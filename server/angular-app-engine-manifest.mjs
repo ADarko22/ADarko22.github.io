@@ -1,6 +1,6 @@
 
 export default {
-  basePath: 'adarko22.github.io',
+  basePath: '/adarko22',
   supportedLocales: {
   "en-US": ""
 },
