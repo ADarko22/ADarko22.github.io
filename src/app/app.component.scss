@@ -1,0 +1,74 @@
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 70px;
+    
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    @media (max-width: 600px) {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+        }
+    }
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    background: linear-gradient(to right, #54c9f0, #ffffff);
+    background-clip: text; 
+    -webkit-background-clip: text; 
+    color: transparent;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+.spacer {
+    flex: 1;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+
+    @media (max-width: 600px) {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    button {
+        padding: 5px 10px;
+        font-size: 16px;
+        font-weight: 500;
+        text-transform: capitalize;
+        transition: color 0.3s ease, transform 0.3s ease;
+        cursor: pointer;
+
+        color: inherit;   
+        background: none; 
+        border: none;
+        border-top: 1px solid rgb(252, 252, 252);
+        border-bottom: 1px solid rgb(252, 252, 252);
+
+        &:hover {
+            transform: scale(1.1);
+        }
+
+        &.active {
+            font-weight: bold;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
