@@ -50,8 +50,12 @@ app.get('**', (req, res, next) => {
       providers: [{ provide: APP_BASE_HREF, useValue: baseUrl }],
     })
     .then((html) => res.send(html))
-    .catch((err) => next(err));
+    .catch((err) => {
+      console.error('SSR error:', err); // Detailed logging
+      res.status(500).send('Server Error'); // Specific error response
+    });
 });
+
 
 /**
  * Start the server if this module is the main entry point.

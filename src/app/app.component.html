@@ -14,3 +14,61 @@
 <router-outlet/>
 
 <h1>Work in Progress ...</h1>
+<div *ngIf="resume">
+  <section>
+      <h2>{{ resume.intro.full_name }}</h2>
+      <h3>{{ resume.intro.profession }}</h3>
+      <p [innerHTML]="sanitizeHtml(resume.intro.summary)"></p>
+      <p>Languages: {{ resume.intro.languages }}</p>
+      <p [innerHTML]="sanitizeHtml(resume.intro.photos_intro)"></p>
+      <div *ngIf="resume.intro.photos">
+          <img *ngFor="let photo of resume.intro.photos" [src]="photo" alt="Photo"
+              style="max-width: 200px; margin: 10px;">
+      </div>
+  </section>
+
+  <section>
+      <h2>Work Experience</h2>
+      <div *ngFor="let work of resume.work_experience">
+          <h3>{{ work.job_title }} at {{ work.company }}</h3>
+          <p>Location: {{ work.location }}</p>
+          <p [innerHTML]="sanitizeHtml(work.company_description)"></p>
+          <p *ngIf="work.role">Role: {{ work.role }}</p>
+          <p>Dates: {{ work.start_date }} - {{ work.end_date || 'Present' }}</p>
+          <h4>Responsibilities:</h4>
+          <ul>
+              <li *ngFor="let responsibility of work.responsibilities" [innerHTML]="sanitizeHtml(responsibility)"></li>
+          </ul>
+          <h4>Tech Stack:</h4>
+          <ul>
+              <li *ngFor="let tech of work.tech_stack">{{ tech }}</li>
+          </ul>
+      </div>
+  </section>
+
+  <section>
+      <h2>Education</h2>
+      <div *ngFor="let education of resume.education">
+          <h3>{{ education.degree }} from {{ education.institution }}</h3>
+          <p>Location: {{ education.location }}</p>
+          <p>Graduation Year: {{ education.graduation_year }}</p>
+          <p [innerHTML]="sanitizeHtml(education.thesis)"></p>
+          <div *ngIf="education.publications && education.publications.length > 0">
+              <h4>Publications:</h4>
+              <ul>
+                  <li *ngFor="let publication of education.publications" [innerHTML]="sanitizeHtml(publication)"></li>
+              </ul>
+          </div>
+      </div>
+  </section>
+
+  <section>
+      <h2>Contacts</h2>
+      <p>Email: {{ resume.contacts.email }}</p>
+      <p>Phone: {{ resume.contacts.phone }}</p>
+      <p *ngIf="resume.contacts.linkedin">LinkedIn: <a [href]="resume.contacts.linkedin"
+              target="_blank">{{ resume.contacts.linkedin }}</a></p>
+      <p *ngIf="resume.contacts.github">GitHub: <a [href]="resume.contacts.github"
+              target="_blank">{{ resume.contacts.github }}</a></p>
+  </section>
+</div>

@@ -5,7 +5,16 @@
         "languages": "Italian (native), English (fluent), Spanish (basic)",
         "summary": "Software engineer with a passion for crafting innovative and efficient solutions. Over 6 years of experience in designing and implementing robust software solutions. Committed to continuous learning, I frequently challenge my problem solving skills on platforms like HackerRank, LeetCode, CodeForces, and with the Advent of Code.",
         "photos_intro": "Outside of work I'm in happily engaged and I love traveling, adventures, and relax. Checkout my memories below!",
-        "photos": ""
+        "photos": [
+            "assets/intro-photos/Kilimanjaro-Hike-1.jpeg",
+            "assets/intro-photos/Kilimanjaro-Hike-2.jpeg",
+            "assets/intro-photos/Kilimanjaro-Hike-3.jpeg",
+            "assets/intro-photos/Kilimanjaro-Hike-4.jpeg",
+            "assets/intro-photos/Kilimanjaro-Hike-5.jpeg",
+            "assets/intro-photos/Kilimanjaro-Hike-6.jpeg",
+            "assets/intro-photos/Kilimanjaro-Hike-7.jpeg",
+            "assets/intro-photos/Kilimanjaro-Hike-8.jpeg"
+        ]
     },
     "work_experience": [
         {
@@ -14,7 +23,7 @@
         "company_description": "Tech Mahindra is a global leader in digital transformation, IT services, and consulting. Part of the Mahindra Group, it delivers innovative solutions across industries like telecom, healthcare, and finance.",
         "role": "Consultant for a leading Swiss private-bank specialized in wealth and asset management services.",
         "location": "Geneva, Switzerland",
-        "start_date": "06-03-2025",
+        "start_date": "2025-03-06",
         "end_date": null,
         "responsibilities": [
             "..."
@@ -28,8 +37,8 @@
         "company": "SonarSource SA.",
         "company_description": "Sonar is a software company dedicated to improving code quality and security, by providing solutions to detect bugs, vulnerabilities and code smells in several programming languages.",
         "location": "Geneva, Switzerland",
-        "start_date": "01-04-2023",
-        "end_date": "28-02-2025",
+        "start_date": "2023-04-01",
+        "end_date": "2025-02-28",
         "responsibilities": [
             "Leveraging <i>Abstract Syntax Trees (ASTs)</i>, I worked on static analysis tools to detect a wide range of vulnerabilities, including security flaws and performance bottlenecks for Java and Kotlin projects. Integrated the <i>Eclipse Compiler for Java</i> to support the features of Java 21 and Java 22.",
             "Extended <i>Gradle</i> and <i>Maven</i> plugins to improve project indexing and support for various file types, resulting in a more accurate representation of the project structure.",
@@ -46,8 +55,8 @@
         "company": "Flow Traders",
         "company_description": "Flow Traders is a leading global trading firm specialized in Exchange-Traded Products (ETPs). The company uses proprietary strategies and tools to identify and capitalize on market inefficiencies and trends.",
         "location": "Amsterdam, The Netherlands",
-        "start_date": "01-09-2018",
-        "end_date": "31-03-2023",
+        "start_date": "2018-09-01",
+        "end_date": "2023-03-31",
         "responsibilities": [
             "Implemented a robust observability solution using <i>Prometheus</i>, <i>Grafana</i>, and <i>OpenTelemetry</i> to monitor and optimize services on <i>Amazon EKS</i>. Automated redeployment mechanisms to ensure high availability and rapid recovery from failures.",
             "Leveraged <i>Kafka Streams</i> to process real-time market data, from distributed components, and enhance the price limit tool. Contributed to the development of a global position aggregator by implementing <i>Kafka Connectors</i> for data ingestion, manipulation and storage.",
@@ -57,7 +66,7 @@
             "Developed and maintained robust relational database systems, using <i>Hibernate</i> and <i>MySQL</i>, for <i>Reference Data</i> (ETFs, Futures, Forex, etc.) and <i>Clearing operations</i>. Optimized database performance by more than 50% using indexing and batching."
         ],
         "tech_stack": [
-            "Java", "Maven", "JUnit", "Mockito", "MySQL", "MariaDB", "SQL", "Apache Kafka", "Strimzi Kafka Connectors", "Confluent Kafka Connectors", "Hazelcast", "JMeter", "Hiberante", "JProfiler", "VisualVM", "Docker", "Promethesu", "Grafana", "OpenTelemetry", "OpenCsv", "Git", "BitBucker", "Kubernetes", "Amazon EKS", "Python", "TCP/IP Protocols", "QuickFix", "FIX Protocol"
+            "Java", "Maven", "JUnit", "Mockito", "MySQL", "MariaDB", "SQL", "Apache Kafka", "Strimzi Kafka Connectors", "Confluent Kafka Connectors", "Hazelcast", "JMeter", "Hiberante", "JProfiler", "VisualVM", "Docker", "Prometheus", "Grafana", "OpenTelemetry", "OpenCsv", "Git", "BitBucket", "Kubernetes", "Amazon EKS", "Python", "TCP/IP Protocols", "QuickFix", "FIX Protocol"
         ]
         }
     ],

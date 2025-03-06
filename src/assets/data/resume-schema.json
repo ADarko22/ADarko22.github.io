@@ -1,5 +1,4 @@
 {
-    "$schema": "https://json-schema.org/draft-04/schema",
     "title": "Resume",
     "description": "This document records the details of a Resume",
     "type": "object",
@@ -29,7 +28,7 @@
           },
           "photos": {
             "type": "array",
-            "description": "List of names of photos locaated in `public/intro-photos`.",
+            "description": "List of names of photos locaated in `src/assets/intro-photos`.",
             "items": {
               "type": "string"
             }
@@ -57,7 +56,6 @@
             },
             "role": {
               "type": ["string", "null"],
-              "format": "string",
               "description": "The role covered as a consultant."
             },
             "location": {
@@ -67,12 +65,12 @@
             "start_date": {
               "type": "string",
               "format": "date",
-              "description": "Start date of employment (DD-MM-YYYY)."
+              "description": "Start date of employment (YYYY-MM-DD)."
             },
             "end_date": {
               "type": ["string", "null"],
               "format": "date",
-              "description": "End date of employment (DD-MM-YYYY) or null if currently employed."
+              "description": "End date of employment (YYYY-MM-DD) or null if currently employed."
             },
             "responsibilities": {
               "type": "array",
