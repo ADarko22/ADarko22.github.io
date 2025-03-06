@@ -1,0 +1,90 @@
+{
+    "intro": {
+        "full_name": "Angelo Buono",
+        "profession": "Software Engineer",
+        "languages": "Italian (native), English (fluent), Spanish (basic)",
+        "summary": "Software engineer with a passion for crafting innovative and efficient solutions. Over 6 years of experience in designing and implementing robust software solutions. Committed to continuous learning, I frequently challenge my problem solving skills on platforms like HackerRank, LeetCode, CodeForces, and with the Advent of Code.",
+        "photos_intro": "Outside of work I'm in happily engaged and I love traveling, adventures, and relax. Checkout my memories below!",
+        "photos": ""
+    },
+    "work_experience": [
+        {
+        "job_title": "Senior Software Engineer",
+        "company": "Tech Mahindra",
+        "company_description": "Tech Mahindra is a global leader in digital transformation, IT services, and consulting. Part of the Mahindra Group, it delivers innovative solutions across industries like telecom, healthcare, and finance.",
+        "role": "Consultant for a leading Swiss private-bank specialized in wealth and asset management services.",
+        "location": "Geneva, Switzerland",
+        "start_date": "06-03-2025",
+        "end_date": null,
+        "responsibilities": [
+            "..."
+        ],
+        "tech_stack": [
+            "Java", "Maven", "JUnit", "..."
+        ]
+        },
+        {
+        "job_title": "Software Engineer",
+        "company": "SonarSource SA.",
+        "company_description": "Sonar is a software company dedicated to improving code quality and security, by providing solutions to detect bugs, vulnerabilities and code smells in several programming languages.",
+        "location": "Geneva, Switzerland",
+        "start_date": "01-04-2023",
+        "end_date": "28-02-2025",
+        "responsibilities": [
+            "Leveraging <i>Abstract Syntax Trees (ASTs)</i>, I worked on static analysis tools to detect a wide range of vulnerabilities, including security flaws and performance bottlenecks for Java and Kotlin projects. Integrated the <i>Eclipse Compiler for Java</i> to support the features of Java 21 and Java 22.",
+            "Extended <i>Gradle</i> and <i>Maven</i> plugins to improve project indexing and support for various file types, resulting in a more accurate representation of the project structure.",
+            "Reduced build and test times of <i>Cirrus-ci</i> jobs for dogfooding the Java and Kotlin analyzers on <i>Sonar Qube</i> by leveraging knowledge of <i>Linux Systems</i> and <i>DevOps</i> tools, such as <i>Docker</i>, <i>Bash</i>, and <i>Git</i>.",
+            "Mentored and onboarded new team members through individual sessions and defining specific onboarding programs. I've also contributed to the  <i>Sonar community</i> by sharing expertise, answering questions and providing code examples.",
+            "Led a proof-of-concept project to integrate a <i>RoBERTa</i>-based ML model for detecting commented code. Explored frameworks like <i>Spring Boot</i> and <i>JSpecify</i>, <i>Java 21</i> features and sustainable coding to ideate and implement new rules for the Java analyzer."
+            ],
+        "tech_stack": [
+            "Java", "Gradle", "Maven", "JUnit", "Mockito", "Kotlin", "Eclipse ECJ", "Docker", "Linux", "Git", "Sonar Qube", "Sonar Cloud", "Cirrus-ci", "Bash", " Python", "Spring Boot", "JSpecify", "Thymeleaf"
+        ]
+        },
+        {
+        "job_title": "Software Engineer",
+        "company": "Flow Traders",
+        "company_description": "Flow Traders is a leading global trading firm specialized in Exchange-Traded Products (ETPs). The company uses proprietary strategies and tools to identify and capitalize on market inefficiencies and trends.",
+        "location": "Amsterdam, The Netherlands",
+        "start_date": "01-09-2018",
+        "end_date": "31-03-2023",
+        "responsibilities": [
+            "Implemented a robust observability solution using <i>Prometheus</i>, <i>Grafana</i>, and <i>OpenTelemetry</i> to monitor and optimize services on <i>Amazon EKS</i>. Automated redeployment mechanisms to ensure high availability and rapid recovery from failures.",
+            "Leveraged <i>Kafka Streams</i> to process real-time market data, from distributed components, and enhance the price limit tool. Contributed to the development of a global position aggregator by implementing <i>Kafka Connectors</i> for data ingestion, manipulation and storage.",
+            "Utilized profiling tools like <i>JMeter</i>, <i>JProfiler</i>, and <i>VisualVM</i> to identify and resolve performance bottlenecks in complex systems. Optimized database queries, network communication, and application logic.",
+            "Contributed to the development of a global position aggregator using <i>Hazelcast</i> and <i>Kafka</i> for distributed data management. Enhanced the user interface using <i>JavaFX</i> to efficiently visualize real-time data sourced via TCP protocols.",
+            "Successfully integrated with multiple trading venues (Euronext, LSE, Eurex, etc.) using the <i>FIX protocol</i> and the <i>QuickFix</i> library. Collaborated with counterparties and performed User Acceptance Testing for the FIX connectivity in diverse scenarios.",
+            "Developed and maintained robust relational database systems, using <i>Hibernate</i> and <i>MySQL</i>, for <i>Reference Data</i> (ETFs, Futures, Forex, etc.) and <i>Clearing operations</i>. Optimized database performance by more than 50% using indexing and batching."
+        ],
+        "tech_stack": [
+            "Java", "Maven", "JUnit", "Mockito", "MySQL", "MariaDB", "SQL", "Apache Kafka", "Strimzi Kafka Connectors", "Confluent Kafka Connectors", "Hazelcast", "JMeter", "Hiberante", "JProfiler", "VisualVM", "Docker", "Promethesu", "Grafana", "OpenTelemetry", "OpenCsv", "Git", "BitBucker", "Kubernetes", "Amazon EKS", "Python", "TCP/IP Protocols", "QuickFix", "FIX Protocol"
+        ]
+        }
+    ],
+    "education": [
+        {
+        "degree": "Master Degree in Computer Science",
+        "institution": "University of Pisa",
+        "location": "Pisa, Italia",
+        "graduation_year": 2018,
+        "thesis": "Platoon Formation and Stability, using Multi-access Edge Computing in LTE-Advanced networks",
+        "publications": [
+            "<a href=\"https://www.researchgate.net/publication/327238265_SimuLTE-MEC_extending_SimuLTE_for_Multiaccess_Edge_Computing\">SimuLTE-MEC: extending SimuLTE for Multiaccess Edge Computing</a>",
+            "<a href=\"https://etd.adm.unipi.it/t/etd-09052018-192851\">Platoon Formation and Stability with Multi-access Edge Computing in LTE-Advanced networks</a>"
+        ]
+        },
+        {
+        "degree": "Bachelor Degree in Ingegneria Informatica",
+        "institution": "University of Pisa",
+        "location": "Pisa, Italia",
+        "graduation_year": 2015,
+        "thesis": "Il sistema operativo JUNOS, e confronto con Cisco IOS"
+        }
+    ],
+    "contacts": {
+        "email": "a.elessar22@gmail.com",
+        "phone": "+41 076 53 57 039",
+        "linkedin": "https://www.linkedin.com/in/angelobuono",
+        "github": "https://github.com/ADarko22"
+    }
+}
