@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 
 import { ResumeParserService } from '../resume-service/resume-parser.service';
 import { WorkExperience } from '../resume-service/resume.model';
-import { HtmlSanitizerService } from '../html-sanitizer.service';
+import { HtmlSanitizerService } from '../resume-service/html-sanitizer.service';
 import { SafeHtml } from '@angular/platform-browser';
 
 @Component({

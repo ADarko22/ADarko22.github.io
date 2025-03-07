@@ -1,0 +1,18 @@
+<div class="slideshow-container">
+    <div *ngIf="isLoading" class="loading-spinner">
+      <mat-spinner></mat-spinner>
+    </div>
+  
+    <div class="photo-wrapper">
+      <img *ngIf="prevPhotoUrl && !isLoading" [src]="prevPhotoUrl" class="side-photo prev-photo" alt="Previous Photo">
+      <img *ngIf="currentPhoto && !isLoading" [src]="currentPhoto" class="slideshow-image" alt="Slideshow Image">
+      <img *ngIf="nextPhotoUrl && !isLoading" [src]="nextPhotoUrl" class="side-photo next-photo" alt="Next Photo">
+    </div>
+  
+    <button mat-icon-button class="prev" (click)="prevPhoto()" *ngIf="!isLoading">
+      <mat-icon>chevron_left</mat-icon>
+    </button>
+    <button mat-icon-button class="next" (click)="nextPhoto()" *ngIf="!isLoading">
+      <mat-icon>chevron_right</mat-icon>
+    </button>
+</div>

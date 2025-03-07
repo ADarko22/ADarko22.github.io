@@ -1,14 +1,22 @@
 <mat-toolbar color="primary" class="toolbar">
-  <span class="logo">Angelo Buono's Home</span>
-  <span class="spacer"></span>
+    <span class="logo">Angelo Buono's Home</span>
+    <span class="spacer"></span>
+    
+    <nav class="nav-links">
+      <button mat-button routerLink="intro" routerLinkActive="active">Intro</button>
+      <button mat-button routerLink="work-experience" routerLinkActive="active">Work Experience</button>
+      <button mat-button routerLink="education" routerLinkActive="active">Education</button>
+      <button mat-button routerLink="hobbies" routerLinkActive="active">Hobbies</button>
+      <button mat-button routerLink="contacts" routerLinkActive="active">Contacts</button>
+    </nav>
   
-  <nav class="nav-links">
-    <button mat-button routerLink="intro" routerLinkActive="active">Intro</button>
-    <button mat-button routerLink="work-experience" routerLinkActive="active">Work Experience</button>
-    <button mat-button routerLink="education" routerLinkActive="active">Education</button>
-    <button mat-button routerLink="hobbies" routerLinkActive="active">Hobbies</button>
-    <button mat-button routerLink="contacts" routerLinkActive="active">Contacts</button>
-  </nav>
-</mat-toolbar>
-
-<router-outlet/>
+    <mat-slide-toggle
+      class="theme-toggle"
+      [checked]="isDarkMode"
+      (change)="toggleTheme()"
+    >
+      {{ isDarkMode ? 'Dark Mode' : 'Light Mode' }}
+    </mat-slide-toggle>
+  </mat-toolbar>
+  
+  <router-outlet/>

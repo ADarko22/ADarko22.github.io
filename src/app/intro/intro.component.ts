@@ -1,32 +1,40 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { PhotoSlideshowComponent } from '../photo-slideshow/photo-slideshow.component';
 import { ResumeParserService } from '../resume-service/resume-parser.service';
 import { Intro } from '../resume-service/resume.model';
-import { HtmlSanitizerService } from '../html-sanitizer.service';
+import { HtmlSanitizerService } from '../resume-service/html-sanitizer.service';
 import { SafeHtml } from '@angular/platform-browser';
 
 @Component({
-  selector: 'app-intro',
-  imports: [CommonModule],
+  selector: 'intro',
+  imports: [CommonModule, PhotoSlideshowComponent],
   templateUrl: './intro.component.html',
   styleUrl: './intro.component.scss'
 })
-export class IntroComponent {
-    intro: Intro | null = null;
+export class IntroComponent implements OnInit {
+  intro: Intro | null = null;
+  photoUrls: string[] = []; 
 
-    constructor(private resumeParserService: ResumeParserService, private sanitizer: HtmlSanitizerService) { }
+  constructor(private resumeParserService: ResumeParserService, private sanitizer: HtmlSanitizerService) { }
 
-    ngOnInit(): void {
-        this.resumeParserService.getResume().subscribe(data => {
-          this.intro = data?.intro ?? null;
-      });
-    }
+  ngOnInit(): void {
+    this.resumeParserService.getResume().subscribe(data => {
+      if (data && data.intro) {
+        this.intro = data.intro;
+        if (this.intro.photos) {
+          this.photoUrls = this.intro.photos;
+        } else {
+          this.photoUrls = [];
+        }
+      } else {
+        this.intro = null;
+        this.photoUrls = [];
+      }
+    });
+  }
 
-    // TODO:  provide the sanitized elements specifically for the Intro
-    // TODO:  implement a way to load all the photos from the assets/intro-photos folder and remove the field from the json!
-
-    sanitizeHtml(html: string | undefined): SafeHtml {
-        return this.sanitizer.sanitizeHtml(html)
-    }
+  sanitizeHtml(html: string | undefined): SafeHtml {
+    return this.sanitizer.sanitizeHtml(html);
+  }
 }

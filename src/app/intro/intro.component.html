@@ -6,9 +6,6 @@
         <p [innerHTML]="sanitizeHtml(intro.summary)"></p>
         <p>Languages: {{ intro.languages }}</p>
         <p [innerHTML]="sanitizeHtml(intro.photos_intro)"></p>
-        <div *ngIf="intro.photos">
-            <img *ngFor="let photo of intro.photos" [src]="photo" alt="Photo"
-                style="max-width: 200px; margin: 10px;">
-        </div>
+        <photo-slideshow [photoUrls]="photoUrls"></photo-slideshow>
     </section>
 </div>  
