@@ -1,0 +1,17 @@
+<div *ngIf="educations">
+    <section>
+        <h2>Education</h2>
+        <div *ngFor="let education of educations">
+            <h3>{{ education.degree }} from {{ education.institution }}</h3>
+            <p>Location: {{ education.location }}</p>
+            <p>Graduation Year: {{ education.graduation_year }}</p>
+            <p [innerHTML]="sanitizeHtml(education.thesis)"></p>
+            <div *ngIf="education.publications && education.publications.length > 0">
+                <h4>Publications:</h4>
+                <ul>
+                    <li *ngFor="let publication of education.publications" [innerHTML]="sanitizeHtml(publication)"></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</div>

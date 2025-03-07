@@ -1,0 +1,21 @@
+
+<div *ngIf="workExperiences">
+    <section>
+        <h2>Work Experience</h2>
+        <div *ngFor="let work of workExperiences">
+            <h3>{{ work.job_title }} at {{ work.company }}</h3>
+            <p>Location: {{ work.location }}</p>
+            <p [innerHTML]="sanitizeHtml(work.company_description)"></p>
+            <p *ngIf="work.role">Role: {{ work.role }}</p>
+            <p>Dates: {{ work.start_date }} - {{ work.end_date || 'Present' }}</p>
+            <h4>Responsibilities:</h4>
+            <ul>
+                <li *ngFor="let responsibility of work.responsibilities" [innerHTML]="sanitizeHtml(responsibility)"></li>
+            </ul>
+            <h4>Tech Stack:</h4>
+            <ul>
+                <li *ngFor="let tech of work.tech_stack">{{ tech }}</li>
+            </ul>
+        </div>
+    </section>
+</div>
