@@ -1,9 +1,11 @@
+import { ThemeToggleComponent } from './theme-toggle.component';
 import { Component } from '@angular/core';
 import { RouterOutlet, RouterModule } from '@angular/router';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { CommonModule } from '@angular/common';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import { ThemeService } from './theme.service';
+import { Metadata, MetadataService } from './metadata.service';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
@@ -14,18 +16,23 @@ import { ThemeService } from './theme.service';
     RouterOutlet,
     RouterModule,
     MatSlideToggleModule,
+    ThemeToggleComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  constructor(public themeService: ThemeService) {}
+  metadata: Metadata | undefined;
 
-  toggleTheme() {
-    this.themeService.toggleTheme();
-  }
+  constructor(
+    private metadataService: MetadataService,
+    private titleService: Title) {}
 
-  get isDarkMode() {
-    return this.themeService.isDarkTheme();
+  ngOnInit() {
+    this.metadataService.getMetadata()
+    .subscribe((metadata) => {
+      this.metadata = metadata
+      this.titleService.setTitle(metadata.title); 
+    });
   }
 }

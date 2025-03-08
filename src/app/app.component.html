@@ -1,5 +1,5 @@
 <mat-toolbar color="primary" class="toolbar">
-  <span class="logo">Angelo Buono's Home</span>
+  <span class="logo">{{ metadata?.logo }}</span>
   <span class="spacer"></span>
   
   <nav class="nav-links">
@@ -10,12 +10,7 @@
     <button mat-button routerLink="contacts" routerLinkActive="active">Contacts</button>
   </nav>
 
-  <mat-slide-toggle
-    class="theme-toggle"
-    [checked]="isDarkMode"
-    (change)="toggleTheme()"
-  >
-  </mat-slide-toggle>
+  <theme-toggle/>
 </mat-toolbar>
 
 <router-outlet/>

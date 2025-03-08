@@ -39,6 +39,12 @@ $dark-theme: mat.m2-define-dark-theme((
       background-color: white;
       color: black;
     }
+
+    .logo {
+      background: linear-gradient(to right, #54c9f0, #ffffff);
+      background-clip: text; 
+      -webkit-background-clip: text; 
+    }
   }
 
   .theme-dark {
@@ -46,6 +52,12 @@ $dark-theme: mat.m2-define-dark-theme((
     & {
       background-color: #303030;
       color: white;
+    }
+
+    .logo {
+      background: linear-gradient(to right, #0981a8, #2b2929);
+      background-clip: text; 
+      -webkit-background-clip: text; 
     }
 
     a {
@@ -61,5 +73,18 @@ $dark-theme: mat.m2-define-dark-theme((
     a:active {
       color: #66a5ad; 
     }
+  }
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+
+  > div {
+    background-color: var(--mdc-theme-primary);
+    padding: 8px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
   }
 }

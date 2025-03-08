@@ -38,4 +38,9 @@ export class ThemeService {
   isDarkTheme(): boolean {
     return this.isDarkMode;
   }
+
+  private getStoredTheme(): boolean {
+    const storedTheme = localStorage.getItem('theme');
+    return storedTheme === 'dark';
+  }
 }
