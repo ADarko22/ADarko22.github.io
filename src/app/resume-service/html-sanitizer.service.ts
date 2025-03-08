@@ -7,7 +7,7 @@ import DOMPurify from 'dompurify';
     providedIn: 'root',
 })
 export class HtmlSanitizerService {
-    constructor(private sanitizer: DomSanitizer) {}
+    constructor(readonly sanitizer: DomSanitizer) {}
 
     sanitizeHtml(html: string | undefined): SafeHtml {
         if (html) {

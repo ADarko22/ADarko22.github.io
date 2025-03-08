@@ -10,11 +10,11 @@ import { Resume } from './resume.model';
     providedIn: 'root',
 })
 export class ResumeParserService {
-    private ajv: Ajv;
-    private resumeSubject = new BehaviorSubject<Resume | null>(null);
-    private resume$: Observable<Resume | null>; 
+    readonly ajv: Ajv;
+    readonly resumeSubject = new BehaviorSubject<Resume | null>(null);
+    readonly resume$: Observable<Resume | null>; 
 
-    constructor(private http: HttpClient) {
+    constructor(readonly http: HttpClient) {
         this.ajv = new Ajv();
         addFormats(this.ajv);
         this.resume$ = this.loadAndParseResume().pipe(

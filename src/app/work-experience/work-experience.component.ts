@@ -15,7 +15,7 @@ import { SafeHtml } from '@angular/platform-browser';
 export class WorkExperienceComponent {
     workExperiences: WorkExperience[] | null = null;
 
-    constructor(private resumeParserService: ResumeParserService, private sanitizer: HtmlSanitizerService) { }
+    constructor(readonly resumeParserService: ResumeParserService, readonly sanitizer: HtmlSanitizerService) { }
 
     ngOnInit(): void {
         this.resumeParserService.getResume().subscribe(data => {

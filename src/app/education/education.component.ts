@@ -16,7 +16,7 @@ import { SafeHtml } from '@angular/platform-browser';
 export class EducationComponent {
     educations: Education[] | null = null;
 
-    constructor(private resumeParserService: ResumeParserService, private sanitizer: HtmlSanitizerService) { }
+    constructor(readonly resumeParserService: ResumeParserService, private sanitizer: HtmlSanitizerService) { }
 
     ngOnInit(): void {
         this.resumeParserService.getResume().subscribe(data => {

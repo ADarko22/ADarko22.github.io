@@ -14,7 +14,7 @@ import { Contacts } from '../resume-service/resume.model';
 export class ContactsComponent {
   contacts: Contacts | null = null;
 
-  constructor(private resumeParserService: ResumeParserService) { }
+  constructor(readonly resumeParserService: ResumeParserService) { }
 
   ngOnInit(): void {
       this.resumeParserService.getResume().subscribe(data => {

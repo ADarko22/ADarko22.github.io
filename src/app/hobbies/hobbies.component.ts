@@ -7,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrl: './hobbies.component.scss'
 })
 export class HobbiesComponent {
-
+    // TODO:  Add Hobbie in resume.json and it's schema
+    // TODO: Add GitHub projects loader service
 }

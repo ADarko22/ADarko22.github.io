@@ -1,68 +1,65 @@
 @use '@angular/material' as mat;
 @include mat.core();
 
-// Define light theme palettes
-$light-primary: mat.define-palette(mat.$m2-blue-palette, A400, A100, A700);
-$light-accent: mat.define-palette(mat.$m2-pink-palette, A200, A100, A400);
-$light-warn: mat.define-palette(mat.$red-palette);
+// 🌞 Light Theme Palettes (M2)
+$light-primary: mat.m2-define-palette(mat.$m2-blue-palette, 500);
+$light-accent: mat.m2-define-palette(mat.$m2-pink-palette, A200);
+$light-warn: mat.m2-define-palette(mat.$m2-red-palette);
 
-// Define dark theme palettes
-$dark-primary: mat.define-palette(mat.$m2-blue-palette, 200);
-$dark-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
-$dark-warn: mat.define-palette(mat.$red-palette);
+// 🌚 Dark Theme Palettes (M2)
+$dark-primary: mat.m2-define-palette(mat.$m2-blue-grey-palette, 200);
+$dark-accent: mat.m2-define-palette(mat.$m2-deep-orange-palette, A200);
+$dark-warn: mat.m2-define-palette(mat.$m2-red-palette);
 
-// Define light theme
-$light-theme: mat.define-light-theme((
+// 🌞 Define Light Theme
+$light-theme: mat.m2-define-light-theme((
   color: (
     primary: $light-primary,
     accent: $light-accent,
     warn: $light-warn,
   ),
-  background: (
-    background: white,
-    surface: #f0f0f0,
-  ),
-  foreground: (
-    base: black,
-  )
+  background-color: white
 ));
 
-// Define dark theme
-$dark-theme: mat.define-dark-theme((
+// 🌚 Define Dark Theme
+$dark-theme: mat.m2-define-dark-theme((
   color: (
     primary: $dark-primary,
     accent: $dark-accent,
     warn: $dark-warn,
   ),
-  background: (
-    background: #303030,
-    surface: #424242,
-  ),
-  foreground: (
-    base: white, 
-  )
+  background-color: #303030
 ));
 
+// 🌍 Apply Themes
 :root {
-  --background-color: white;
-  --text-color: black;
-  --card-background: #f0f0f0;
-  --border-color: #ddd;
-}
-
-.theme-dark {
-  :root {
-    --background-color: #303030;
-    --text-color: white;
-    --card-background: #424242;
-    --border-color: #555;
+  .theme-light {
+    @include mat.all-component-themes($light-theme);
+    & {
+      background-color: white;
+      color: black;
+    }
   }
-}
 
-.theme-light {
-  @include mat.all-component-themes($light-theme);
-}
+  .theme-dark {
+    @include mat.all-component-colors($dark-theme);
+    & {
+      background-color: #303030;
+      color: white;
+    }
 
-.theme-dark {
-  @include mat.all-component-themes($dark-theme);
+    a {
+      color: #89cff0; 
+      text-decoration: underline; 
+    }
+  
+    a:hover,
+    a:focus {
+      color: #b0e0e6;
+    }
+  
+    a:active {
+      color: #66a5ad; 
+    }
+  }
 }

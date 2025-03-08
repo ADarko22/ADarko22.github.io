@@ -74,14 +74,31 @@
 
 .theme-toggle {
     margin-right: 10px;
-}
 
-.theme-light {
-    background-color: white;
-    color: black;
-}
+    .mat-slide-toggle-content {
+        display: none; // Hide the label
+    }
 
-.theme-dark {
-    background-color: #303030;
-    color: white;
+    .mat-slide-toggle-bar {
+        width: 40px;
+        height: 20px;
+        border-radius: 10px;
+        background: linear-gradient(to right, #303030 50%, white 50%);
+        border: 1px solid #ccc;
+    }
+
+    .mat-slide-toggle-thumb {
+        width: 18px;
+        height: 18px;
+        background-color: #f0f0f0;
+        border-radius: 50%;
+        transition: transform 0.3s ease;
+    }
+
+    &.mat-checked {
+        .mat-slide-toggle-thumb {
+            transform: translateX(20px);
+            background-color: #303030;
+        }
+    }
 }
