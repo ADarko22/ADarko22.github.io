@@ -17,30 +17,26 @@
 
 ## 🏗️ Project Structure
 The core data files are stored in:
-- **`src/assets/data/resume.json`** → Contains the resume details (adheres to `resume-schema.json`).
-- **`src/assets/data/resume-schema.json`** → Defines the schema for `resume.json`.
+- **[`resume.json`](src/assets/data/resume.json)** → Contains the resume details (adheres to `resume-schema.json`).
+- **[`resume-schema.json`](src/assets/data/resume-schema.json)** → Defines the schema for `resume.json`.
+- **[`metadata.json`](src/assets/data/metadata.json)** → Contains the extra info, such as
+
 
 ## 🛠️ Customization
 Anyone can clone and modify this project to suit their personal needs. Here’s how:
 
-1. **Change the Website Title**
-   - Edit `src/index.html`
-   - Modify the `<title>` tag.
-   - _(Future updates will improve this process.)_
+1. **Customize Resume Information**
+   - Update [`resume.json`](src/assets/data/resume.json) with personal details.
+   - Include profile photos and other images in [`src/assets/`](src/assets/) and reference them inside `resume.json`.
 
-2. **Modify the Navigation Bar Logo**
-   - Edit `src/app/app.component.html`
-   - Replace the logo with your own.
-   - _(Future updates will provide a more flexible configuration.)_
-
-3. **Customize Resume Information**
-   - Update `src/assets/data/resume.json` with personal details.
-   - Include profile photos and other images in `src/assets/` and reference them inside `resume.json`.
+2. **Customize Title, Logo and other metadata**
+    - Update [`metadata.json`](src/assets/data/metadata.json) with extra metadata, like the title and the logo
+    - Extend the [`MetadataService`](src/app/metadata.service.ts) to inject extra informations in the existing components
 
 ## 💻 Installation & Running Locally
 ```sh
 # Clone the repository
-git clone https://github.com/your-username/my-resume-website.git
+git clone https://github.com/<YOUR-USERNAME>/<REPOSITORY-NAME>.git
 cd my-resume-website
 
 # Install dependencies

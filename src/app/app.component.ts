@@ -4,6 +4,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { CommonModule } from '@angular/common';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { ThemeService } from './theme.service';
+import { Metadata, MetadataService } from './metadata.service';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
@@ -19,7 +21,20 @@ import { ThemeService } from './theme.service';
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  constructor(public themeService: ThemeService) {}
+  metadata: Metadata | undefined;
+
+  constructor(
+    public themeService: ThemeService, 
+    private metadataService: MetadataService,
+    private titleService: Title) {}
+
+  ngOnInit() {
+    this.metadataService.getMetadata()
+    .subscribe((metadata) => {
+      this.metadata = metadata
+      this.titleService.setTitle(metadata.title); 
+    });
+  }
 
   toggleTheme() {
     this.themeService.toggleTheme();
