@@ -1,9 +1,21 @@
 <div *ngIf="contacts">
     <section>
-        <h2>Contacts</h2>
+      <h2>Contacts</h2>
+      <div class="contact-card">
+        <span class="material-symbols-outlined">mail</span>
         <p>Email: {{ contacts.email }}</p>
+      </div>
+      <div class="contact-card">
+        <span class="material-symbols-outlined">phone</span>
         <p>Phone: {{ contacts.phone }}</p>
-        <p *ngIf="contacts.linkedin">LinkedIn: <a [href]="contacts.linkedin" target="_blank">{{ contacts.linkedin }}</a></p>
-        <p *ngIf="contacts.github">GitHub: <a [href]="contacts.github" target="_blank">{{contacts.github }}</a></p>
+      </div>
+      <div *ngIf="contacts.linkedin" class="contact-card">
+        <span class="material-symbols-outlined">link</span>
+        <p>LinkedIn: <a [href]="contacts.linkedin" target="_blank">{{ contacts.linkedin }}</a></p>
+      </div>
+      <div *ngIf="contacts.github" class="contact-card">
+        <span class="material-symbols-outlined">code</span>
+        <p>GitHub: <a [href]="contacts.github" target="_blank">{{ contacts.github }}</a></p>
+      </div>
     </section>
   </div>

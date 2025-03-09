@@ -1,4 +1,3 @@
-// theme-toggle.component.ts
 import { Component, inject } from '@angular/core';
 import { ThemeService } from './theme.service';
 import { CommonModule } from '@angular/common';
@@ -11,13 +10,13 @@ import { CommonModule } from '@angular/common';
     <div>
       <button 
         [class.active]="!themeService.isDarkTheme()" 
-        [disabled]="!themeService.isDarkTheme()"
+        [disabled]="!themeService.isDarkTheme()" 
         (click)="themeService.toggleTheme()">
         <span class="material-symbols-outlined">wb_sunny</span>
       </button>
       <button 
         [class.active]="themeService.isDarkTheme()" 
-        [disabled]="themeService.isDarkTheme()"
+        [disabled]="themeService.isDarkTheme()" 
         (click)="themeService.toggleTheme()">
         <span class="material-symbols-outlined">dark_mode</span>
       </button>
@@ -41,9 +40,6 @@ import { CommonModule } from '@angular/common';
     }
     .theme-light button.active {
       background-color: rgba(0, 0, 0, 0.1);
-    }
-    button:disabled {
-        cursor: default;
     }
   `,
 })

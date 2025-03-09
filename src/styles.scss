@@ -17,8 +17,7 @@ $light-theme: mat.m2-define-light-theme((
     primary: $light-primary,
     accent: $light-accent,
     warn: $light-warn,
-  ),
-  background-color: white
+  )
 ));
 
 // 🌚 Define Dark Theme
@@ -27,64 +26,79 @@ $dark-theme: mat.m2-define-dark-theme((
     primary: $dark-primary,
     accent: $dark-accent,
     warn: $dark-warn,
-  ),
-  background-color: #303030
+  )
 ));
 
 // 🌍 Apply Themes
 :root {
-  .theme-light {
-    @include mat.all-component-themes($light-theme);
-    & {
-      background-color: white;
-      color: black;
-    }
+  @include mat.all-component-colors($light-theme);
 
-    .logo {
-      background: linear-gradient(to right, #54c9f0, #ffffff);
-      background-clip: text; 
-      -webkit-background-clip: text; 
-    }
-  }
+  & {
+    // body
+    --background-color: rgb(230, 247, 252);
+    --text-color:  #303030;
 
-  .theme-dark {
-    @include mat.all-component-colors($dark-theme);
-    & {
-      background-color: #303030;
-      color: white;
-    }
+    // Toolbar
+    --logo-gradient: linear-gradient(to right, #54c9f0, #ffffff);
+    --toolbar-div-background: mat.get-color-from-palette($light-primary);
 
-    .logo {
-      background: linear-gradient(to right, #0981a8, #2b2929);
-      background-clip: text; 
-      -webkit-background-clip: text; 
-    }
+    // Links
+    --link-color: #3ca6f1;
+    --link-hover-color: #1dd0e8;
+    --link-active-color: #440ece;
 
-    a {
-      color: #89cff0; 
-      text-decoration: underline; 
-    }
-  
-    a:hover,
-    a:focus {
-      color: #b0e0e6;
-    }
-  
-    a:active {
-      color: #66a5ad; 
-    }
+    // Contacts Component
+    --contacts-section-bg: linear-gradient(135deg, #e0f7fa, #c2e9f6);
+    --contacts-h2-color: #1976d2;
+    --contacts-card-bg: rgba(255, 255, 255, 0.8);
+    --contacts-icon-color: #009688;
+    --contacts-p-color: #37474f;
+    --contacts-a-color: #009688;
+    --contacts-a-hover-color: #00796b;
   }
 }
 
-.toolbar {
-  display: flex;
-  align-items: center;
+.theme-dark {
+  @include mat.all-component-colors($dark-theme);
+  & {
+    // body
+    --background-color: #303030;
+    --text-color: rgb(230, 247, 252);
 
-  > div {
-    background-color: var(--mdc-theme-primary);
-    padding: 8px;
-    border-radius: 4px;
-    display: flex;
-    align-items: center;
+    // Toolbar
+    --toolbar-div-background: mat.get-color-from-palette($dark-primary);
+    --logo-gradient: linear-gradient(to right, #0981a8, #2b2929);
+
+    // Links
+    --link-color: #89cff0;
+    --link-hover-color: #b0e0e6;
+    --link-active-color: #66a5ad;
+
+    // Contacts Component
+    --contacts-section-bg: linear-gradient(135deg, #37474f, #263238);
+    --contacts-h2-color: #89cff0;
+    --contacts-card-bg: rgba(55, 71, 79, 0.8);
+    --contacts-icon-color: #80cbc4;
+    --contacts-p-color: #cfd8dc;
+    --contacts-a-color: #80cbc4;
+    --contacts-a-hover-color: #26a69a;
   }
+}
+
+body {
+  background-color: var(--background-color); 
+  color: var(--text-color);
+}
+
+a {
+  color: var(--link-color);
+}
+
+a:hover,
+a:focus {
+  color: var(--link-hover-color);
+}
+
+a:active {
+  color: var(--link-active-color);
 }

@@ -1,0 +1,64 @@
+/* contacts.component.scss */
+
+div {
+    display: flex;
+    justify-content: center;
+    padding-top: 10vh;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  section {
+    text-align: center;
+    background: var(--contacts-section-bg);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: var(--contacts-h2-color);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    font-weight: 600;
+  }
+  
+  .contact-card {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    border-radius: 8px;
+    background-color: var(--contacts-card-bg);
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  
+    span.material-symbols-outlined {
+      margin-right: 15px;
+      color: var(--contacts-icon-color);
+      font-size: 1.5rem;
+    }
+  
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: var(--contacts-p-color);
+      margin: 0;
+    }
+  
+    a {
+      color: var(--contacts-a-color);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-bottom 0.3s ease, color 0.3s ease;
+  
+      &:hover {
+        border-bottom: 1px solid var(--contacts-a-color);
+        color: var(--contacts-a-hover-color);
+      }
+    }
+  }

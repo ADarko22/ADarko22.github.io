@@ -4,6 +4,7 @@
     align-items: center;
     padding: 0 20px;
     height: 70px;
+    color: var(--text-color);
     
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
@@ -15,20 +16,22 @@
     }
 
 .toolbar > div {
-    background-color: inherit; 
-    padding: 8px; 
+    background-color: var(--toolbar-div-background);
+    padding: 8px;
     border-radius: 4px;
+    display: flex;
+    align-items: center;
 }
-    
- 
 
 .logo {
+    background: var(--logo-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
     font-size: 24px;
     font-weight: bold;
     letter-spacing: 1px;
     text-transform: uppercase;
     color: transparent;
-
     transition: transform 0.3s ease-in-out;
 
     &:hover {
@@ -60,8 +63,8 @@
         color: inherit;   
         background: none; 
         border: none;
-        border-top: 1px solid rgb(252, 252, 252);
-        border-bottom: 1px solid rgb(252, 252, 252);
+        border-top: 1px solid var(--text-color);
+        border-bottom: 1px solid var(--text-color);
 
         &:hover {
             transform: scale(1.1);
