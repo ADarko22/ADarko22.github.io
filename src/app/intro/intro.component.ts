@@ -37,4 +37,6 @@ export class IntroComponent implements OnInit {
   sanitizeHtml(html: string | undefined): SafeHtml {
     return this.sanitizer.sanitizeHtml(html);
   }
+
+  // todo change the resume-schema.json to have an array of Languages with level: {langauge, level} and render it nicely
 }
