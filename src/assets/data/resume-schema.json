@@ -87,7 +87,7 @@
               }
             }
           },
-          "required": ["job_title", "company", "start_date"]
+          "required": ["job_title", "company", "location", "start_date", "tech_stack"]
         }
       },
       "education": {

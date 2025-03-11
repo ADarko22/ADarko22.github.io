@@ -19,11 +19,11 @@ export interface WorkExperience {
     company: string;
     company_description?: string;
     role?: string | null;
-    location?: string;
+    location: string;
     start_date: string;
     end_date?: string | null;
     responsibilities?: string[];
-    tech_stack?: string[];
+    tech_stack: string[];
 }
 
 export interface Education {

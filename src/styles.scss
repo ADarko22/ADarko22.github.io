@@ -56,6 +56,19 @@ $dark-theme: mat.m2-define-dark-theme((
     --intro-photos-intro-color: #333;
     --intro-languages-bg: rgba(0, 150, 136, 0.1);
 
+    // Work Experience Variables
+    --work-section-bg: linear-gradient(135deg, #e0f7fa, #c2e9f6);
+    --work-h2-color: #1976d2;
+    --work-h3-color: #37474f;
+    --work-h4-color: #555;
+    --work-p-color: #333;
+    --work-li-color: #333;
+    --work-expand-color: #009688;
+    --work-expand-hover-color: #00796b;
+    --work-section-border-radius: 12px;
+    --work-section-padding: 20px;
+    --work-section-margin-bottom: 20px;
+
     // Contacts Component
     --contacts-section-bg: linear-gradient(135deg, #e0f7fa, #c2e9f6);
     --contacts-h2-color: #1976d2;
@@ -91,6 +104,16 @@ $dark-theme: mat.m2-define-dark-theme((
     --intro-languages-color: #80cbc4;
     --intro-photos-intro-color: #eee;
     --intro-languages-bg: rgba(128, 203, 196, 0.1);
+
+    // Work Experience Variables
+    --work-section-bg: linear-gradient(135deg, #37474f, #263238);
+    --work-h2-color: #89cff0;
+    --work-h3-color: #cfd8dc;
+    --work-h4-color: #ddd;
+    --work-p-color: #eee;
+    --work-li-color: #eee;
+    --work-expand-color: #80cbc4;
+    --work-expand-hover-color: #26a69a;
 
     // Contacts Component
     --contacts-section-bg: linear-gradient(135deg, #37474f, #263238);

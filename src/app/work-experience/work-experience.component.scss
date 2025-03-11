@@ -1,0 +1,144 @@
+.work-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 5vh;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  .work-section {
+    background: var(--work-section-bg);
+    padding: var(--work-section-padding);
+    border-radius: var(--work-section-border-radius);
+    max-width: 1200px;
+    width: 90%; 
+    animation: fadeIn 0.5s ease-in-out;
+    margin-bottom: var(--work-section-margin-bottom);
+  }
+  
+  .work-heading {
+    color: var(--work-h2-color);
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .work-item {
+    margin-bottom: 20px;
+  }
+  
+  .work-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+  }
+  
+  .work-header-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-grow: 1;
+  }
+  
+  .work-job-title {
+    color: var(--work-h3-color);
+    margin: 0;
+  }
+  
+  .work-header-details {
+    display: flex;
+    gap: 10px;
+    font-size: 0.9em;
+    color: #777;
+    margin-left: auto;
+    justify-content: flex-end;
+    margin-right: 10px;
+  }
+  
+  .expand-icon {
+    color: var(--work-expand-color);
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+  }
+  
+  .expand-icon:hover {
+    color: var(--work-expand-hover-color);
+  }
+  
+  .work-details {
+    padding: 15px;
+    text-align: left;
+  }
+  
+  .work-company-description,
+  .work-role {
+    color: var(--work-p-color);
+    margin-bottom: 10px;
+  }
+  
+  .work-responsibilities-title,
+  .work-tech-stack-title {
+    color: var(--work-h4-color);
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+
+  .work-company-description-title {
+    color: var(--work-h4-color);
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .work-responsibilities-title {
+    color: var(--work-h4-color);
+    margin-top: 30px; 
+    margin-bottom: 15px; 
+    font-weight: bold;
+    letter-spacing: 1px; 
+    border-bottom: 1px solid #ddd; 
+    padding-bottom: 5px; 
+  }
+  
+  .work-responsibilities {
+    list-style-type: none; 
+    padding-left: 0; 
+    margin-top: 10px; 
+  }
+  
+  .work-responsibility {
+    color: var(--work-li-color);
+    margin-bottom: 15px; 
+    padding: 10px; 
+    background-color: rgba(0, 0, 0, 0.03);
+    border-radius: 5px; 
+    border-left: 3px solid var(--work-expand-color); 
+    border-right: 3px solid var(--work-expand-color); 
+    font-weight: 500;
+    position: relative; 
+  }
+  
+  .work-tech-stack-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .work-tech-stack-table td {
+    padding: 5px;
+    text-align: center;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
