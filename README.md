@@ -12,7 +12,7 @@
   - **Education**
   - **Contacts**
 - Future enhancements:
-  - **Hobbies section**
+  - **Hall of Dame section**
   - **GitHub project integration** (projects will be dynamically loaded from `resume.json`)
 
 ## 🏗️ Project Structure
@@ -29,9 +29,10 @@ Anyone can clone and modify this project to suit their personal needs. Here’s 
    - Update [`resume.json`](src/assets/data/resume.json) with personal details.
    - Include profile photos and other images in [`src/assets/`](src/assets/) and reference them inside `resume.json`.
 
-2. **Customize Title, Logo and other metadata**
+2. **Customize Title, Logo, other metadata and styles**
     - Update [`metadata.json`](src/assets/data/metadata.json) with extra metadata, like the title and the logo
     - Extend the [`MetadataService`](src/app/metadata.service.ts) to inject extra informations in the existing components
+    - Update the [`styles.scss`](src/styles.scss) to modify theme colors and other rendering
 
 ## 💻 Installation & Running Locally
 ```sh

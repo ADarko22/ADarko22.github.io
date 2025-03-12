@@ -41,4 +41,3 @@ export interface Contacts {
     linkedin?: string;
     github?: string;
 }
-

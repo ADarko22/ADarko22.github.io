@@ -6,10 +6,18 @@ import { ResumeParserService } from '../resume-service/resume-parser.service';
 import { Education } from '../resume-service/resume.model';
 import { HtmlSanitizerService } from '../resume-service/html-sanitizer.service';
 import { SafeHtml } from '@angular/platform-browser';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatListModule } from '@angular/material/list';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 @Component({
   selector: 'app-education',
-  imports: [CommonModule],
+  imports: [
+        CommonModule,
+        MatExpansionModule,
+        MatListModule,
+        MatGridListModule
+  ],
   templateUrl: './education.component.html',
   styleUrl: './education.component.scss'
 })
@@ -29,5 +37,13 @@ export class EducationComponent {
 
     sanitizeHtml(html: string | undefined): SafeHtml {
         return this.sanitizer.sanitizeHtml(html)
+    }
+
+    trackByEducation(index: number, education: any): any {
+      return education.id;
+    }
+  
+    trackByPublication(index: number, publication: any): any {
+      return publication; 
     }
 }

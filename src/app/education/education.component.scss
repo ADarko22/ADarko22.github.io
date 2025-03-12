@@ -1,0 +1,88 @@
+.education-section {
+    display: block;
+    justify-content: center;
+    margin-bottom: 2rem;
+
+    min-width: 90vw;
+    width: fit-content;
+    padding-left: -5vw;
+    padding-right: 5vw;
+}
+
+.education-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.education-heading {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    width: 100%;
+}
+
+.education-details {
+    padding: 1rem;
+    text-align: left;
+    width: 100%;
+}
+
+mat-accordion {
+    width: 100%;
+}
+
+mat-expansion-panel {
+    background: var(--work-expansion-panel-bg);
+    display: block;
+
+    width: fit-content; 
+    flex-wrap: nowrap; 
+}
+
+mat-expansion-panel-header {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+
+    width: fit-content; 
+    flex-wrap: nowrap; 
+    min-height: 5vw;
+    height: fit-content;
+}
+
+mat-panel-title {
+    font-size: clamp(1.1rem, 1.2rem, 1.4rem);
+
+    min-width: 50vw;
+    width: fit-content; 
+    flex-wrap: nowrap; 
+    min-height: 5vw;
+    height: fit-content;
+}
+
+mat-panel-description {
+    font-size: clamp(0.8rem, 0.9rem, 1.1rem);
+    color: #777;
+
+    min-width: 40vw;
+    width: fit-content; 
+    flex-wrap: nowrap; 
+    min-height: 5vw;
+    height: fit-content;
+}
+
+mat-list {
+    margin-top: 0.6rem;
+}
+
+mat-list-item {
+    padding: 0.6rem;
+    background-color: rgba(0, 0, 0, 0.03);
+    border-radius: 0.3rem;
+    margin-bottom: 0.6rem;
+}

@@ -1,32 +1,43 @@
-<div *ngIf="workExperiences" class="work-container">
+<div *ngIf="isLoading" class="loading-container">
+    <mat-spinner></mat-spinner>
+</div>
+  
+  <div *ngIf="workExperiences && !isLoading" class="work-container">
     <section class="work-section">
       <h2 class="work-heading">Work Experience</h2>
-      <div *ngFor="let work of workExperiences; let i = index" class="work-item">
-        <div class="work-header" (click)="toggleExpanded(i)">
-          <div class="work-header-info">
-            <h3 class="work-job-title">{{ work.job_title }} at {{ work.company }}</h3>
-            <div class="work-header-details">
-              <span class="work-header-dates">{{ work.start_date.split('-')[0] }} - {{ work.end_date?.split('-')?.[0] || 'Present' }}</span>
-              <span class="work-header-location">{{ work.location }}</span>
-            </div>
+      <mat-accordion>
+        <mat-expansion-panel
+          *ngFor="let work of workExperiences; let i = index; trackBy: trackByWorkExperience" [expanded]="i === 0">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              {{ work.job_title }} at {{ work.company }}
+            </mat-panel-title>
+            <mat-panel-description>
+              {{ work.start_date.split('-')[0] }} -
+              {{ work.end_date?.split('-')?.[0] || 'Present' }} |
+              {{ work.location }}
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <div class="work-details">
+            <h4 class="work-company-description-title">About the Company:</h4>
+            <p class="work-company-description">
+              {{ work.company_description }}
+            </p>
+            <p *ngIf="work.role" class="work-role">Role: {{ work.role }}</p>
+            <h4 class="work-responsibilities-title">
+                Key Contributions & Responsibilities:
+              </h4>
+              <div *ngFor="let responsibility of work.responsibilities; trackBy: trackByResponsibility" class="responsibility-item">
+                <div [innerHTML]="sanitizeHtml(responsibility)"></div>
+              </div>
+            <h4 class="work-tech-stack-title">Tech Stack:</h4>
+            <mat-grid-list cols="4" rowHeight="1:0.1">
+              <mat-grid-tile *ngFor="let tech of work.tech_stack">
+                {{ tech }}
+              </mat-grid-tile>
+            </mat-grid-list>
           </div>
-          <span class="expand-icon">{{ isExpanded(i) ? '-' : '+' }}</span>
-        </div>
-        <div *ngIf="isExpanded(i)" class="work-details">
-          <h4 class="work-company-description-title">About the Company:</h4>
-          <p class="work-company-description" [innerHTML]="sanitizeHtml(work.company_description)"></p>
-          <p *ngIf="work.role" class="work-role">Role: {{ work.role }}</p>
-          <h4 class="work-responsibilities-title">Key Contributions & Responsibilities:</h4>
-          <ul class="work-responsibilities">
-            <li *ngFor="let responsibility of work.responsibilities" class="work-responsibility" [innerHTML]="sanitizeHtml(responsibility)"></li>
-          </ul>
-          <h4 class="work-tech-stack-title">Tech Stack:</h4>
-          <table class="work-tech-stack-table">
-            <tr *ngFor="let row of getTechStackRows(work.tech_stack)">
-              <td *ngFor="let tech of row">{{ tech }}</td>
-            </tr>
-          </table>
-        </div>
-      </div>
+        </mat-expansion-panel>
+      </mat-accordion>
     </section>
   </div>
