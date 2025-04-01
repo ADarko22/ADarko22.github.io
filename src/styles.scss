@@ -55,9 +55,11 @@ $dark-theme: mat.m2-define-dark-theme((
     --intro-languages-color: #009688;
     --intro-photos-intro-color: #333;
     --intro-languages-bg: rgba(0, 150, 136, 0.1);
+    --intro-language-mat-chip-row-bg: linear-gradient(to right, rgb(46, 236, 131),  rgb(200, 248, 200)); 
 
     // Work Experience Variables
     --work-expansion-panel-bg: linear-gradient(135deg, #e0f7fa, #c2e9f6);
+    --responsibility-item-bg:  #91d0ef63;
 
     // Education Variables
     --education-expansion-panel-bg: linear-gradient(135deg, #e0f7fa, #c2e9f6);
@@ -99,9 +101,11 @@ $dark-theme: mat.m2-define-dark-theme((
     --intro-languages-color: #80cbc4;
     --intro-photos-intro-color: #eee;
     --intro-languages-bg: rgba(128, 203, 196, 0.1);
+    --intro-language-mat-chip-row-bg: linear-gradient(to right, rgb(29, 82, 29), rgb(53, 62, 57)); 
 
     // Work Experience Variables
     --work-expansion-panel-bg: linear-gradient(135deg, #37474f, #263238);
+    --responsibility-item-bg:  #184b5f62;
 
     // Education Variables
     --education-expansion-panel-bg: linear-gradient(135deg, #37474f, #263238);

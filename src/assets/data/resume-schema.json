@@ -15,8 +15,29 @@
             "description": "The profession which best fits yourself."
           },
           "languages": {
-            "type": "string",
-            "description": "Languages known and spoken."
+              "type": "array",
+              "description": "Languages known and spoken with proficiency level.",
+              "items": {
+                  "type": "object",
+                  "properties": {
+                      "name": {
+                          "type": "string",
+                          "description": "Name of the language."
+                      },
+                      "proficiency": {
+                          "type": "string",
+                          "enum": [
+                              "Native",
+                              "Full Professional",
+                              "Professional Working",
+                              "Limited Working",
+                              "Elementary"
+                          ],
+                          "description": "Proficiency level of the language."
+                      }
+                  },
+                  "required": ["name", "proficiency"]
+              }
           },
           "summary": {
             "type": "string",
@@ -125,6 +146,53 @@
             }
           },
           "required": ["degree", "institution", "graduation_year"]
+        }
+      },
+      "hall_of_fame": {
+        "type": "array",
+        "description": "List of achievements grouped by categories.",
+        "items": {
+          "type": "object",
+          "properties": {
+            "category": {
+              "type": "string",
+              "description": "Category of achievements (e.g., Coding Achievements, SW Projects, Personal Achievements)."
+            },
+            "achievements": {
+              "type": "array",
+              "description": "List of achievements within the category.",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "title": {
+                    "type": "string",
+                    "description": "Title or name of the achievement."
+                  },
+                  "description": {
+                    "type": ["string", "null"],
+                    "description": "Description of the achievement."
+                  },
+                  "images": {
+                    "type": ["array", "null"],
+                    "description": "List of image names located in `src/assets/hall-of-fame`.",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "links": {
+                    "type": ["array", "null"],
+                    "description": "List of links associated with the achievement.",
+                    "items": {
+                      "type": "string",
+                      "format": "uri"
+                    }
+                  }
+                },
+                "required": ["title"]
+              }
+            }
+          },
+          "required": ["category", "achievements"]
         }
       },
       "contacts": {

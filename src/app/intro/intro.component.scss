@@ -49,15 +49,44 @@
   }
   
   .intro-languages-container {
-    background: var(--intro-languages-bg);
-    padding: 10px 15px;
-    border-radius: 8px;
-    display: inline-block;
+    background: var(--intro-languages-bg); 
+    padding: 15px;
+    border-radius: 12px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 15px;
+    width: 100%; 
+    box-sizing: border-box; 
   }
-  
-  .intro-languages {
-    color: var(--intro-languages-color);
+
+  .intro-languages-title {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: var(--intro-summary-color); 
+  }
+
+  mat-chip-set {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  mat-chip-row {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    background: var(--intro-language-mat-chip-row-bg);
+    padding: 8px 12px; 
+  }
+
+  .language-name {
+    font-weight: bold;
+    margin-right: 0.3rem;
+    color: var(--intro-summary-color);
+  }
+
+  .language-proficiency {
+    font-style: italic;
+    color: var(--intro-summary-color); 
   }
   
   .intro-photos-intro-container {

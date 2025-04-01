@@ -5,10 +5,11 @@ import { ResumeParserService } from '../resume-service/resume-parser.service';
 import { Intro } from '../resume-service/resume.model';
 import { HtmlSanitizerService } from '../resume-service/html-sanitizer.service';
 import { SafeHtml } from '@angular/platform-browser';
+import { MatChipsModule } from '@angular/material/chips';
 
 @Component({
   selector: 'intro',
-  imports: [CommonModule, PhotoSlideshowComponent],
+  imports: [CommonModule, PhotoSlideshowComponent, MatChipsModule],
   templateUrl: './intro.component.html',
   styleUrl: './intro.component.scss'
 })
@@ -34,9 +35,11 @@ export class IntroComponent implements OnInit {
     });
   }
 
+  trackByLanguage(index: number, language: any): string {
+    return language.name;
+  }
+  
   sanitizeHtml(html: string | undefined): SafeHtml {
     return this.sanitizer.sanitizeHtml(html);
   }
-
-  // todo change the resume-schema.json to have an array of Languages with level: {langauge, level} and render it nicely
 }
