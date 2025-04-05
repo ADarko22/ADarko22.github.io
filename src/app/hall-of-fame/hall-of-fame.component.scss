@@ -1,20 +1,36 @@
 section {
-    padding: 20px;
-  }
-  
-  h2 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  mat-card {
-    margin-bottom: 20px;
-  }
-  
-  mat-grid-list {
-    margin-bottom: 10px;
-  }
-  
-  mat-chip-set {
-    margin-top: 10px;
-  }
+  padding: 20px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+mat-accordion {
+  width: 100%;
+}
+
+mat-expansion-panel {
+  margin-bottom: 10px;
+}
+
+.category-achievements {
+  padding: 10px;
+}
+
+.achievement-details {
+  padding: 10px;
+}
+
+.hall-of-fame-slideshow {
+  margin-bottom: 10px;
+}
+
+mat-chip-set {
+  margin-top: 10px;
+}
+
+.category-icon, .achievement-icon {
+  margin-right: 10px;
+}

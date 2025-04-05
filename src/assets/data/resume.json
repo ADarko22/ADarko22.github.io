@@ -123,7 +123,6 @@
                     "title": "Leet Code",
                     "description": "todo",
                     "images": [
-                        "assets/hall-of-fame-images/Leetcode-50days-2025.png", 
                         "assets/hall-of-fame-images/Leetcode-100days-2022.png", 
                         "assets/hall-of-fame-images/Leetcode-DailyChallenge-March-2025.png"
                     ],
@@ -132,8 +131,13 @@
                 {
                     "title": "Advent of Code",
                     "description": "todo post link to repo and image",
-                    "images": [],
-                    "links": []
+                    "images": [
+                        "assets/hall-of-fame-images/AoC-2024.png"
+                    ],
+                    "links": [
+                        "https://adventofcode.com/2024",
+                        "https://adventofcode.com/2023"
+                    ]
                 }
             ]
         },

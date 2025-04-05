@@ -8,6 +8,7 @@ import { HtmlSanitizerService } from '../resume-service/html-sanitizer.service';
 import { SafeHtml } from '@angular/platform-browser';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatListModule } from '@angular/material/list';
+import { MatIcon, MatIconModule } from '@angular/material/icon';
 import { MatGridListModule } from '@angular/material/grid-list';
 
 @Component({
@@ -16,6 +17,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
         CommonModule,
         MatExpansionModule,
         MatListModule,
+        MatIconModule,
         MatGridListModule
   ],
   templateUrl: './education.component.html',
@@ -31,10 +33,7 @@ export class EducationComponent {
           this.educations = data?.education ?? null
       });
     }
-
-    // TODO:  provide the sanitized elements specifically for the Intro
-    // TODO:  implement a way to load all the photos from the assets/intro-photos folder and remove the field from the json!
-
+    
     sanitizeHtml(html: string | undefined): SafeHtml {
         return this.sanitizer.sanitizeHtml(html)
     }
