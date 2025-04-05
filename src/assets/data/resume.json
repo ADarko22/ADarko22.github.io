@@ -123,14 +123,6 @@
                     "title": "Leet Code",
                     "description": "todo",
                     "images": [
-                        "assets/intro-photos/Kilimanjaro-Hike-1.jpeg",
-                        "assets/intro-photos/Kilimanjaro-Hike-2.jpeg",
-                        "assets/intro-photos/Kilimanjaro-Hike-3.jpeg",
-                        "assets/intro-photos/Kilimanjaro-Hike-4.jpeg",
-                        "assets/intro-photos/Kilimanjaro-Hike-5.jpeg",
-                        "assets/intro-photos/Kilimanjaro-Hike-6.jpeg",
-                        "assets/intro-photos/Kilimanjaro-Hike-7.jpeg",
-                        "assets/intro-photos/Kilimanjaro-Hike-8.jpeg",
                         "assets/hall-of-fame-images/Leetcode-50days-2025.png", 
                         "assets/hall-of-fame-images/Leetcode-100days-2022.png", 
                         "assets/hall-of-fame-images/Leetcode-DailyChallenge-March-2025.png"
@@ -152,7 +144,7 @@
                     "title": "Sonar",
                     "description": "Community Hero",
                     "images": [
-                        "hall-of-fame-images/Sonar-Community-Hero-2023.jpeg"
+                        "assets/hall-of-fame-images/Sonar-Community-Hero-2023.jpeg"
                     ],
                     "links": []
                 }
@@ -175,7 +167,15 @@
                 {
                     "title": "Kilimanjaro's Hike",
                     "description": "Hike in January 2023 of Mount Kilimanjaro with friends from Flow Traders",
-                    "images": [],
+                    "images": [
+                        "assets/hall-of-fame-images/Kilimanjaro-Hike-2.jpeg",
+                        "assets/hall-of-fame-images/Kilimanjaro-Hike-3.jpeg",
+                        "assets/hall-of-fame-images/Kilimanjaro-Hike-4.jpeg",
+                        "assets/hall-of-fame-images/Kilimanjaro-Hike-5.jpeg",
+                        "assets/hall-of-fame-images/Kilimanjaro-Hike-6.jpeg",
+                        "assets/hall-of-fame-images/Kilimanjaro-Hike-7.jpeg",
+                        "assets/hall-of-fame-images/Kilimanjaro-Hike-8.jpeg"
+                    ],
                     "links": []
                 }
             ]

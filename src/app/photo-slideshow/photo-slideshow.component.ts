@@ -31,14 +31,20 @@ export class PhotoSlideshowComponent implements OnInit, OnDestroy {
   }
 
   updatePhoto(): void {
-    if (this.photoUrls.length > 0) {
+    if (this.photoUrls && this.photoUrls.length > 0) {
       this.currentPhoto = this.photoUrls[this.currentPhotoIndex];
 
-      const prevIndex = (this.currentPhotoIndex - 1 + this.photoUrls.length) % this.photoUrls.length;
-      const nextIndex = (this.currentPhotoIndex + 1) % this.photoUrls.length;
+      if (this.photoUrls.length > 1) {
+          const prevIndex = (this.currentPhotoIndex - 1 + this.photoUrls.length) % this.photoUrls.length;
+          const nextIndex = (this.currentPhotoIndex + 1) % this.photoUrls.length;
 
-      this.prevPhotoUrl = this.photoUrls[prevIndex];
-      this.nextPhotoUrl = this.photoUrls[nextIndex];
+          this.prevPhotoUrl = this.photoUrls[prevIndex];
+          this.nextPhotoUrl = this.photoUrls[nextIndex];
+      } else {
+          this.prevPhotoUrl = null;
+          this.nextPhotoUrl = null;
+      }
+
     } else {
       this.currentPhoto = null;
       this.prevPhotoUrl = null;
@@ -58,10 +64,13 @@ export class PhotoSlideshowComponent implements OnInit, OnDestroy {
 
   @HostListener('document:keydown', ['$event'])
   handleKeyboardEvent(event: KeyboardEvent) {
-    if (event.key === 'ArrowRight') {
-      this.nextPhoto();
-    } else if (event.key === 'ArrowLeft') {
-      this.prevPhoto();
+    if (this.photoUrls && this.photoUrls.length > 1){
+        if (event.key === 'ArrowRight') {
+          this.nextPhoto();
+        } else if (event.key === 'ArrowLeft') {
+          this.prevPhoto();
+        }
     }
+
   }
 }

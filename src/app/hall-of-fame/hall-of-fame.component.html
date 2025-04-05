@@ -1,6 +1,26 @@
-<p>HallOfFameComponent works!</p>
+<section *ngIf="hallOfFame && hallOfFame.length > 0">
+    <h2>Hall of Fame</h2>
+    <mat-card *ngFor="let category of hallOfFame; trackBy: trackByAchievementCategory">
+        <mat-card-header>
+            <mat-card-title>{{ category.category }}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <div *ngFor="let achievement of category.achievements; trackBy: trackByAchievement">
+                <h3>{{ achievement.title }}</h3>
+                <p *ngIf="achievement.description">{{ achievement.description }}</p>
 
-<!-- todo:
-add achievements like: certificate, photos of Kilimanjar, Community Hero, GitHub projects
+                <div *ngIf="achievement.images && achievement.images.length > 0" class="hall-of-fame-slideshow">
+                    <photo-slideshow [photoUrls]="achievement.images"></photo-slideshow>
+                </div>
 
--->
+                <div *ngIf="achievement.links && achievement.links.length > 0">
+                    <mat-chip-set>
+                        <mat-chip-row *ngFor="let link of achievement.links">
+                            <a [href]="link" target="_blank">{{ link }}</a>
+                        </mat-chip-row>
+                    </mat-chip-set>
+                </div>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</section>

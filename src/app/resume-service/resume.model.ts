@@ -33,14 +33,14 @@ interface Language {
     publications?: string[] | null;
   }
   
-  interface Achievement {
+  export interface Achievement {
     title: string;
     description?: string | null;
     images?: string[] | null;
     links?: string[] | null;
   }
   
-  interface AchievementCategory {
+  export interface AchievementCategory {
     category: string;
     achievements: Achievement[];
   }
