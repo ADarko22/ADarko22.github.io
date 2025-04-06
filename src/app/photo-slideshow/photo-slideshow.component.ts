@@ -10,7 +10,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
   standalone: true,
   imports: [CommonModule, MatIconModule, MatButtonModule, MatProgressSpinnerModule],
   templateUrl: './photo-slideshow.component.html',
-  styleUrls: ['./photo-slideshow.component.scss']
+  styleUrls: ['./photo-slideshow.component.scss'],
 })
 export class PhotoSlideshowComponent implements OnInit, OnDestroy {
   @Input() photoUrls: string[] = [];
@@ -20,6 +20,7 @@ export class PhotoSlideshowComponent implements OnInit, OnDestroy {
   nextPhotoUrl: string | null = null;
   private destroy$ = new Subject<void>();
   isLoading: boolean = false;
+  isFullscreen: boolean = false;
 
   ngOnInit(): void {
     this.updatePhoto();
@@ -35,16 +36,15 @@ export class PhotoSlideshowComponent implements OnInit, OnDestroy {
       this.currentPhoto = this.photoUrls[this.currentPhotoIndex];
 
       if (this.photoUrls.length > 1) {
-          const prevIndex = (this.currentPhotoIndex - 1 + this.photoUrls.length) % this.photoUrls.length;
-          const nextIndex = (this.currentPhotoIndex + 1) % this.photoUrls.length;
+        const prevIndex = (this.currentPhotoIndex - 1 + this.photoUrls.length) % this.photoUrls.length;
+        const nextIndex = (this.currentPhotoIndex + 1) % this.photoUrls.length;
 
-          this.prevPhotoUrl = this.photoUrls[prevIndex];
-          this.nextPhotoUrl = this.photoUrls[nextIndex];
+        this.prevPhotoUrl = this.photoUrls[prevIndex];
+        this.nextPhotoUrl = this.photoUrls[nextIndex];
       } else {
-          this.prevPhotoUrl = null;
-          this.nextPhotoUrl = null;
+        this.prevPhotoUrl = null;
+        this.nextPhotoUrl = null;
       }
-
     } else {
       this.currentPhoto = null;
       this.prevPhotoUrl = null;
@@ -64,13 +64,23 @@ export class PhotoSlideshowComponent implements OnInit, OnDestroy {
 
   @HostListener('document:keydown', ['$event'])
   handleKeyboardEvent(event: KeyboardEvent) {
-    if (this.photoUrls && this.photoUrls.length > 1){
-        if (event.key === 'ArrowRight') {
-          this.nextPhoto();
-        } else if (event.key === 'ArrowLeft') {
-          this.prevPhoto();
-        }
+    if (this.isFullscreen && event.key === 'Escape') {
+      this.closeFullscreen();
     }
+    if (this.photoUrls && this.photoUrls.length > 1) {
+      if (event.key === 'ArrowRight') {
+        this.nextPhoto();
+      } else if (event.key === 'ArrowLeft') {
+        this.prevPhoto();
+      }
+    }
+  }
 
+  openFullscreen(): void {
+    this.isFullscreen = true;
+  }
+
+  closeFullscreen(): void {
+    this.isFullscreen = false;
   }
 }
