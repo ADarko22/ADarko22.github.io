@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+import { CommonModule, formatDate } from '@angular/common';
 import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
 import { ResumeParserService } from '../resume-service/resume-parser.service';
 import { WorkExperience } from '../resume-service/resume.model';
@@ -6,6 +6,7 @@ import { HtmlSanitizerService } from '../resume-service/html-sanitizer.service';
 import { SafeHtml } from '@angular/platform-browser';
 import { map, catchError, of } from 'rxjs';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
@@ -15,6 +16,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
   imports: [
     CommonModule,
     MatExpansionModule,
+    MatIconModule,
     MatListModule,
     MatGridListModule,
     MatProgressSpinnerModule,
@@ -54,6 +56,12 @@ export class WorkExperienceComponent implements OnInit {
 
   sanitizeHtml(html: string | undefined): SafeHtml {
     return this.sanitizer.sanitizeHtml(html);
+  }
+
+  formatDate(dateString: string | null | undefined): string | null {
+    if (!dateString) return null;
+    const date = new Date(dateString);
+    return formatDate(date, 'MMM yyyy', 'en-US');
   }
 
   trackByWorkExperience(index: number, work: WorkExperience): string {

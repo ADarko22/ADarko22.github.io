@@ -1,43 +1,62 @@
 <div *ngIf="isLoading" class="loading-container">
-    <mat-spinner></mat-spinner>
+  <mat-spinner></mat-spinner>
 </div>
-  
-  <div *ngIf="workExperiences && !isLoading" class="work-container">
-    <section class="work-section">
+
+<div *ngIf="workExperiences && !isLoading" class="work-container">
+  <section class="work-section">
       <h2 class="work-heading">Work Experience</h2>
       <mat-accordion>
-        <mat-expansion-panel
-          *ngFor="let work of workExperiences; let i = index; trackBy: trackByWorkExperience" [expanded]="i === 0">
-          <mat-expansion-panel-header>
-            <mat-panel-title>
-              {{ work.job_title }} at {{ work.company }}
-            </mat-panel-title>
-            <mat-panel-description>
-              {{ work.start_date.split('-')[0] }} -
-              {{ work.end_date?.split('-')?.[0] || 'Present' }} |
-              {{ work.location }}
-            </mat-panel-description>
-          </mat-expansion-panel-header>
-          <div class="work-details">
-            <h4 class="work-company-description-title">About the Company:</h4>
-            <p class="work-company-description">
-              {{ work.company_description }}
-            </p>
-            <p *ngIf="work.role" class="work-role">Role: {{ work.role }}</p>
-            <h4 class="work-responsibilities-title">
-                Key Contributions & Responsibilities:
-              </h4>
-              <div *ngFor="let responsibility of work.responsibilities; trackBy: trackByResponsibility" class="responsibility-item">
-                <div [innerHTML]="sanitizeHtml(responsibility)"></div>
+          <mat-expansion-panel
+              *ngFor="let work of workExperiences; let i = index; trackBy: trackByWorkExperience"
+              [expanded]="i === 0">
+              <mat-expansion-panel-header>
+                  <mat-panel-title>
+                      <mat-icon class="work-icon">business</mat-icon>
+                      {{ work.job_title }} at {{ work.company }}
+                  </mat-panel-title>
+                  <mat-panel-description>
+                      <mat-icon class="date-icon">calendar_today</mat-icon>
+                      {{ formatDate(work.start_date) }} - {{ formatDate(work.end_date) || 'Present' }} |
+                      <mat-icon class="location-icon">location_on</mat-icon>
+                      {{ work.location }}
+                  </mat-panel-description>
+              </mat-expansion-panel-header>
+              <div class="work-details">
+                  <article>
+                      <h3 class="work-detail-heading">
+                          <mat-icon class="about-icon">info</mat-icon>
+                          About the Company
+                      </h3>
+                      <p class="work-company-description">{{ work.company_description }}</p>
+                  </article>
+                  <article *ngIf="work.role">
+                      <h3 class="work-detail-heading">
+                          <mat-icon class="role-icon">person</mat-icon>
+                          Role
+                      </h3>
+                      <p class="work-role">{{ work.role }}</p>
+                  </article>
+                  <article>
+                      <h3 class="work-detail-heading">
+                          <mat-icon class="responsibilities-icon">list_alt</mat-icon>
+                          Key Contributions & Responsibilities
+                      </h3>
+                      <div *ngFor="let responsibility of work.responsibilities; trackBy: trackByResponsibility" class="responsibility-item">
+                          <mat-icon class="responsibility-icon">done_outline</mat-icon>
+                          <div [innerHTML]="sanitizeHtml(responsibility)"></div>
+                      </div>
+                  </article>
+                  <article>
+                      <h3 class="work-detail-heading">
+                          <mat-icon class="tech-stack-icon">code</mat-icon>
+                          Tech Stack
+                      </h3>
+                      <div class="tech-stack-grid">
+                          <span *ngFor="let tech of work.tech_stack" class="tech-stack-item">{{ tech }}</span>
+                      </div>
+                  </article>
               </div>
-            <h4 class="work-tech-stack-title">Tech Stack:</h4>
-            <mat-grid-list cols="4" rowHeight="1:0.1">
-              <mat-grid-tile *ngFor="let tech of work.tech_stack">
-                {{ tech }}
-              </mat-grid-tile>
-            </mat-grid-list>
-          </div>
-        </mat-expansion-panel>
+          </mat-expansion-panel>
       </mat-accordion>
-    </section>
-  </div>
+  </section>
+</div>

@@ -1,53 +1,50 @@
 .work-section {
     display: block;
     justify-content: center;
-    margin-bottom: 2rem;
-
-    min-width: 90vw;
-    width: fit-content;
-    padding-left: -5vw;
-    padding-right: 5vw;
+    max-width: 90vw;
+    width: 100%;
+    padding: 0 1em;
 }
 
 .work-container {
     display: flex;
     justify-content: center;
-    padding-top: 0rem;
-    padding-bottom: 0rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
 }
 
 .work-heading {
     text-align: center;
-    margin-bottom: 2rem;
     font-size: clamp(1.8rem, 3vw, 2.5rem);
     width: 100%;
+    word-wrap: break-word;
 }
 
 .work-details {
-    padding: 1rem;
+    padding: 1em;
     text-align: left;
     width: 100%;
 }
 
-.responsibility-item {
-    padding: 0.6rem;
-    background-color: var(--responsibility-item-bg);
-    border-radius: 0.3rem;
-    margin-bottom: 0.6rem;
+.work-detail-heading {
+    margin-top: 1.2em;
+    margin-bottom: 0.6em;
+    font-size: clamp(1rem, 1.2vw, 1.4rem);
+    word-wrap: break-word;
 }
 
+.responsibility-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 0.6em;
+    word-wrap: break-word;
+}
+
+.responsibility-item > div ,
 .work-company-description,
 .work-role {
-    margin-bottom: 0.6rem;
-}
-
-.work-responsibilities-title,
-.work-tech-stack-title {
-    margin-top: 1.2rem;
-    margin-bottom: 0.6rem;
-    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    margin-bottom: 0.6em;
+    line-height: 1.6;
+    font-size: clamp(0.9rem, 1vw, 1.1rem);
+    word-wrap: break-word;
 }
 
 mat-accordion {
@@ -56,71 +53,73 @@ mat-accordion {
 
 mat-expansion-panel {
     background: var(--work-expansion-panel-bg);
-    display: block;
-
-    width: fit-content; 
-    flex-wrap: nowrap; 
+    width: 100%;
 }
 
 mat-expansion-panel-header {
     text-align: center;
     align-items: center;
     justify-content: center;
-    flex-wrap: nowrap;
-
-    width: fit-content; 
-    flex-wrap: nowrap; 
     min-height: 5vw;
     height: fit-content;
+    word-wrap: break-word;
 }
 
 mat-panel-title {
-    font-size: clamp(1.1rem, 1.2rem, 1.4rem);
-
-    min-width: 50vw;
-    width: fit-content; 
-    flex-wrap: nowrap; 
-    min-height: 5vw;
-    height: fit-content;
+    font-size: clamp(1rem, 1.1vw, 1.2rem);
+    width: 100%;
+    flex: 2; 
+    word-wrap: break-word;
 }
 
 mat-panel-description {
-    font-size: clamp(0.8rem, 0.9rem, 1.1rem);
+    font-size: clamp(0.9rem, 1vw, 1.1rem);
     color: #777;
-
-    min-width: 40vw;
-    width: fit-content; 
-    flex-wrap: nowrap; 
-    min-height: 5vw;
-    height: fit-content;
+    flex: 1; 
+    justify-content: flex-end; 
+    width: 100%;
+    word-wrap: break-word;
 }
 
-mat-list {
-    margin-top: 0.6rem;
-}
-
-mat-list-item {
-    padding: 0.6rem;
-    background-color: rgba(0, 0, 0, 0.03);
-    border-radius: 0.3rem;
-    margin-bottom: 0.6rem;
-}
-
-.tech-stack-flex-grid {
+.tech-stack-grid {
     display: flex;
-    flex-wrap: nowrap;
-    gap: 0.3rem;
-    margin-top: 0.6rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.6em;
 }
 
-.tech-stack-flex-grid span {
-    background-color: rgba(0, 0, 0, 0.03);
-    padding: 0.3rem 0.6rem;
-    border-radius: 0.3rem;
-    white-space: nowrap;
-}
-
-mat-grid-tile{
+.tech-stack-item {
     background-color: var(--responsibility-item-bg);
+    padding: 0.3em 0.6em;
     border-radius: 10rem;
+    white-space: nowrap;
+    font-size: clamp(0.9rem, 1vw, 1.1rem);
+    word-wrap: break-word;
+}
+
+.work-icon,
+.date-icon,
+.location-icon,
+.about-icon,
+.role-icon,
+.responsibilities-icon,
+.tech-stack-icon {
+    margin-right: 0.2em;
+    vertical-align: middle;
+    font-size: 1.2em;
+    color: var(--icon-color, #3f51b5);
+    display: inline-flex;
+    align-items: center;
+}
+
+.mat-panel-title .work-icon,
+.mat-panel-description .date-icon,
+.mat-panel-description .location-icon {
+  margin-right: 0.2em;
+}
+
+.responsibility-item .responsibility-icon {
+    margin-right: 0.2em;
+    margin-top: 0.2em;
+    color: var(--icon-color, #3f51b5);
 }

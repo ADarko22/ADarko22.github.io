@@ -5,21 +5,32 @@
             <mat-expansion-panel *ngFor="let education of educations; let i = index; trackBy: trackByEducation" [expanded]="i === 0">
                 <mat-expansion-panel-header>
                     <mat-panel-title>
-                        <mat-icon class="education-icon">school</mat-icon> 
+                        <mat-icon class="education-icon">school</mat-icon>
                         {{ education.degree }} from {{ education.institution }}
                     </mat-panel-title>
                     <mat-panel-description>
-                        {{ education.graduation_year }} | {{ education.location }}
+                        <mat-icon class="calendar-icon">calendar_today</mat-icon>
+                        {{ education.graduation_year }} |
+                        <mat-icon class="location-icon">location_on</mat-icon>
+                        {{ education.location }}
                     </mat-panel-description>
                 </mat-expansion-panel-header>
                 <div class="education-details">
-                    <h5>Thesis:</h5>
-                    <p [innerHTML]="sanitizeHtml(education.thesis)"></p>
+                    <h5>
+                        <mat-icon class="thesis-icon">description</mat-icon>
+                        Thesis: <strong>{{ education.thesis }}</strong>
+                    </h5>
                     <div *ngIf="education.publications && education.publications.length > 0">
-                        <h5>Publications:</h5>
+                        <h5>
+                            <mat-icon class="publications-icon">library_books</mat-icon>
+                            Publications:
+                        </h5>
                         <mat-list>
                             <mat-list-item *ngFor="let publication of education.publications; trackBy: trackByPublication">
-                                <a href={{publication.link}} target="_blank"> {{ publication.title }}</a>
+                                <a href={{publication.link}} target="_blank">
+                                    <mat-icon class="publication-link-icon">link</mat-icon>
+                                    {{ publication.title }}
+                                </a>
                             </mat-list-item>
                         </mat-list>
                     </div>

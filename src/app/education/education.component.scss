@@ -1,43 +1,52 @@
 .education-section {
     display: block;
     justify-content: center;
-    margin-bottom: 2rem;
-
-    min-width: 90vw;
-    width: fit-content;
-    padding-left: -5vw;
-    padding-right: 5vw;
+    max-width: 90vw; 
+    width: 100%;
+    padding: 0 1em; 
 }
 
 .education-container {
     display: flex;
     justify-content: center;
-    padding-top: 0rem;
-    padding-bottom: 0rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
 }
 
 .education-heading {
     text-align: center;
-    margin-bottom: 2rem;
     font-size: clamp(1.8rem, 3vw, 2.5rem);
     width: 100%;
+    word-wrap: break-word;
 }
 
 .education-details {
-    padding: 1rem;
+    padding: 1em; 
     text-align: left;
     width: 100%;
+    word-wrap: break-word;
 }
 
 p {
     background-color: rgba(0, 0, 0, 0.03);
+    word-wrap: break-word;
 }
 
 h5 {
-    margin-top: -0.5rem;
-    margin-bottom: 0rem;
+    margin-bottom: 0.5em;
+    word-wrap: break-word;
+}
+
+.education-details p,
+.education-details mat-list-item a {
+    margin-bottom: 0.6em;
+    line-height: 1.6;
+    font-size: clamp(0.9rem, 1vw, 1.1rem);
+    word-wrap: break-word;
+}
+
+.education-details h5 strong {
+    color: var(--icon-color, #3f51b5);
+    font-weight: bold;
+    font-style: italic;
 }
 
 mat-accordion {
@@ -46,47 +55,51 @@ mat-accordion {
 
 mat-expansion-panel {
     background: var(--work-expansion-panel-bg);
-    display: block;
-
-    width: fit-content; 
-    flex-wrap: nowrap; 
+    width: 100%;
 }
 
 mat-expansion-panel-header {
     text-align: center;
     align-items: center;
     justify-content: center;
-    flex-wrap: nowrap;
-
-    width: fit-content; 
-    flex-wrap: nowrap; 
-    min-height: 5vw;
+    min-height: 3vh;
     height: fit-content;
+    word-wrap: break-word;
 }
 
 mat-panel-title {
-    font-size: clamp(1.1rem, 1.2rem, 1.4rem);
-
-    min-width: 50vw;
-    width: fit-content; 
-    flex-wrap: nowrap; 
-    min-height: 5vw;
-    height: fit-content;
+    font-size: clamp(1rem, 1.1vw, 1.2rem);
+    flex: 2;
+    width: 100%;
+    word-wrap: break-word;
 }
 
 mat-panel-description {
-    font-size: clamp(0.8rem, 0.9rem, 1.1rem);
+    font-size: clamp(0.9rem, 1vw, 1.1rem);
     color: #777;
-
-    min-width: 40vw;
-    width: fit-content; 
-    flex-wrap: nowrap; 
-    min-height: 5vw;
-    height: fit-content;
+    flex: 1; 
+    justify-content: flex-end; 
+    width: 100%;
+    word-wrap: break-word;
 }
 
 mat-list-item {
     background-color: rgba(0, 0, 0, 0.03);
-    border-radius: 0.3rem;
-    margin-bottom: 0.6rem;
+    border-radius: 0.3em; 
+    margin-bottom: 0.6em; 
+    word-wrap: break-word;
+}
+
+.education-icon,
+.calendar-icon,
+.location-icon,
+.thesis-icon,
+.publications-icon,
+.publication-link-icon {
+    margin-right: 0.2em;
+    vertical-align: middle;
+    font-size: 1.2em;
+    color: var(--icon-color, #3f51b5);
+    display: inline-flex;
+    align-items: center;
 }

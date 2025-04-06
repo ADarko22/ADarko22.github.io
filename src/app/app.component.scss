@@ -17,7 +17,7 @@
     background: var(--logo-gradient);
     background-clip: text;
     -webkit-background-clip: text;
-    font-size: 1.8rem;
+    font-size: clamp(1.4rem, 2vw, 1.8rem);
     font-weight: bold;
     letter-spacing: 0.0625em;
     text-transform: uppercase;
@@ -46,7 +46,7 @@
 
 .nav-links button {
     cursor: pointer;
-    font-size: 0.8rem;
+    font-size: clamp(0.7rem, 1vw, 0.8rem);
     text-transform: capitalize;
     color: inherit;
     background: none;

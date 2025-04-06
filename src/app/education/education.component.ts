@@ -8,7 +8,7 @@ import { HtmlSanitizerService } from '../resume-service/html-sanitizer.service';
 import { SafeHtml } from '@angular/platform-browser';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatListModule } from '@angular/material/list';
-import { MatIcon, MatIconModule } from '@angular/material/icon';
+import { MatIconModule } from '@angular/material/icon';
 import { MatGridListModule } from '@angular/material/grid-list';
 
 @Component({
