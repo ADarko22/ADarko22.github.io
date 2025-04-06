@@ -1,4 +1,4 @@
-interface Language {
+export interface Language {
     name: string;
     proficiency: "Native" | "Full Professional" | "Professional Working" | "Limited Working" | "Elementary";
   }

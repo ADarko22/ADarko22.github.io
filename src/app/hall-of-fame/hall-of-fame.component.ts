@@ -9,7 +9,7 @@ import { HtmlSanitizerService } from '../resume-service/html-sanitizer.service';
 import { PhotoSlideshowComponent } from '../photo-slideshow/photo-slideshow.component';
 import { SafeHtml } from '@angular/platform-browser';
 import { MatExpansionModule } from '@angular/material/expansion';
-import { MatIconModule } from '@angular/material/icon'; // Import MatIconModule
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'hall-of-fame',

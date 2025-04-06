@@ -1,26 +1,34 @@
 <div *ngIf="intro" class="intro-container">
     <section class="intro-section">
-        <div class="intro-header">
-            <h2 class="intro-full-name">{{ intro.full_name }}</h2>
-            <h3 class="intro-profession">{{ intro.profession }}</h3>
+      <div class="intro-header">
+        <h2 class="intro-full-name">{{ intro.full_name }}</h2>
+        <h3 class="intro-profession">{{ intro.profession }}</h3>
+      </div>
+      <div class="intro-details">
+        <p class="intro-summary" [innerHTML]="sanitizeHtml(intro.summary)"></p>
+        <div
+          class="intro-languages-container"
+          *ngIf="intro?.languages?.length ?? 0 > 0"
+        >
+          <p class="intro-languages-title">Languages:</p>
+          <div class="language-chips">
+            <mat-chip
+              *ngFor="let language of intro.languages; trackBy: trackByLanguage"
+              class="language-chip"
+              [ngClass]="getProficiencyClass(language.proficiency)"
+            >
+            <img [src]="getLanguageIcon(language.name)" class="language-icon" alt="{{ language.name }} flag">
+            <span class="language-name">{{ language.name }}:</span>
+              <span class="language-proficiency">{{ language.proficiency }}</span>
+            </mat-chip>
+          </div>
         </div>
-        <div class="intro-details">
-            <p class="intro-summary" [innerHTML]="sanitizeHtml(intro.summary)"></p>
-            <div class="intro-languages-container" *ngIf="intro?.languages?.length ?? 0 > 0">
-                <p class="intro-languages-title">Languages:</p>
-                <mat-chip-set>
-                  <mat-chip-row *ngFor="let language of intro.languages; trackBy: trackByLanguage">
-                    <span class="language-name">{{ language.name }}:</span>
-                    <span class="language-proficiency">{{ language.proficiency }}</span>
-                  </mat-chip-row>
-                </mat-chip-set>
-              </div>
-        </div>
+      </div>
     </section>
     <div class="intro-photos-intro-container">
-        <p class="intro-photos-intro" [innerHTML]="sanitizeHtml(intro.photos_intro)"></p>
+      <p class="intro-photos-intro" [innerHTML]="sanitizeHtml(intro.photos_intro)"></p>
     </div>
     <div class="intro-slideshow">
-        <photo-slideshow [photoUrls]="photoUrls"></photo-slideshow>
+      <photo-slideshow [photoUrls]="photoUrls"></photo-slideshow>
     </div>
-</div>
+  </div>
