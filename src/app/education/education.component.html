@@ -18,7 +18,9 @@
                     <div *ngIf="education.publications && education.publications.length > 0">
                         <h5>Publications:</h5>
                         <mat-list>
-                            <mat-list-item *ngFor="let publication of education.publications; trackBy: trackByPublication" [innerHTML]="sanitizeHtml(publication)"></mat-list-item>
+                            <mat-list-item *ngFor="let publication of education.publications; trackBy: trackByPublication">
+                                <a href={{publication.link}} target="_blank"> {{ publication.title }}</a>
+                            </mat-list-item>
                         </mat-list>
                     </div>
                 </div>

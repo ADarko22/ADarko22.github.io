@@ -40,10 +40,7 @@ export class HallOfFameComponent implements OnInit {
     });
   }
 
-  trackByAchievementCategory(
-    index: number,
-    achievementCategory: AchievementCategory
-  ): string {
+  trackByAchievementCategory(index: number,achievementCategory: AchievementCategory): string {
     return achievementCategory.category;
   }
 

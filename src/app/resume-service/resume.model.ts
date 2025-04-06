@@ -24,13 +24,18 @@ interface Language {
     tech_stack: string[];
   }
   
+  export interface Publication {
+    title: string,
+    link: string
+  }
+
   export interface Education {
     degree: string;
     institution: string;
     location?: string;
     graduation_year: number;
     thesis?: string;
-    publications?: string[] | null;
+    publications?: Publication[] | null;
   }
   
   export interface Achievement {

@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { ResumeParserService } from '../resume-service/resume-parser.service';
-import { Education } from '../resume-service/resume.model';
+import { Education, Publication } from '../resume-service/resume.model';
 import { HtmlSanitizerService } from '../resume-service/html-sanitizer.service';
 import { SafeHtml } from '@angular/platform-browser';
 import { MatExpansionModule } from '@angular/material/expansion';

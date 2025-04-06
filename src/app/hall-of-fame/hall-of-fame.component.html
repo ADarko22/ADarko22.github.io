@@ -26,7 +26,7 @@
               <div *ngIf="achievement.links && achievement.links.length > 0">
                 <mat-chip-set>
                   <mat-chip-row *ngFor="let link of achievement.links">
-                    <a [href]="link" target="_blank">{{ link.substring(link.lastIndexOf("/")) }}</a>
+                    <a href={{link}} target="_blank">{{ link }}</a>
                   </mat-chip-row>
                 </mat-chip-set>
               </div>

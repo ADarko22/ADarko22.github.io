@@ -103,8 +103,14 @@
         "graduation_year": 2018,
         "thesis": "Platoon Formation and Stability, using Multi-access Edge Computing in LTE-Advanced networks",
         "publications": [
-            "<a href=\"https://www.researchgate.net/publication/327238265_SimuLTE-MEC_extending_SimuLTE_for_Multiaccess_Edge_Computing\">SimuLTE-MEC: extending SimuLTE for Multiaccess Edge Computing</a>",
-            "<a href=\"https://etd.adm.unipi.it/t/etd-09052018-192851\">Platoon Formation and Stability with Multi-access Edge Computing in LTE-Advanced networks</a>"
+            {
+                "title": "SimuLTE-MEC: extending SimuLTE for Multiaccess Edge Computing",
+                "link": "https://www.researchgate.net/publication/327238265_SimuLTE-MEC_extending_SimuLTE_for_Multiaccess_Edge_Computing"
+            },
+            {
+                "title": "Platoon Formation and Stability with Multi-access Edge Computing in LTE-Advanced networks",
+                "link": "https://etd.adm.unipi.it/t/etd-09052018-192851"
+            }
         ]
         },
         {

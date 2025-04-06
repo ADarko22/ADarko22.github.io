@@ -141,7 +141,18 @@
                 "type": ["array", "null"],
                 "description": "List of papers published.",
                 "items": {
-                  "type": "string"
+                  "type": "object",
+                  "properties": {
+                    "title": {
+                      "type": "string",
+                      "description": "Name of the publication."
+                    },
+                    "link": {
+                      "type": "string",
+                      "format": "uri",
+                      "description": "Link to the publication article."
+                    }
+                  }
                 }
             }
           },
