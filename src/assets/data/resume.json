@@ -46,15 +46,15 @@
         "job_title": "Senior Software Engineer",
         "company": "Tech Mahindra",
         "company_description": "Tech Mahindra is a global leader in digital transformation, IT services, and consulting. Part of the Mahindra Group, it delivers innovative solutions across industries like telecom, healthcare, and finance.",
-        "role": "Consultant for a leading Swiss private-bank specialized in wealth and asset management services.",
+        "role": "Consultant at Pictet, a leading Swiss private-bank specialized in wealth and asset management services.",
         "location": "Geneva, Switzerland",
         "start_date": "2025-03-06",
         "end_date": null,
         "responsibilities": [
-            "..."
+             "Migrated a <i>complex client relationships</i> web application, from Java 8, Spring Boot 1.5 and Hibernate 5.5 to Java 17, Spring Boot 3 and Hibernate 6.6"
         ],
         "tech_stack": [
-            "Java", "Maven", "JUnit", "..."
+            "Java", "Maven", "Spring Boot", "Hiberante", "JUnit", "Typescript", "Thymeleaf", "ArgoCD", "Grafana", "Prometheus", "Logstash", "Elasticsearch", "Kubernetes", "AWS", "ArgoCD", "GitOps", "BitBucket"
         ]
         },
         {
