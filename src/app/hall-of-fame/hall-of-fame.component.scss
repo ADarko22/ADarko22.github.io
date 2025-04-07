@@ -1,36 +1,124 @@
-section {
-  padding: 20px;
+.hall-of-fame-container {
+  display: flex;
+  height: 100vh;
+  background-color: var(--hall-of-fame-bg);
 }
 
-h2 {
-  text-align: center;
-  margin-bottom: 20px;
+.category-menu {
+  width: 250px;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0.5em;
+  height: 100%;
+  overflow-y: auto;
+  transition: width 0.3s ease;
+  background-color: var(--hall-of-fame-menu-bg);
+
+  &.minimized {
+    width: 60px;
+  }
+
+  .minimize-button {
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+    color: var(--text-color);
+  }
+
+  mat-accordion {
+    width: 100%;
+  }
+
+  mat-expansion-panel {
+    background: var(--hall-of-fame-menu-bg);
+    width: 100%;
+  }
+
+  .category-title {
+    font-size: 0.9rem; 
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--text-color);
+  }
+
+  .achievement-title {
+    font-size: 0.9rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--text-color);
+  }
+
+  mat-list-item {
+    cursor: pointer;
+    height: 2em;
+    background-color: var(--hall-of-fame-menu-bg);
+    border-radius: 0.3em;
+    margin-bottom: 0.3em; 
+    margin-left: 0em;
+    color: var(--text-color);
+
+    &.selected {
+      background-color: #77777714;
+    }
+  }
+
+  .category-icon,
+  .achievement-icon {
+    margin-right: 0.2em;
+    color: var(--icon-color, #3f51b5); 
+  }
 }
 
-mat-accordion {
-  width: 100%;
-}
+.achievement-display {
+  flex-grow: 1;
+  padding: 0.5em;
+  overflow-y: auto;
+  background-color: var(--hall-of-fame-bg);
 
-mat-expansion-panel {
-  margin-bottom: 10px;
-}
-
-.category-achievements {
-  padding: 10px;
-}
-
-.achievement-details {
-  padding: 10px;
+  .achievement-details {
+    padding: 0.5em;
+  }
 }
 
 .hall-of-fame-slideshow {
-  margin-bottom: 10px;
+  margin-top: 1em;
 }
 
-mat-chip-set {
-  margin-top: 10px;
-}
+.achievement-links {
+  margin-top: 1em;
+  display: flex;
+  flex-wrap: wrap;
 
-.category-icon, .achievement-icon {
-  margin-right: 10px;
+  .link-chip {
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 2em;
+    padding: 0.5em 1em;
+    margin: 0.25em;
+    display: inline-flex;
+    align-items: center;
+
+    .link-anchor {
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .link-icon {
+      margin-right: 0.5em;
+      font-size: 1em;
+    }
+
+    .link-text {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 200px;
+    }
+  }
 }

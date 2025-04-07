@@ -22,7 +22,7 @@
             }
         ],
         "summary": "Software engineer with a passion for crafting innovative and efficient solutions. Over 6 years of experience in designing and implementing robust software solutions. Committed to continuous learning, I frequently challenge my problem solving skills on platforms like HackerRank, LeetCode, CodeForces, and with the Advent of Code.",
-        "photos_intro": "Life is not only work, and I'm lucky to be surrounded by love and amazing frieds! In my free time I enjoy traveling and building memories...",
+        "photos_intro": "Life is not only work, and I'm lucky to be surrounded by love and amazing friends! In my free time I enjoy traveling and building memories...",
         "photos": [
             "assets/intro-photos/Angelo-Teo-Amsterdam.jpeg",
             "assets/intro-photos/Angelo-Teo-Annecy.jpeg",
@@ -55,6 +55,16 @@
         ],
         "tech_stack": [
             "Java", "Maven", "Spring Boot", "Hiberante", "JUnit", "Typescript", "Thymeleaf", "ArgoCD", "Grafana", "Prometheus", "Logstash", "Elasticsearch", "Kubernetes", "AWS", "ArgoCD", "GitOps", "BitBucket"
+        ],
+        "git_repositories": [
+            {
+                "name": "Bitbucket Repository Analyzer",
+                "uri": "https://github.com/ADarko22/BitbucketRepositoryAnalyzer"
+            },
+            {
+                "name": "Demo Null-Safe Approaches",
+                "uri": "https://github.com/ADarko22/DemoNullSafeApproaches"
+            }
         ]
         },
         {
@@ -73,6 +83,28 @@
             ],
         "tech_stack": [
             "Java", "Gradle", "Maven", "JUnit", "Mockito", "Kotlin", "Eclipse ECJ", "Docker", "Linux", "Git", "Sonar Qube", "Sonar Cloud", "Cirrus-ci", "Bash", " Python", "Spring Boot", "JSpecify", "Thymeleaf"
+        ],
+        "git_repositories": [
+            {
+                "name": "Sonar Java",
+                "uri": "https://github.com/SonarSource/sonar-java"
+            },
+            {
+                "name": "Sonar Scanner Maven",
+                "uri": "https://github.com/SonarSource/sonar-scanner-maven"
+            },
+            {
+                "name": "Sonar Scanner Gradle",
+                "uri": "https://github.com/SonarSource/sonar-scanner-gradle"
+            },
+            {
+                "name": "Sonar Kotlin",
+                "uri": "https://github.com/SonarSource/sonar-kotlin"
+            },
+            {
+                "name": "RSPEC",
+                "uri": "https://github.com/SonarSource/rspec"
+            }
         ]
         },
         {
@@ -106,10 +138,6 @@
             {
                 "title": "SimuLTE-MEC: extending SimuLTE for Multiaccess Edge Computing",
                 "link": "https://www.researchgate.net/publication/327238265_SimuLTE-MEC_extending_SimuLTE_for_Multiaccess_Edge_Computing"
-            },
-            {
-                "title": "Platoon Formation and Stability with Multi-access Edge Computing in LTE-Advanced networks",
-                "link": "https://etd.adm.unipi.it/t/etd-09052018-192851"
             }
         ]
         },
@@ -156,17 +184,6 @@
                     "images": [
                         "assets/hall-of-fame-images/Sonar-Community-Hero-2023.jpeg"
                     ],
-                    "links": []
-                }
-            ]
-        },
-        {
-            "category": "GitHub Projects",
-            "achievements": [
-                {
-                    "title": "My Resume Website",
-                    "description": "todo list he main projects of my cv",
-                    "images": [],
                     "links": []
                 }
             ]

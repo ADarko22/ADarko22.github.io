@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, OnDestroy, HostListener } from '@angular/core';
+import { Component, Input, OnInit, OnDestroy, HostListener, OnChanges, SimpleChanges } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Subject } from 'rxjs';
 import { MatIconModule } from '@angular/material/icon';
@@ -12,7 +12,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
   templateUrl: './photo-slideshow.component.html',
   styleUrls: ['./photo-slideshow.component.scss'],
 })
-export class PhotoSlideshowComponent implements OnInit, OnDestroy {
+export class PhotoSlideshowComponent implements OnInit, OnDestroy, OnChanges {
   @Input() photoUrls: string[] = [];
   currentPhotoIndex: number = 0;
   currentPhoto: string | null = null;
@@ -24,6 +24,13 @@ export class PhotoSlideshowComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.updatePhoto();
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes['photoUrls']) {
+      this.currentPhotoIndex = 0;
+      this.updatePhoto();
+    }
   }
 
   ngOnDestroy(): void {

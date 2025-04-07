@@ -4,12 +4,13 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { CommonModule } from '@angular/common';
 import { ResumeParserService } from '../resume-service/resume-parser.service';
-import { AchievementCategory, Achievement } from '../resume-service/resume.model';
+import { HallOfFame, Achievement } from '../resume-service/resume.model';
 import { HtmlSanitizerService } from '../resume-service/html-sanitizer.service';
 import { PhotoSlideshowComponent } from '../photo-slideshow/photo-slideshow.component';
 import { SafeHtml } from '@angular/platform-browser';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
 
 @Component({
   selector: 'hall-of-fame',
@@ -21,13 +22,17 @@ import { MatIconModule } from '@angular/material/icon';
     CommonModule,
     PhotoSlideshowComponent,
     MatExpansionModule,
-    MatIconModule, // Add MatIconModule to imports
+    MatIconModule,
+    MatListModule,
   ],
   templateUrl: './hall-of-fame.component.html',
   styleUrl: './hall-of-fame.component.scss',
 })
 export class HallOfFameComponent implements OnInit {
-  hallOfFame: AchievementCategory[] | null = null;
+  hallOfFames: HallOfFame[] | null = null;
+  selectedAchievement: Achievement | null = null;
+  menuMinimized: boolean = false;
+  expandedHallOfFames: boolean[] = [];
 
   constructor(
     readonly resumeParserService: ResumeParserService,
@@ -36,12 +41,20 @@ export class HallOfFameComponent implements OnInit {
 
   ngOnInit(): void {
     this.resumeParserService.getResume().subscribe((data) => {
-      this.hallOfFame = data?.hall_of_fame ?? null;
+      this.hallOfFames = data?.hall_of_fame ?? null;
+      this.expandedHallOfFames = this.hallOfFames?.map((_, i) => i === 0) ?? [];
+      if (this.hallOfFames && this.hallOfFames.length > 0 && this.hallOfFames[0].achievements && this.hallOfFames[0].achievements.length > 0) {
+        this.selectedAchievement = this.hallOfFames[0].achievements[0];
+      }
     });
   }
 
-  trackByAchievementCategory(index: number,achievementCategory: AchievementCategory): string {
-    return achievementCategory.category;
+  extractYear(link: string): string | undefined {
+    return link.match(/\/(\d{4})$/)?.[1];
+  }
+
+  trackByAchievementCategory(index: number, hallOfFame: HallOfFame): string {
+    return hallOfFame.category;
   }
 
   trackByAchievement(index: number, achievement: Achievement): string {
@@ -56,7 +69,7 @@ export class HallOfFameComponent implements OnInit {
     switch (category.toLowerCase()) {
       case 'coding achievements':
         return 'code';
-      case 'sw projects':
+      case 'work achievements':
         return 'developer_board';
       case 'personal achievements':
         return 'emoji_events';
@@ -66,7 +79,22 @@ export class HallOfFameComponent implements OnInit {
   }
 
   getAchievementIcon(achievementTitle: string): string {
-    // Add logic to map achievement titles to icons if needed
     return 'military_tech';
+  }
+
+  selectAchievement(achievement: Achievement): void {
+    this.selectedAchievement = achievement;
+  }
+
+  toggleMenu(): void {
+    this.menuMinimized = !this.menuMinimized;
+  }
+
+  setExpanded(index: number, expanded: boolean): void {
+    this.expandedHallOfFames[index] = expanded;
+  }
+
+  trackByLink(index: number, link: string): string {
+    return link;
   }
 }

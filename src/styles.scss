@@ -66,6 +66,10 @@ $dark-theme: mat.m2-define-dark-theme((
     --education-panel-description-color: #777; 
     --education-list-item-bg: rgba(0, 0, 0, 0.03); 
 
+    // Hall of Fame Variables
+    --hall-of-fame-bg: linear-gradient(135deg, #e0f7fa, #c2e9f6);
+    --hall-of-fame-menu-bg: linear-gradient(135deg, #e0f7fa, #c2e9f6);
+
     // Contacts Component
     --contacts-section-bg: linear-gradient(135deg, #e0f7fa, #c2e9f6);
     --contacts-h2-color: #1976d2;
@@ -111,6 +115,10 @@ $dark-theme: mat.m2-define-dark-theme((
     --education-expansion-panel-bg: linear-gradient(135deg, #37474f, #263238);
     --education-panel-description-color: #bbb;
     --education-list-item-bg: rgba(255, 255, 255, 0.05); 
+
+    // Hall of Fame Variables
+    --hall-of-fame-bg: inear-gradient(135deg, #37474f, #263238);
+    --hall-of-fame-menu-bg: linear-gradient(135deg, #37474f, #263238);
 
     // Contacts Component
     --contacts-section-bg: linear-gradient(135deg, #37474f, #263238);

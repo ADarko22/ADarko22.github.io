@@ -41,10 +41,11 @@
                           <mat-icon class="responsibilities-icon">list_alt</mat-icon>
                           Key Contributions & Responsibilities
                       </h3>
-                      <div *ngFor="let responsibility of work.responsibilities; trackBy: trackByResponsibility" class="responsibility-item">
-                          <mat-icon class="responsibility-icon">done_outline</mat-icon>
-                          <div [innerHTML]="sanitizeHtml(responsibility)"></div>
-                      </div>
+                      <ul class="responsibility-list">
+                        <li *ngFor="let responsibility of work.responsibilities; trackBy: trackByResponsibility">
+                            <div [innerHTML]="sanitizeHtml(responsibility)"></div>
+                        </li>
+                    </ul>
                   </article>
                   <article>
                       <h3 class="work-detail-heading">

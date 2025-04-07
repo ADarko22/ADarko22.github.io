@@ -1,38 +1,59 @@
-<section *ngIf="hallOfFame && hallOfFame.length > 0">
-    <h2>Hall of Fame</h2>
-    <mat-accordion>
-      <mat-expansion-panel *ngFor="let category of hallOfFame; trackBy: trackByAchievementCategory">
+<section *ngIf="hallOfFames && hallOfFames.length > 0" class="hall-of-fame-container">
+  <aside class="category-menu" [class.minimized]="menuMinimized">
+    <button class="minimize-button" (click)="toggleMenu()">
+      <mat-icon>{{ menuMinimized ? 'menu_open' : 'menu' }}</mat-icon>
+    </button>
+    <mat-accordion *ngIf="!menuMinimized" [multi]="true">
+      <mat-expansion-panel
+        *ngFor="let hallOfFame of hallOfFames; let i = index; trackBy: trackByAchievementCategory"
+        [expanded]="expandedHallOfFames[i]"
+        (opened)="setExpanded(i, true)"
+        (closed)="setExpanded(i, false)"
+      >
         <mat-expansion-panel-header>
-          <mat-panel-title>
-            <mat-icon class="category-icon">{{ getCategoryIcon(category.category) }}</mat-icon>
-            {{ category.category }}
+          <mat-panel-title class="category-title">
+            <mat-icon class="category-icon">{{ getCategoryIcon(hallOfFame.category) }}</mat-icon>
+            {{ hallOfFame.category }}
           </mat-panel-title>
         </mat-expansion-panel-header>
-        <div class="category-achievements">
-          <mat-expansion-panel *ngFor="let achievement of category.achievements; trackBy: trackByAchievement">
-            <mat-expansion-panel-header>
-              <mat-panel-title>
-                <mat-icon class="achievement-icon">{{ getAchievementIcon(achievement.title) }}</mat-icon>
-                {{ achievement.title }}
-              </mat-panel-title>
-            </mat-expansion-panel-header>
-            <div class="achievement-details">
-              <p *ngIf="achievement.description">{{ achievement.description }}</p>
-  
-              <div *ngIf="achievement.images && achievement.images.length > 0" class="hall-of-fame-slideshow">
-                <photo-slideshow [photoUrls]="achievement.images"></photo-slideshow>
-              </div>
-  
-              <div *ngIf="achievement.links && achievement.links.length > 0">
-                <mat-chip-set>
-                  <mat-chip-row *ngFor="let link of achievement.links">
-                    <a href={{link}} target="_blank">{{ link }}</a>
-                  </mat-chip-row>
-                </mat-chip-set>
-              </div>
-            </div>
-          </mat-expansion-panel>
-        </div>
+        <mat-list>
+          <mat-list-item
+            *ngFor="let achievement of hallOfFame.achievements; trackBy: trackByAchievement"
+            (click)="selectAchievement(achievement)"
+            [class.selected]="selectedAchievement === achievement"
+          >
+            <mat-icon matListItemIcon>{{ getAchievementIcon(achievement.title) }}</mat-icon>
+            <div matListItemTitle class="achievement-title">{{ achievement.title }}</div>
+          </mat-list-item>
+        </mat-list>
       </mat-expansion-panel>
     </mat-accordion>
-  </section>
+  </aside>
+
+  <main class="achievement-display">
+    <div *ngIf="selectedAchievement" class="achievement-details">
+      <h2>{{ selectedAchievement.title }}</h2>
+      <p *ngIf="selectedAchievement.description">
+        {{ selectedAchievement.description }}
+      </p>
+
+      <div
+        *ngIf="selectedAchievement.images && selectedAchievement.images.length > 0"
+        class="hall-of-fame-slideshow"
+      >
+        <photo-slideshow [photoUrls]="selectedAchievement.images"></photo-slideshow>
+      </div>
+
+      <div *ngIf="selectedAchievement.links && selectedAchievement.links.length > 0" class="achievement-links">
+        <div *ngFor="let link of selectedAchievement.links; trackBy: trackByLink" class="link-chip">
+          <a [href]="link" target="_blank" class="link-anchor">
+            <mat-icon class="link-icon">link</mat-icon>
+            <span class="link-text">
+              {{ extractYear(link) ? extractYear(link) : link }}
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+</section>
