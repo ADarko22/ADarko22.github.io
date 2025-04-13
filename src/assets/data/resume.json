@@ -155,7 +155,7 @@
             "achievements": [
                 {
                     "title": "Leet Code",
-                    "description": "todo",
+                    "description": "I enjoy puzzling my mind with solving Lee Code problems and learning from them. In 2022 I spent 100 days on Leet Code, preparing for job interviews at big techs, like Uber and Sonar. In 2025 I'm training my endurance with Daily Challenges and I got March full month badge!",
                     "images": [
                         "assets/hall-of-fame-images/Leetcode-100days-2022.png", 
                         "assets/hall-of-fame-images/Leetcode-DailyChallenge-March-2025.png"
@@ -164,7 +164,7 @@
                 },
                 {
                     "title": "Advent of Code",
-                    "description": "todo post link to repo and image",
+                    "description": "In the last few years I've been awaiting Christmas with the Advent of Code, an amazing initiative wihch I'm very glad for! In 2024, for the 10-th anniversary I completed the whole calendar and it's been a fantastic journey!",
                     "images": [
                         "assets/hall-of-fame-images/AoC-2024.png"
                     ],
@@ -179,12 +179,12 @@
             "category": "Work Achievements",
             "achievements": [
                 {
-                    "title": "Sonar",
-                    "description": "Community Hero",
+                    "title": "Community Hero at Sonar",
+                    "description": "Sonar has an internal Leaderboard for Sonar Sourcers which help users in the Community. I have been many times fighting for the top position and I finally got it 6 months from joining the company. I'm proud of the \"Community Hero\" t-shirt I got!",
                     "images": [
                         "assets/hall-of-fame-images/Sonar-Community-Hero-2023.jpeg"
                     ],
-                    "links": []
+                    "links": ["https://community.sonarsource.com/"]
                 }
             ]
         },
@@ -193,7 +193,7 @@
             "achievements": [
                 {
                     "title": "Kilimanjaro's Hike",
-                    "description": "Hike in January 2023 of Mount Kilimanjaro with friends from Flow Traders",
+                    "description": "At end of January 2023 I conquered the peak of Mount Kilimanjaro with friends from Flow Traders. It's an amazing experience which I'll always keep in my heart. The best way to farewell the most amazing company I worked for.",
                     "images": [
                         "assets/hall-of-fame-images/Kilimanjaro-Hike-2.jpeg",
                         "assets/hall-of-fame-images/Kilimanjaro-Hike-3.jpeg",
