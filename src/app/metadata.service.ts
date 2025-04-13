@@ -4,6 +4,9 @@ import { Observable } from 'rxjs';
 
 export interface Metadata {
   title: string;
+  author: string;
+  description: string;
+  keywords: string;
   logo: string;
 }
 

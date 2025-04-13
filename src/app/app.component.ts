@@ -5,7 +5,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { CommonModule } from '@angular/common';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { Metadata, MetadataService } from './metadata.service';
-import { Title } from '@angular/platform-browser';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
@@ -26,13 +26,25 @@ export class AppComponent {
 
   constructor(
     private metadataService: MetadataService,
-    private titleService: Title) {}
+    private titleService: Title,
+    private meta: Meta) {}
 
   ngOnInit() {
     this.metadataService.getMetadata()
     .subscribe((metadata) => {
       this.metadata = metadata
       this.titleService.setTitle(metadata.title); 
+
+    // Set Meta Tags
+    this.meta.addTags([
+      { name: 'author', content: metadata.author },
+      { name: 'description', content: metadata.description },
+      { name: 'keywords', content: metadata.keywords },
+      { property: 'og:title', content: metadata.title },
+      { property: 'og:description', content: metadata.description },
+      { property: 'og:type', content: 'website' },
+      { property: 'og:site_name', content: metadata.title },
+    ]);
     });
   }
 }
