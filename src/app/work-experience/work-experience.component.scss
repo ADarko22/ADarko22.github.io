@@ -103,6 +103,7 @@
   .about-icon,
   .role-icon,
   .responsibilities-icon,
+  .git-icon,
   .tech-stack-icon {
     margin-right: 0.2em;
     vertical-align: middle;
@@ -117,3 +118,25 @@
   .mat-panel-description .location-icon {
     margin-right: 0.2em;
   }
+
+
+.git-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.6em;
+}
+
+.git-chip {
+    background-color: var(--responsibility-item-bg);
+    padding: 0.5em 1em;
+    border-radius: 10rem;
+    text-decoration: none;
+    color: inherit;
+    white-space: nowrap;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: var(--responsibility-item-bg);
+    }
+}

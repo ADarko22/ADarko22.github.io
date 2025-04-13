@@ -1,7 +1,8 @@
+import { IconService } from './../icon-service';
 import { CommonModule, formatDate } from '@angular/common';
 import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
 import { ResumeParserService } from '../resume-service/resume-parser.service';
-import { WorkExperience } from '../resume-service/resume.model';
+import { WorkExperience, GitRepository } from '../resume-service/resume.model'; // Import GitRepository
 import { HtmlSanitizerService } from '../resume-service/html-sanitizer.service';
 import { SafeHtml } from '@angular/platform-browser';
 import { map, catchError, of } from 'rxjs';
@@ -32,7 +33,8 @@ export class WorkExperienceComponent implements OnInit {
   constructor(
     readonly resumeParserService: ResumeParserService,
     readonly sanitizer: HtmlSanitizerService,
-    private cdr: ChangeDetectorRef
+    private cdr: ChangeDetectorRef,
+    private iconService: IconService
   ) {}
 
   ngOnInit(): void {
@@ -52,6 +54,7 @@ export class WorkExperienceComponent implements OnInit {
         this.isLoading = false;
         this.cdr.detectChanges();
       });
+      this.iconService.registerIcons()
   }
 
   sanitizeHtml(html: string | undefined): SafeHtml {
@@ -61,17 +64,25 @@ export class WorkExperienceComponent implements OnInit {
   formatDate(dateString: string | null | undefined): string | null {
     if (!dateString) return null;
     const date = new Date(dateString);
+    if (isNaN(date.getTime())) {
+      console.error('Invalid date string:', dateString);
+      return 'Invalid Date';
+    }
     return formatDate(date, 'MMM yyyy', 'en-US');
   }
 
   trackByWorkExperience(index: number, work: WorkExperience): string {
     if (!work) {
-      return "";
+      return '';
     }
     return work.company + work.job_title;
   }
 
   trackByResponsibility(index: number, responsibility: string): string {
     return responsibility;
+  }
+
+  trackByGitRepo(index: number, repo: GitRepository): string {
+    return repo.name + repo.uri;
   }
 }
