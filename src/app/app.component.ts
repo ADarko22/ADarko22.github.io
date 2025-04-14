@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { Metadata, MetadataService } from './metadata.service';
 import { Meta, Title } from '@angular/platform-browser';
+import { IconService } from './icon-service';
 
 @Component({
   selector: 'app-root',
@@ -27,13 +28,16 @@ export class AppComponent {
   constructor(
     private metadataService: MetadataService,
     private titleService: Title,
-    private meta: Meta) {}
+    private meta: Meta,
+    private iconService: IconService
+  ) {}
 
   ngOnInit() {
     this.metadataService.getMetadata()
     .subscribe((metadata) => {
       this.metadata = metadata
       this.titleService.setTitle(metadata.title); 
+      this.iconService.registerIcons()
 
     // Set Meta Tags
     this.meta.addTags([

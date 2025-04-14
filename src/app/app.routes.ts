@@ -6,6 +6,7 @@ import { ContactsComponent } from './contacts/contacts.component';
 import { HallOfFameComponent } from './hall-of-fame/hall-of-fame.component';
 
 export const routes: Routes = [
+    { path: '', component: IntroComponent },
     { path: 'intro', component: IntroComponent },
     { path: 'work-experience', component: WorkExperienceComponent },
     { path: 'education', component: EducationComponent },

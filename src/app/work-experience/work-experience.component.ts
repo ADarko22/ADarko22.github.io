@@ -1,4 +1,3 @@
-import { IconService } from './../icon-service';
 import { CommonModule, formatDate } from '@angular/common';
 import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
 import { ResumeParserService } from '../resume-service/resume-parser.service';
@@ -33,8 +32,7 @@ export class WorkExperienceComponent implements OnInit {
   constructor(
     readonly resumeParserService: ResumeParserService,
     readonly sanitizer: HtmlSanitizerService,
-    private cdr: ChangeDetectorRef,
-    private iconService: IconService
+    private cdr: ChangeDetectorRef
   ) {}
 
   ngOnInit(): void {
@@ -54,7 +52,6 @@ export class WorkExperienceComponent implements OnInit {
         this.isLoading = false;
         this.cdr.detectChanges();
       });
-      this.iconService.registerIcons()
   }
 
   sanitizeHtml(html: string | undefined): SafeHtml {

@@ -34,113 +34,58 @@ $dark-theme: mat.m2-define-dark-theme((
   @include mat.all-component-colors($light-theme);
 
   & {
-    // body
-    --background-color: rgb(230, 247, 252);
-    --text-color:  #303030;
+    // Background 
+    --base-bg-color: rgb(230, 247, 252);
+    --primary-bg-color: linear-gradient(135deg, #e0f7fa, #c2e9f6);
+    --secondary-bg-color:  #91d0ef43;
+    --hover-bg-color: #5caeda43;
+    --icon-bg-color: #185485ef;
+    --toolbar-bg-color: #c2e9f6;
 
-    // Toolbar
-    --logo-gradient: linear-gradient(to right, #54c9f0, #ffffff);
-    --toolbar-div-background: mat.get-color-from-palette($light-primary);
+    // Text
+    --logo-color: linear-gradient(to right, #08293b, #56c6f6);
+    --text-color:  #303030;
 
     // Links
     --link-color: #3ca6f1;
     --link-hover-color: #1dd0e8;
     --link-active-color: #440ece;
-
-    // Intro Component Variables
-    --intro-section-bg: linear-gradient(135deg, #e0f7fa, #c2e9f6);
-    --intro-full-name-color: #1976d2;
-    --intro-profession-color: #37474f;
-    --intro-summary-color: #333;
-    --intro-languages-color: #009688;
-    --intro-photos-intro-color: #333;
-    --intro-languages-bg: rgba(0, 150, 136, 0.1);
-    --intro-language-mat-chip-row-bg: linear-gradient(to right, rgb(46, 236, 131),  rgb(200, 248, 200)); 
-
-    // Work Experience Variables
-    --work-expansion-panel-bg: linear-gradient(135deg, #e0f7fa, #c2e9f6);
-    --responsibility-item-bg:  #91d0ef63;
-
-    // Education Variables
-    --education-expansion-panel-bg: linear-gradient(135deg, #e0f7fa, #c2e9f6);
-    --education-panel-description-color: #777; 
-    --education-list-item-bg: rgba(0, 0, 0, 0.03); 
-
-    // Hall of Fame Variables
-    --hall-of-fame-bg: linear-gradient(135deg, #e0f7fa, #c2e9f6);
-    --hall-of-fame-menu-bg: linear-gradient(135deg, #e0f7fa, #c2e9f6);
-
-    // Contacts Component
-    --contacts-section-bg: linear-gradient(135deg, #e0f7fa, #c2e9f6);
-    --contacts-h2-color: #1976d2;
-    --contacts-card-bg: rgba(255, 255, 255, 0.8);
-    --contacts-icon-color: #009688;
-    --contacts-p-color: #37474f;
-    --contacts-a-color: #009688;
-    --contacts-a-hover-color: #00796b;
   }
 }
 
 .theme-dark {
   @include mat.all-component-colors($dark-theme);
   & {
-    // body
-    --background-color: #303030;
-    --text-color: rgb(230, 247, 252);
+    // Background 
+    --base-bg-color: #303030;
+    --primary-bg-color: linear-gradient(135deg, #37474f, #263238);
+    --secondary-bg-color:  #91d0ef22;
+    --hover-bg-color: rgba(108, 168, 198, 0.263);
+    --icon-bg-color: #61c5f0ef;
+    --toolbar-bg-color: #37474f;
 
-    // Toolbar
-    --toolbar-div-background: mat.get-color-from-palette($dark-primary);
+    // Text
+    --logo-color: linear-gradient(to right, #fbfeff, #56c6f6);
+    --text-color:  rgb(230, 247, 252);
+
     --logo-gradient: linear-gradient(to right, #0981a8, #2b2929);
 
     // Links
     --link-color: #89cff0;
     --link-hover-color: #b0e0e6;
     --link-active-color: #66a5ad;
-
-    // Intro Component Variables
-    --intro-section-bg: linear-gradient(135deg, #37474f, #263238);
-    --intro-full-name-color: #89cff0;
-    --intro-profession-color: #cfd8dc;
-    --intro-summary-color: #eee;
-    --intro-languages-color: #80cbc4;
-    --intro-photos-intro-color: #eee;
-    --intro-languages-bg: rgba(128, 203, 196, 0.1);
-    --intro-language-mat-chip-row-bg: linear-gradient(to right, rgb(29, 82, 29), rgb(53, 62, 57)); 
-
-    // Work Experience Variables
-    --work-expansion-panel-bg: linear-gradient(135deg, #37474f, #263238);
-    --responsibility-item-bg:  #184b5f62;
-
-    // Education Variables
-    --education-expansion-panel-bg: linear-gradient(135deg, #37474f, #263238);
-    --education-panel-description-color: #bbb;
-    --education-list-item-bg: rgba(255, 255, 255, 0.05); 
-
-    // Hall of Fame Variables
-    --hall-of-fame-bg: inear-gradient(135deg, #37474f, #263238);
-    --hall-of-fame-menu-bg: linear-gradient(135deg, #37474f, #263238);
-
-    // Contacts Component
-    --contacts-section-bg: linear-gradient(135deg, #37474f, #263238);
-    --contacts-h2-color: #89cff0;
-    --contacts-card-bg: rgba(55, 71, 79, 0.8);
-    --contacts-icon-color: #80cbc4;
-    --contacts-p-color: #cfd8dc;
-    --contacts-a-color: #80cbc4;
-    --contacts-a-hover-color: #26a69a;
   }
 }
 
 body {
   width: 100%;
-  background-color: var(--background-color); 
+  background-color: var(--base-bg-color); 
   color: var(--text-color);
-  font-family: 'Roboto', sans-serif; 
+  font-family: 'Lato', 'Poppins'; 
   font-size: 22px; 
   line-height: 1.6; 
   -webkit-font-smoothing: antialiased; 
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: auto;
 }
 
 a {

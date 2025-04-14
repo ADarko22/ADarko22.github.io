@@ -32,14 +32,11 @@ import { CommonModule } from '@angular/common';
       padding: 4px 8px;
       margin: 0 4px;
       cursor: pointer;
-      color: var(--mdc-theme-on-primary);
+      color: var(--primary-bg-color);
       border-radius: 4px;
     }
     button.active {
-      background-color: rgba(255, 255, 255, 0.2);
-    }
-    .theme-light button.active {
-      background-color: rgba(0, 0, 0, 0.1);
+      background-color: var(--secondary-bg-color);
     }
   `,
 })

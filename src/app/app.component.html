@@ -1,16 +1,19 @@
-<mat-toolbar color="primary" class="toolbar">
-  <span class="logo">{{ metadata?.logo }}</span>
-  <span class="spacer"></span>
-  
-  <nav class="nav-links">
-    <button mat-button routerLink="intro" routerLinkActive="active">Intro</button>
-    <button mat-button routerLink="work-experience" routerLinkActive="active">Work Experience</button>
-    <button mat-button routerLink="education" routerLinkActive="active">Education</button>
-    <button mat-button routerLink="hall-of-fame" routerLinkActive="active">Hall of Fame</button>
-    <button mat-button routerLink="contacts" routerLinkActive="active">Contacts</button>
-    <theme-toggle/>
-  </nav>
-
+<mat-toolbar class="toolbar">
+  <div class="toolbar__left">
+    <span class="toolbar__logo">{{ metadata?.logo }}</span>
+  </div>
+  <div class="toolbar__right">
+    <nav class="toolbar__nav-links">
+      <button mat-button routerLink="intro" routerLinkActive="active">Intro</button>
+      <button mat-button routerLink="work-experience" routerLinkActive="active">Work Experience</button>
+      <button mat-button routerLink="education" routerLinkActive="active">Education</button>
+      <button mat-button routerLink="hall-of-fame" routerLinkActive="active">Hall of Fame</button>
+      <button mat-button routerLink="contacts" routerLinkActive="active">Contacts</button>
+    </nav>
+    <div class="toolbar__theme-toggle">
+      <theme-toggle />
+    </div>
+  </div>
 </mat-toolbar>
 
-<router-outlet/>
+<router-outlet />

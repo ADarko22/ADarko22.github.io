@@ -21,8 +21,8 @@
                 "proficiency": "Elementary"
             }
         ],
-        "summary": "Software engineer with a passion for crafting innovative and efficient solutions. Over 6 years of experience in designing and implementing robust software solutions. Committed to continuous learning, I frequently challenge my problem solving skills on platforms like HackerRank, LeetCode, CodeForces, and with the Advent of Code.",
-        "photos_intro": "Life is not only work, and I'm lucky to be surrounded by love and amazing friends! In my free time I enjoy traveling and building memories...",
+        "summary": "Software Engineer with a passion for crafting innovative and efficient solutions. Over 6 years of experience in designing and implementing robust software solutions. Committed to continuous learning, I frequently challenge my problem solving skills on platforms like HackerRank, LeetCode, CodeForces, and with the Advent of Code.",
+        "photos_intro": "When I'm not busy coding, I'm lucky to be surrounded by love and amazing friends! In my free time I enjoy traveling and building memories...",
         "photos": [
             "assets/intro-photos/Angelo-Teo-Amsterdam.jpeg",
             "assets/intro-photos/Angelo-Teo-Annecy.jpeg",
@@ -179,7 +179,7 @@
             "category": "Work Achievements",
             "achievements": [
                 {
-                    "title": "Community Hero at Sonar",
+                    "title": "Sonar's Community Hero",
                     "description": "Sonar has an internal Leaderboard for Sonar Sourcers which help users in the Community. I have been many times fighting for the top position and I finally got it 6 months from joining the company. I'm proud of the \"Community Hero\" t-shirt I got!",
                     "images": [
                         "assets/hall-of-fame-images/Sonar-Community-Hero-2023.jpeg"

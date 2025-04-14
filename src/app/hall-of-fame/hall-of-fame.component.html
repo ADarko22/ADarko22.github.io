@@ -22,7 +22,7 @@
             (click)="selectAchievement(achievement)"
             [class.selected]="selectedAchievement === achievement"
           >
-            <mat-icon matListItemIcon>{{ getAchievementIcon(achievement.title) }}</mat-icon>
+            <mat-icon class="achievement-icon" matListItemIcon>{{ getAchievementIcon(achievement.title) }}</mat-icon>
             <div matListItemTitle class="achievement-title">{{ achievement.title }}</div>
           </mat-list-item>
         </mat-list>
@@ -44,16 +44,14 @@
         <photo-slideshow [photoUrls]="selectedAchievement.images"></photo-slideshow>
       </div>
 
-      <div *ngIf="selectedAchievement.links && selectedAchievement.links.length > 0" class="achievement-links">
-        <div *ngFor="let link of selectedAchievement.links; trackBy: trackByLink" class="link-chip">
-          <a [href]="link" target="_blank" class="link-anchor">
-            <mat-icon class="link-icon">link</mat-icon>
-            <span class="link-text">
-              {{ extractYear(link) ? extractYear(link) : link }}
-            </span>
-          </a>
-        </div>
-      </div>
+        <mat-list class="achievement-links">
+          <mat-list-item *ngFor="let link of selectedAchievement.links; trackBy: trackByLink">
+            <a [href]="link" target="_blank">
+              <mat-icon class="link-icon">link</mat-icon>
+              {{ link }}
+            </a>
+          </mat-list-item>
+        </mat-list>        
     </div>
   </main>
 </section>

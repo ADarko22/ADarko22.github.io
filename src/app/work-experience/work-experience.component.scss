@@ -4,22 +4,15 @@
   }
   
   .work-section {
+    margin-top: 1em;
     display: block;
     justify-content: center;
-    max-width: 90vw;
+    max-width: 75vw;
     width: 100%;
     padding: 0 1em;
   }
-  
-  .work-heading {
-    text-align: center;
-    font-size: clamp(1.8rem, 3vw, 2.5rem);
-    width: 100%;
-    word-wrap: break-word;
-  }
-  
+    
   .work-details {
-    padding: 1em;
     text-align: left;
     width: 100%;
     font-size: clamp(1rem, 1.1vw, 1.2rem);
@@ -35,7 +28,10 @@
     list-style-type: disc;
   
     li {
-      background-color: var(--responsibility-item-bg);
+      border-radius: 0.8em;
+      padding-left: 0.2em;
+      padding-right: 0.2em;
+      background-color: var(--secondary-bg-color);
       margin-bottom: 0.5em;
       margin-right: 3.5em;
   
@@ -52,14 +48,15 @@
   }
   
   mat-expansion-panel {
-    background: var(--work-expansion-panel-bg);
+    background: var(--primary-bg-color);
     width: 100%;
   }
   
   mat-expansion-panel-header {
-    text-align: center;
+    display: flex;
+    text-align: left;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     min-height: 5vw;
     height: fit-content;
     word-wrap: break-word;
@@ -67,18 +64,21 @@
   
   mat-panel-title {
     font-size: clamp(1rem, 1.1vw, 1.2rem);
+    color: var(--text-color);
     width: 100%;
-    flex: 2;
+    flex: 1;
+    margin-right: 1em;
     word-wrap: break-word;
   }
   
   mat-panel-description {
     font-size: clamp(0.9rem, 1vw, 1.1rem);
-    color: #777;
+    color: var(--text-color);
     flex: 1;
-    justify-content: flex-end;
     width: 100%;
+    display: flex;
     word-wrap: break-word;
+    justify-content: flex-end;
   }
   
   .tech-stack-grid {
@@ -89,12 +89,16 @@
   }
   
   .tech-stack-item {
-    background-color: var(--responsibility-item-bg);
+    background: var(--secondary-bg-color);
     padding: 0.3em 0.6em;
     border-radius: 10rem;
     white-space: nowrap;
     font-size: clamp(0.9rem, 1vw, 1.1rem);
     word-wrap: break-word;
+
+    &:hover {
+      background: var(--hover-bg-color);
+    }
   }
   
   .work-icon,
@@ -105,21 +109,15 @@
   .responsibilities-icon,
   .git-icon,
   .tech-stack-icon {
+    margin-left: 1.2em;
     margin-right: 0.2em;
     vertical-align: middle;
     font-size: 1.2em;
-    color: var(--icon-color, #3f51b5);
+    color: var(--icon-bg-color);
     display: inline-flex;
     align-items: center;
   }
   
-  .mat-panel-title .work-icon,
-  .mat-panel-description .date-icon,
-  .mat-panel-description .location-icon {
-    margin-right: 0.2em;
-  }
-
-
 .git-chips {
     display: flex;
     flex-wrap: wrap;
@@ -128,7 +126,7 @@
 }
 
 .git-chip {
-    background-color: var(--responsibility-item-bg);
+    background: var(--secondary-bg-color);
     padding: 0.5em 1em;
     border-radius: 10rem;
     text-decoration: none;
@@ -137,6 +135,6 @@
     transition: background-color 0.3s ease;
 
     &:hover {
-        background-color: var(--responsibility-item-bg);
+        background: var(--hover-bg-color);
     }
 }

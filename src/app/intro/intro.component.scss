@@ -9,7 +9,7 @@
 
 .intro-section {
   text-align: center;
-  background: var(--intro-section-bg);
+  background: var(--primary-bg-color);
   padding: 1.5em;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -17,8 +17,6 @@
   width: 100%;
   margin-bottom: 1.5em;
   box-sizing: border-box;
-  align-items: center;
-  align-content: center;
 }
 
 .intro-header {
@@ -26,54 +24,59 @@
   margin-bottom: 0.5em;
 }
 
+.intro-full-name,
+.intro-profession,
+.intro-summary,
+.intro-photos-intro,
+.intro-languages-title,
+.language-name,
+.language-proficiency {
+  word-wrap: break-word; 
+}
+
 .intro-full-name {
   font-size: clamp(2rem, 3vw, 2.5rem);
   margin-bottom: 0.5em;
-  color: var(--intro-full-name-color);
+  color: var(--text-color);
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
   font-weight: 600;
-  word-wrap: break-word;
 }
 
 .intro-profession {
-  color: var(--intro-profession-color);
+  color: var(--text-color);
   margin-bottom: 0.2em;
   font-size: clamp(1rem, 1.2vw, 1.2rem);
-  word-wrap: break-word;
 }
 
 .intro-details {
   text-align: center;
-  align-items: center;
-  align-content: center;
 }
 
 .intro-summary,
 .intro-photos-intro {
-  color: var(--intro-summary-color);
+  color: var(--text-color);
   line-height: 1.6;
   margin-bottom: 1em;
   font-size: clamp(1.1rem, 1.2vw, 1.3rem);
-  word-wrap: break-word;
+  font-style: italic;
 }
 
 .intro-languages-container {
-  background: var(--intro-languages-bg);
+  background: var(--secondary-bg-color);
   padding: 0.2em;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: fit-content;
+  vertical-align: middle;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   margin: 0 auto;
 }
 
 .intro-languages-title {
   font-weight: bold;
-  color: var(--intro-summary-color);
+  color: var(--text-color);
   font-size: clamp(1rem, 1.2vw, 1.2rem);
-  word-wrap: break-word;
   margin-right: 0.5em;
 }
 
@@ -85,12 +88,10 @@
 .language-chip {
   display: flex;
   align-items: center;
-  background-color: var(--intro-language-mat-chip-row-bg);
   padding: 0.5em 0.8em;
   border-radius: 16px;
   margin: 0.25em;
   font-size: clamp(0.9rem, 1vw, 1.1rem);
-  word-wrap: break-word;
 
   &.native {
     background-color: rgba(76, 175, 80, 0.2);
@@ -119,23 +120,22 @@
 }
 
 .language-icon {
-  width: 24px; 
-  height: 16px; 
+  width: 24px;
+  height: 16px;
   margin-left: -1em;
   margin-right: 0.2em;
-  object-fit: contain; 
+  object-fit: contain;
+  vertical-align: middle;
 }
 
 .language-name {
   font-weight: bold;
   margin-right: 0.3em;
-  color: var(--intro-summary-color);
-  word-wrap: break-word;
+  color: var(--text-color);
 }
 
 .language-proficiency {
   font-style: italic;
-  word-wrap: break-word;
 }
 
 .intro-photos-intro-container {

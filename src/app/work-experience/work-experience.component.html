@@ -4,7 +4,6 @@
 
 <div *ngIf="workExperiences && !isLoading" class="work-container">
     <section class="work-section">
-        <h2 class="work-heading">Work Experience</h2>
         <mat-accordion>
             <mat-expansion-panel *ngFor="let work of workExperiences; let i = index; trackBy: trackByWorkExperience" [expanded]="i === 0">
                 <mat-expansion-panel-header>
@@ -14,7 +13,7 @@
                     </mat-panel-title>
                     <mat-panel-description>
                         <mat-icon class="date-icon">calendar_today</mat-icon>
-                        {{ formatDate(work.start_date) }} - {{ formatDate(work.end_date) || 'Present' }} |
+                        {{ formatDate(work.start_date) }} - {{ formatDate(work.end_date) || 'Present' }} 
                         <mat-icon class="location-icon">location_on</mat-icon>
                         {{ work.location }}
                     </mat-panel-description>

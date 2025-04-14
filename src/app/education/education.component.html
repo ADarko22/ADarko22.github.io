@@ -1,6 +1,5 @@
 <div *ngIf="educations" class="education-container">
     <section class="education-section">
-      <h2 class="education-heading">Education</h2>
       <mat-accordion>
         <mat-expansion-panel
           *ngFor="let education of educations; let i = index; trackBy: trackByEducation"

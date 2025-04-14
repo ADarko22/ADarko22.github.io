@@ -1,64 +1,55 @@
-/* contacts.component.scss */
+section {
+  text-align: center;
+  background: var(--primary-bg-color);
+  padding: 1em;
+  border-radius: 1.1em;
+  box-shadow: 0 0.2em 0.3em rgba(0, 0, 0, 0.1);
+  max-width: 45vw;
+  width: 90%; 
+  margin: 3em auto 2em; 
+  animation: fadeIn 0.5s ease-in-out;
 
-div {
-    display: flex;
-    justify-content: center;
-    padding-top: 10vh;
-    padding-bottom: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-  
-  section {
-    text-align: center;
-    background: var(--contacts-section-bg);
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    width: 100%;
-    animation: fadeIn 0.5s ease-in-out;
-  }
-  
   h2 {
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-    color: var(--contacts-h2-color);
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    font-size: 2em;
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+    color: var(--text-color);
     font-weight: 600;
   }
-  
+
   .contact-card {
     display: flex;
     align-items: center;
-    padding: 15px 20px;
-    border-radius: 8px;
-    background-color: var(--contacts-card-bg);
-    margin-bottom: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
-  
-    span.material-symbols-outlined {
-      margin-right: 15px;
-      color: var(--contacts-icon-color);
-      font-size: 1.5rem;
+    padding: 1em 1.5em;
+    border-radius: 1em;
+    background: var(--secondary-bg-color);
+    margin-bottom: 0.5em;
+
+    &:hover {
+      background: var(--hover-bg-color);
     }
-  
+
+    span.material-symbols-outlined {
+      margin-right: 1em;
+      color: var(--icon-bg-color);
+      font-size: 1em;
+    }
+
     p {
-      font-size: 1.1rem;
+      font-size: 1em;
       line-height: 1.6;
-      color: var(--contacts-p-color);
+      color: var(--text-color);
       margin: 0;
     }
-  
+
     a {
-      color: var(--contacts-a-color);
       text-decoration: none;
-      border-bottom: 1px solid transparent;
+      border-bottom: 0.1em solid transparent;
       transition: border-bottom 0.3s ease, color 0.3s ease;
-  
+
       &:hover {
-        border-bottom: 1px solid var(--contacts-a-color);
-        color: var(--contacts-a-hover-color);
+        border-bottom: 0.1em solid var(--contacts-a-color);
       }
     }
   }
+}

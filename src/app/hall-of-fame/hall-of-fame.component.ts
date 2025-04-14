@@ -42,15 +42,11 @@ export class HallOfFameComponent implements OnInit {
   ngOnInit(): void {
     this.resumeParserService.getResume().subscribe((data) => {
       this.hallOfFames = data?.hall_of_fame ?? null;
-      this.expandedHallOfFames = this.hallOfFames?.map((_, i) => i === 0) ?? [];
+      this.expandedHallOfFames = this.hallOfFames?.map((_, i) => true) ?? [];
       if (this.hallOfFames && this.hallOfFames.length > 0 && this.hallOfFames[0].achievements && this.hallOfFames[0].achievements.length > 0) {
         this.selectedAchievement = this.hallOfFames[0].achievements[0];
       }
     });
-  }
-
-  extractYear(link: string): string | undefined {
-    return link.match(/\/(\d{4})$/)?.[1];
   }
 
   trackByAchievementCategory(index: number, hallOfFame: HallOfFame): string {
