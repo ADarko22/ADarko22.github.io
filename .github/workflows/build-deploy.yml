@@ -8,29 +8,9 @@ on:
     types: [opened, synchronize, reopened]
 
 jobs:
-  sonarqube:
-    name: SonarQube
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0  # Shallow clones should be disabled for better analysis
-
-      - name: SonarQube Scan
-        uses: SonarSource/sonarqube-scan-action@v5
-        with:
-          args: >
-            -Dsonar.projectKey=ADarko22_ADarko22.github.io
-            -Dsonar.organization=adarko22-dev
-            -Dsonar.host.url=https://sonarcloud.io
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          SONAR_HOST_URL: https://sonarcloud.io  
-
   deploy:
     name: Deploy Angular to GitHub Pages
     runs-on: ubuntu-latest
-    needs: sonarqube  # Ensures deployment runs only after SonarQube analysis is complete
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
