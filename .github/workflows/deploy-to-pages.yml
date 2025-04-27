@@ -1,4 +1,4 @@
-name: Build and Deploy
+name: Deploy Angular Project To GitHub Pages
 
 on:
   push:
@@ -9,7 +9,7 @@ on:
 
 jobs:
   deploy:
-    name: Deploy Angular to GitHub Pages
+    name: Deploy to GitHub Pages
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -24,7 +24,7 @@ jobs:
         run: npm install
 
       - name: Build Angular app
-        run: npm run build -- --output-path=dist --base-href /ADarko22.github.io/
+        run: npm run build 
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4

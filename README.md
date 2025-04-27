@@ -54,12 +54,21 @@ You can set up GitHub Actions to automatically build and deploy your Angular app
 
 ### **1. Enable GitHub Pages**
 - Go to **Repository Settings** → **Pages**.
-- Set the source to `gh-pages` branch (this will be created by GitHub Actions).
+- Set the source to `gh-pages` branch (this will be created by GitHub Actions) and `root` folder.
 
 ### **2. Create GitHub Actions Workflow**
-Inside your repository, create a file at `.github/workflows/deploy.yml` like [deploy.yml](.github/workflows/build-deploy.yml)
+Inside your repository, create a file at `.github/workflows/deploy-to-pages.yml` like [deploy-to-pages.yml](.github/workflows/deploy-to-pages.yml). This action will:
+  1. Checkou the repository
+  2. Setup Node.js
+  3. Build the project into `dist` folder
+  4. Deploy to GitHub Pages on branch `gh-pages` and folder `dist`
 
-### **3. Commit & Push Changes**
+
+### **3. Create a Secret for the GitHub Token**
+  - Generate a GitHub Token with all the `repo` permits
+  - Add it as a `secrets` named `DEPLOY_GH_PAGES_TOKEN` (used by [deploy-to-pages.yml](.github/workflows/deploy-to-pages.yml))
+
+### **4. Commit & Push Changes**
 Once you commit this file, GitHub Actions will automatically build and deploy your website when you push changes to the `main` branch.
 
 ## 📜 License

@@ -17,8 +17,11 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist",
-            "baseHref": "/ADarko22.github.io/",
+            "outputPath": {
+              "base": "dist",
+              "browser": ""
+            },
+            "baseHref": "/",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -53,7 +56,10 @@
                   "maximumError": "8kB"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "aot": true
             },
             "development": {
               "optimization": false,
