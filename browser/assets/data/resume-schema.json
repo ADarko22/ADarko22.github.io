@@ -1,0 +1,306 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Resume",
+  "description": "This document records the details of a Resume",
+  "type": "object",
+  "properties": {
+    "intro": {
+      "type": "object",
+      "properties": {
+        "full_name": {
+          "type": "string",
+          "description": "Full name (primary name, optionally middle name, and last name)."
+        },
+        "profession": {
+          "type": "string",
+          "description": "The profession which best fits yourself."
+        },
+        "languages": {
+          "type": "array",
+          "description": "Languages known and spoken with proficiency level.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "Name of the language."
+              },
+              "proficiency": {
+                "type": "string",
+                "enum": [
+                  "Native",
+                  "Full Professional",
+                  "Professional Working",
+                  "Limited Working",
+                  "Elementary"
+                ],
+                "description": "Proficiency level of the language."
+              }
+            },
+            "required": [
+              "name",
+              "proficiency"
+            ]
+          }
+        },
+        "summary": {
+          "type": "string",
+          "description": "A brief professional summary or career objective."
+        },
+        "photos_intro": {
+          "type": "string",
+          "description": "A brief introduction to the photos describing me outside of work."
+        },
+        "photos": {
+          "type": "array",
+          "description": "List of names of photos locaated in `src/assets/intro-photos`.",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "summary"
+      ]
+    },
+    "work_experience": {
+      "type": "array",
+      "description": "List of work experiences.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "job_title": {
+            "type": "string",
+            "description": "The title of the position held."
+          },
+          "company": {
+            "type": "string",
+            "description": "Name of the company or organization."
+          },
+          "company_description": {
+            "type": "string",
+            "description": "Description of the company or organization."
+          },
+          "role": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "The role covered as a consultant."
+          },
+          "location": {
+            "type": "string",
+            "description": "Location of the company (City, Country)."
+          },
+          "start_date": {
+            "type": "string",
+            "format": "date",
+            "description": "Start date of employment (YYYY-MM-DD)."
+          },
+          "end_date": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date",
+            "description": "End date of employment (YYYY-MM-DD) or null if currently employed."
+          },
+          "responsibilities": {
+            "type": "array",
+            "description": "List of key responsibilities and achievements.",
+            "items": {
+              "type": "string"
+            }
+          },
+          "tech_stack": {
+            "type": "array",
+            "description": "List of technologies used.",
+            "items": {
+              "type": "string"
+            }
+          },
+          "git_repositories": {
+            "type": "array",
+            "description": "List of git repositories related to the job",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "description": "The name of the git repository"
+                },
+                "uri": {
+                  "type": "string",
+                  "format": "uri",
+                  "description": "The uri of the git repository"
+                }
+              },
+              "required": ["name", "uri"]
+            }
+          }
+        },
+        "required": [
+          "job_title",
+          "company",
+          "location",
+          "start_date",
+          "tech_stack"
+        ]
+      }
+    },
+    "education": {
+      "type": "array",
+      "description": "List of educational qualifications.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "degree": {
+            "type": "string",
+            "description": "Degree obtained (e.g., Bachelor of Science in Computer Science)."
+          },
+          "institution": {
+            "type": "string",
+            "description": "Name of the university or institution."
+          },
+          "location": {
+            "type": "string",
+            "description": "Location of the institution (City, Country)."
+          },
+          "graduation_year": {
+            "type": "integer",
+            "description": "Year of graduation or expected graduation."
+          },
+          "thesis": {
+            "type": "string",
+            "description": "Argument of the thesis."
+          },
+          "publications": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "description": "List of papers published.",
+            "items": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string",
+                  "description": "Name of the publication."
+                },
+                "link": {
+                  "type": "string",
+                  "format": "uri",
+                  "description": "Link to the publication article."
+                }
+              },
+              "required": [
+                "title",
+                "link"
+              ]
+            }
+          }
+        },
+        "required": [
+          "degree",
+          "institution",
+          "graduation_year"
+        ]
+      }
+    },
+    "hall_of_fame": {
+      "type": "array",
+      "description": "List of achievements grouped by categories.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "category": {
+            "type": "string",
+            "description": "Category of achievements (e.g., Coding Achievements, SW Projects, Personal Achievements)."
+          },
+          "achievements": {
+            "type": "array",
+            "description": "List of achievements within the category.",
+            "items": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string",
+                  "description": "Title or name of the achievement."
+                },
+                "description": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "description": "Description of the achievement."
+                },
+                "images": {
+                  "type": [
+                    "array",
+                    "null"
+                  ],
+                  "description": "List of image names located in `src/assets/hall-of-fame`.",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "links": {
+                  "type": [
+                    "array",
+                    "null"
+                  ],
+                  "description": "List of links associated with the achievement.",
+                  "items": {
+                    "type": "string",
+                    "format": "uri"
+                  }
+                }
+              },
+              "required": [
+                "title"
+              ]
+            }
+          }
+        },
+        "required": [
+          "category",
+          "achievements"
+        ]
+      }
+    },
+    "contacts": {
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string",
+          "format": "email",
+          "description": "Professional email address."
+        },
+        "phone": {
+          "type": "string",
+          "description": "Phone number with country code."
+        },
+        "linkedin": {
+          "type": "string",
+          "format": "uri",
+          "description": "LinkedIn profile URL."
+        },
+        "github": {
+          "type": "string",
+          "format": "uri",
+          "description": "GitHub profile URL."
+        }
+      },
+      "required": [
+        "email",
+        "phone"
+      ]
+    }
+  },
+  "required": [
+    "intro",
+    "work_experience",
+    "education",
+    "contacts"
+  ]
+}
