@@ -18,10 +18,10 @@
   </div>
   
   <div class="fullscreen-overlay" *ngIf="isFullscreen">
+    <button mat-icon-button class="close-fullscreen" (click)="closeFullscreen()">
+      <mat-icon>close</mat-icon>
+    </button>
     <div class="fullscreen-image-container">
       <img [src]="currentPhoto" class="fullscreen-image" alt="Fullscreen Image">
-      <button mat-icon-button class="close-fullscreen" (click)="closeFullscreen()">
-        <mat-icon>close</mat-icon>
-      </button>
     </div>
   </div>

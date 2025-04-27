@@ -14,47 +14,40 @@
             },
             {
                 "name": "Spanish",
-                "proficiency": "Elementary"
+                "proficiency": "Limited Working"
             },
             {
                 "name": "French",
                 "proficiency": "Elementary"
             }
         ],
-        "summary": "Software Engineer with a passion for crafting innovative and efficient solutions. Over 6 years of experience in designing and implementing robust software solutions. Committed to continuous learning, I frequently challenge my problem solving skills on platforms like HackerRank, LeetCode, CodeForces, and with the Advent of Code.",
-        "photos_intro": "When I'm not busy coding, I'm lucky to be surrounded by love and amazing friends! In my free time I enjoy traveling and building memories...",
+        "summary": "Hey there! I'm a Software Engineer who gets excited of building cool and clever stuff with code. I've been doing this for over six years now, which means I've wrestled with my fair share of digital beasties and (usually!) come out on top. When I'm not coding, I'm usually geeking out on LeetCode or tackling the brain teasers from Advent of Code. Basically, I'm always up for a good challenge and love making things work smoothly and efficiently!",
+        "photos_intro": "When I'm not lost in lines of code, you'll find me hanging out with awesome people and collecting fun stories and experiences. Quality time with friends and family is important to me, and I'm always up for new adventures. Here's a little peek at some of those moments:",
         "photos": [
-            "assets/intro-photos/Angelo-Teo-Amsterdam.jpeg",
-            "assets/intro-photos/Angelo-Teo-Annecy.jpeg",
+            "assets/intro-photos/Angelo-Teo-Lucerne.jpeg",
             "assets/intro-photos/Angelo-Friends-Oktoberfest-Stuttgard.jpeg",
-            "assets/intro-photos/Angelo-Friends-Roma-Park.jpeg",
-            "assets/intro-photos/Angelo-Teo-Denmark-Wedding.jpeg",
-            "assets/intro-photos/Angelo-Teo-Denmark.jpeg",
-            "assets/intro-photos/Angelo-Teo-Geneve-Lake.jpeg",
-            "assets/intro-photos/Angelo-Teo-Geneve-MontBlanc.jpeg",
-            "assets/intro-photos/Angelo-Teo-Luxemburg.jpeg",
-            "assets/intro-photos/Angelo-Teo-Marseille.jpeg",
-            "assets/intro-photos/Angelo-Teo-Monteaux-Lake.jpeg",
+            "assets/intro-photos/FT-Friends-Kilimanjaro.jpeg",
             "assets/intro-photos/Angelo-Teo-Monteaux.jpeg",
+            "assets/intro-photos/Angelo-Teo-Lucerne-Mt-Pilatus.jpeg",
             "assets/intro-photos/Angelo-Teo-Paquis-Italy-Fans.jpeg",
-            "assets/intro-photos/Angelo-Teo-Paquis.jpeg",
-            "assets/intro-photos/Angelo-Teo-Roma.jpeg"
+            "assets/intro-photos/Angelo-Teo-Colosseum.jpeg"
         ]
     },
     "work_experience": [
         {
         "job_title": "Senior Software Engineer",
         "company": "Tech Mahindra",
-        "company_description": "Tech Mahindra is a global leader in digital transformation, IT services, and consulting. Part of the Mahindra Group, it delivers innovative solutions across industries like telecom, healthcare, and finance.",
-        "role": "Consultant at Pictet, a leading Swiss private-bank specialized in wealth and asset management services.",
+        "company_description": "Tech Mahindra is a global leader in digital transformation, IT services, and consulting. It is part of the Mahindra Group and delivers innovative solutions across industries like telecom, healthcare, and finance.",
+        "role": "Senior DevOps consultant at a leading Swiss private-bank specialized in wealth and asset management services.",
         "location": "Geneva, Switzerland",
         "start_date": "2025-03-06",
         "end_date": null,
         "responsibilities": [
-             "Migrated a <i>complex client relationships</i> web application, from Java 8, Spring Boot 1.5 and Hibernate 5.5 to Java 17, Spring Boot 3 and Hibernate 6.6"
+             "Led the migration of a complex <i>client relationship management (CRM)</i> web application from Java 8 and Spring Boot 1.5.x to Java 11 and Spring Boot 2.7.x, resulting in enhanced maintainability and security.",
+             "Demonstrated the critical importance of <i>null-safe coding practices</i> and the associated tooling for automated enforcement, fostering cleaner and more robust development practices within the team."
         ],
         "tech_stack": [
-            "Java", "Maven", "Spring Boot", "Hiberante", "JUnit", "Typescript", "Thymeleaf", "ArgoCD", "Grafana", "Prometheus", "Logstash", "Elasticsearch", "Kubernetes", "AWS", "ArgoCD", "GitOps", "BitBucket"
+            "Java", "Maven", "Spring Boot", "Hiberante", "Typescript", "Thymeleaf", "ArgoCD", "Grafana", "Prometheus", "Logstash", "Elasticsearch", "Kubernetes", "AWS", "GitOps", "BitBucket", "Bamboo", "OpenAPI", "SwaggerUI", "OAuth 2.0", "OIDC", "JWT"
         ],
         "git_repositories": [
             {
@@ -77,12 +70,12 @@
         "responsibilities": [
             "Leveraging <i>Abstract Syntax Trees (ASTs)</i>, I worked on static analysis tools to detect a wide range of vulnerabilities, including security flaws and performance bottlenecks for Java and Kotlin projects. Integrated the <i>Eclipse Compiler for Java</i> to support the features of Java 21 and Java 22.",
             "Extended <i>Gradle</i> and <i>Maven</i> plugins to improve project indexing and support for various file types, resulting in a more accurate representation of the project structure.",
-            "Reduced build and test times of <i>Cirrus-ci</i> jobs for dogfooding the Java and Kotlin analyzers on <i>Sonar Qube</i> by leveraging knowledge of <i>Linux Systems</i> and <i>DevOps</i> tools, such as <i>Docker</i>, <i>Bash</i>, and <i>Git</i>.",
+            "Reduced build and test times of <i>Cirrus CI</i> jobs for dogfooding the Java and Kotlin analyzers on <i>Sonar Qube</i> by leveraging knowledge of <i>Linux Systems</i> and <i>DevOps</i> tools, such as <i>Docker</i>, <i>Bash</i>, and <i>Git</i>.",
             "Mentored and onboarded new team members through individual sessions and defining specific onboarding programs. I've also contributed to the  <i>Sonar community</i> by sharing expertise, answering questions and providing code examples.",
             "Led a proof-of-concept project to integrate a <i>RoBERTa</i>-based ML model for detecting commented code. Explored frameworks like <i>Spring Boot</i> and <i>JSpecify</i>, <i>Java 21</i> features and sustainable coding to ideate and implement new rules for the Java analyzer."
             ],
         "tech_stack": [
-            "Java", "Gradle", "Maven", "JUnit", "Mockito", "Kotlin", "Eclipse ECJ", "Docker", "Linux", "Git", "Sonar Qube", "Sonar Cloud", "Cirrus-ci", "Bash", " Python", "Spring Boot", "JSpecify", "Thymeleaf"
+            "Java", "Gradle", "Maven", "Kotlin", "Eclipse ECJ", "Docker", "Kubernetes", "Git", "Sonar Qube", "Sonar Cloud", "Cirrus CI", "Bash", " Python", "Spring Boot", "JSpecify", "Thymeleaf", "Testcontainers"
         ],
         "git_repositories": [
             {
@@ -123,7 +116,7 @@
             "Developed and maintained robust relational database systems, using <i>Hibernate</i> and <i>MySQL</i>, for <i>Reference Data</i> (ETFs, Futures, Forex, etc.) and <i>Clearing operations</i>. Optimized database performance by more than 50% using indexing and batching."
         ],
         "tech_stack": [
-            "Java", "Maven", "JUnit", "Mockito", "MySQL", "MariaDB", "SQL", "Apache Kafka", "Strimzi Kafka Connectors", "Confluent Kafka Connectors", "Hazelcast", "JMeter", "Hiberante", "JProfiler", "VisualVM", "Docker", "Prometheus", "Grafana", "OpenTelemetry", "OpenCsv", "Git", "BitBucket", "Kubernetes", "Amazon EKS", "Python", "TCP/IP Protocols", "QuickFix", "FIX Protocol"
+            "Java", "Maven", "Relational DBs", "SQL", "Hiberante", "Apache Kafka", "Kafka Connectors", "Hazelcast", "JMeter",  "JProfiler", "VisualVM", "Docker", "Prometheus", "Grafana", "OpenTelemetry", "OpenCsv", "Git", "BitBucket", "Kubernetes", "Amazon EKS", "Python", "Bash", "TCP/IP Protocols", "QuickFix", "FIX Protocol"
         ]
         }
     ],
@@ -155,7 +148,7 @@
             "achievements": [
                 {
                     "title": "Leet Code",
-                    "description": "I enjoy puzzling my mind with solving Lee Code problems and learning from them. In 2022 I spent 100 days on Leet Code, preparing for job interviews at big techs, like Uber and Sonar. In 2025 I'm training my endurance with Daily Challenges and I got March full month badge!",
+                    "description": "LeetCode is where I love to get my brain in gear and tackle some seriously fun puzzles. There's always something new to learn, and I really enjoy the challenge of finding solutions. My dedication to it has even earned me some pretty cool badges along the way!",
                     "images": [
                         "assets/hall-of-fame-images/Leetcode-100days-2022.png", 
                         "assets/hall-of-fame-images/Leetcode-DailyChallenge-March-2025.png"
@@ -180,9 +173,20 @@
             "achievements": [
                 {
                     "title": "Sonar's Community Hero",
-                    "description": "Sonar has an internal Leaderboard for Sonar Sourcers which help users in the Community. I have been many times fighting for the top position and I finally got it 6 months from joining the company. I'm proud of the \"Community Hero\" t-shirt I got!",
+                    "description": "Sonar has a cool way of recognizing helpful people in their Community with a Leaderboard for Sonar Sourcers. I'm really proud for nailing the top of the board within my first 6 months and receiving the awesome 'Community Hero' t-shirt honored only to few!",
                     "images": [
-                        "assets/hall-of-fame-images/Sonar-Community-Hero-2023.jpeg"
+                        "assets/hall-of-fame-images/Sonar-Community-Hero-2023.jpeg",
+                        "assets/hall-of-fame-images/Sonar-Community-Hero-t-shirt.jpeg"
+                    ],
+                    "links": ["https://community.sonarsource.com/"]
+                },
+                {
+                    "title": "Flow Traders Graduate's Party",
+                    "description": "As a final part of the successful Graduate Program at Flow Traders, I had the pleasure of organizing a celebration with my fellow graduates. It's one of the funniest and most memorable moments from my first job, and it showed me the value of celebrating accomplishments.",
+                    "images": [
+                        "assets/hall-of-fame-images/Flow-Traders-Graduate-Party.jpeg",
+                        "assets/hall-of-fame-images/Flow-Traders-Graduate-Party-1.jpeg",
+                        "assets/hall-of-fame-images/Flow-Traders-Graduate-Party-3.jpeg"
                     ],
                     "links": ["https://community.sonarsource.com/"]
                 }
@@ -193,15 +197,35 @@
             "achievements": [
                 {
                     "title": "Kilimanjaro's Hike",
-                    "description": "At end of January 2023 I conquered the peak of Mount Kilimanjaro with friends from Flow Traders. It's an amazing experience which I'll always keep in my heart. The best way to farewell the most amazing company I worked for.",
+                    "description": "Going up Kilimanjaro with my friends from Flow Traders was a tough but awesome experience, and the memories will stay with me. Getting to the top felt like a really significant way to finish my time at a company I really valued.",
                     "images": [
+                        "assets/hall-of-fame-images/Kilimanjaro-Certificate-2023.png",
                         "assets/hall-of-fame-images/Kilimanjaro-Hike-2.jpeg",
                         "assets/hall-of-fame-images/Kilimanjaro-Hike-3.jpeg",
-                        "assets/hall-of-fame-images/Kilimanjaro-Hike-4.jpeg",
-                        "assets/hall-of-fame-images/Kilimanjaro-Hike-5.jpeg",
                         "assets/hall-of-fame-images/Kilimanjaro-Hike-6.jpeg",
                         "assets/hall-of-fame-images/Kilimanjaro-Hike-7.jpeg",
                         "assets/hall-of-fame-images/Kilimanjaro-Hike-8.jpeg"
+                    ],
+                    "links": []
+                },
+                {
+                    "title": "Sahara's Desert",
+                    "description": "Exploring the Sahara Desert was a dream come true. The quiet nights under the stars, the warmth of the dunes, the stunning sunsets, and the breathtaking sunrise were all so special. It was also a perfect place to practice my photography hobby.",
+                    "images": [
+                        "assets/hall-of-fame-images/Sahara-Desert-1.jpeg",
+                        "assets/hall-of-fame-images/Sahara-Desert-2.jpeg",
+                        "assets/hall-of-fame-images/Sahara-Desert-3.jpeg",
+                        "assets/hall-of-fame-images/Sahara-Desert-4.jpeg"
+                    ],
+                    "links": []
+                },
+                {
+                    "title": "Dutch Tulips Fields",
+                    "description": "Living in the Netherlands wouldn't have been complete without a bike ride through the famous tulip fields. The experience of being surrounded by such vivid, natural colors was truly a blessing for the eyes. ",
+                    "images": [
+                        "assets/hall-of-fame-images/Netherlands-Tulips-1.jpeg",
+                        "assets/hall-of-fame-images/Netherlands-Tulips-3.jpeg",
+                        "assets/hall-of-fame-images/Netherlands-Tulips-4.jpeg"
                     ],
                     "links": []
                 }

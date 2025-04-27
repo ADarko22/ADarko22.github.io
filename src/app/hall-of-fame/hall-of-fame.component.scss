@@ -50,7 +50,7 @@
       .category-title {
         display: flex;
         align-items: center;
-        font-size: 0.6em;
+        font-size: 0.8em;
         color: var(--text-color);
       }
 
@@ -80,7 +80,7 @@
 
       &:hover,
       &.selected {
-        background: var(--secondary-bg-color);
+        background: var(--hover-bg-color);
       }
 
       .mat-list-item-content {

@@ -6,7 +6,7 @@
     border-radius: 5px;
     background-color: var(--toolbar-bg-color);
     color: var(--text-color);
-    box-shadow: 0 0.125em 0.25em rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.125em 0.25em var(--text-color);
     box-sizing: border-box;
     gap: 0.625em;
     width: 100%;
@@ -54,6 +54,7 @@
   
   .toolbar__nav-links button {
     cursor: pointer;
+    font-family: "Gill Sans", sans-serif;
     font-size: clamp(0.7em, 0.8em, 0.8em);
     text-transform: capitalize;
     color: inherit;
