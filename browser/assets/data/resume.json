@@ -1,0 +1,241 @@
+{
+    "intro": {
+        "full_name": "Angelo Buono",
+        "profession": "Software Engineer",
+        "languages": [
+            {
+                "name" : "Italian",
+                "proficiency": "Native"
+            },
+            {
+                "name": "English",
+                "proficiency": "Full Professional"
+
+            },
+            {
+                "name": "Spanish",
+                "proficiency": "Limited Working"
+            },
+            {
+                "name": "French",
+                "proficiency": "Elementary"
+            }
+        ],
+        "summary": "Hey there! I'm a Software Engineer who gets excited of building cool and clever stuff with code. I've been doing this for over six years now, which means I've wrestled with my fair share of digital beasties and (usually!) come out on top. When I'm not coding, I'm usually geeking out on LeetCode or tackling the brain teasers from Advent of Code. Basically, I'm always up for a good challenge and love making things work smoothly and efficiently!",
+        "photos_intro": "When I'm not lost in lines of code, you'll find me hanging out with awesome people and collecting fun stories and experiences. Quality time with friends and family is important to me, and I'm always up for new adventures. Here's a little peek at some of those moments:",
+        "photos": [
+            "assets/intro-photos/Angelo-Teo-Lucerne.jpeg",
+            "assets/intro-photos/Angelo-Friends-Oktoberfest-Stuttgard.jpeg",
+            "assets/intro-photos/FT-Friends-Kilimanjaro.jpeg",
+            "assets/intro-photos/Angelo-Teo-Monteaux.jpeg",
+            "assets/intro-photos/Angelo-Teo-Lucerne-Mt-Pilatus.jpeg",
+            "assets/intro-photos/Angelo-Teo-Paquis-Italy-Fans.jpeg",
+            "assets/intro-photos/Angelo-Teo-Colosseum.jpeg"
+        ]
+    },
+    "work_experience": [
+        {
+        "job_title": "Senior Software Engineer",
+        "company": "Tech Mahindra",
+        "company_description": "Tech Mahindra is a global leader in digital transformation, IT services, and consulting. It is part of the Mahindra Group and delivers innovative solutions across industries like telecom, healthcare, and finance.",
+        "role": "Senior DevOps consultant at a leading Swiss private-bank specialized in wealth and asset management services.",
+        "location": "Geneva, Switzerland",
+        "start_date": "2025-03-06",
+        "end_date": null,
+        "responsibilities": [
+             "Led the migration of a complex <i>client relationship management (CRM)</i> web application from Java 8 and Spring Boot 1.5.x to Java 11 and Spring Boot 2.7.x, resulting in enhanced maintainability and security.",
+             "Demonstrated the critical importance of <i>null-safe coding practices</i> and the associated tooling for automated enforcement, fostering cleaner and more robust development practices within the team."
+        ],
+        "tech_stack": [
+            "Java", "Maven", "Spring Boot", "Hiberante", "Typescript", "Thymeleaf", "ArgoCD", "Grafana", "Prometheus", "Logstash", "Elasticsearch", "Kubernetes", "AWS", "GitOps", "BitBucket", "Bamboo", "OpenAPI", "SwaggerUI", "OAuth 2.0", "OIDC", "JWT"
+        ],
+        "git_repositories": [
+            {
+                "name": "Bitbucket Repository Analyzer",
+                "uri": "https://github.com/ADarko22/BitbucketRepositoryAnalyzer"
+            },
+            {
+                "name": "Demo Null-Safe Approaches",
+                "uri": "https://github.com/ADarko22/DemoNullSafeApproaches"
+            }
+        ]
+        },
+        {
+        "job_title": "Software Engineer",
+        "company": "Sonar",
+        "company_description": "Sonar is a software company dedicated to improving code quality and security, by providing solutions to detect bugs, vulnerabilities and code smells in several programming languages.",
+        "location": "Geneva, Switzerland",
+        "start_date": "2023-04-01",
+        "end_date": "2025-02-28",
+        "responsibilities": [
+            "Leveraging <i>Abstract Syntax Trees (ASTs)</i>, I worked on static analysis tools to detect a wide range of vulnerabilities, including security flaws and performance bottlenecks for Java and Kotlin projects. Integrated the <i>Eclipse Compiler for Java</i> to support the features of Java 21 and Java 22.",
+            "Extended <i>Gradle</i> and <i>Maven</i> plugins to improve project indexing and support for various file types, resulting in a more accurate representation of the project structure.",
+            "Reduced build and test times of <i>Cirrus CI</i> jobs for dogfooding the Java and Kotlin analyzers on <i>Sonar Qube</i> by leveraging knowledge of <i>Linux Systems</i> and <i>DevOps</i> tools, such as <i>Docker</i>, <i>Bash</i>, and <i>Git</i>.",
+            "Mentored and onboarded new team members through individual sessions and defining specific onboarding programs. I've also contributed to the  <i>Sonar community</i> by sharing expertise, answering questions and providing code examples.",
+            "Led a proof-of-concept project to integrate a <i>RoBERTa</i>-based ML model for detecting commented code. Explored frameworks like <i>Spring Boot</i> and <i>JSpecify</i>, <i>Java 21</i> features and sustainable coding to ideate and implement new rules for the Java analyzer."
+            ],
+        "tech_stack": [
+            "Java", "Gradle", "Maven", "Kotlin", "Eclipse ECJ", "Docker", "Kubernetes", "Git", "Sonar Qube", "Sonar Cloud", "Cirrus CI", "Bash", " Python", "Spring Boot", "JSpecify", "Thymeleaf", "Testcontainers"
+        ],
+        "git_repositories": [
+            {
+                "name": "Sonar Java",
+                "uri": "https://github.com/SonarSource/sonar-java"
+            },
+            {
+                "name": "Sonar Scanner Maven",
+                "uri": "https://github.com/SonarSource/sonar-scanner-maven"
+            },
+            {
+                "name": "Sonar Scanner Gradle",
+                "uri": "https://github.com/SonarSource/sonar-scanner-gradle"
+            },
+            {
+                "name": "Sonar Kotlin",
+                "uri": "https://github.com/SonarSource/sonar-kotlin"
+            },
+            {
+                "name": "RSPEC",
+                "uri": "https://github.com/SonarSource/rspec"
+            }
+        ]
+        },
+        {
+        "job_title": "Software Engineer",
+        "company": "Flow Traders",
+        "company_description": "Flow Traders is a leading global trading firm specialized in Exchange-Traded Products (ETPs). The company uses proprietary strategies and tools to identify and capitalize on market inefficiencies and trends.",
+        "location": "Amsterdam, The Netherlands",
+        "start_date": "2018-09-01",
+        "end_date": "2023-03-31",
+        "responsibilities": [
+            "Implemented a robust observability solution using <i>Prometheus</i>, <i>Grafana</i>, and <i>OpenTelemetry</i> to monitor and optimize services on <i>Amazon EKS</i>. Automated redeployment mechanisms to ensure high availability and rapid recovery from failures.",
+            "Leveraged <i>Kafka Streams</i> to process real-time market data, from distributed components, and enhance the price limit tool. Contributed to the development of a global position aggregator by implementing <i>Kafka Connectors</i> for data ingestion, manipulation and storage.",
+            "Utilized profiling tools like <i>JMeter</i>, <i>JProfiler</i>, and <i>VisualVM</i> to identify and resolve performance bottlenecks in complex systems. Optimized database queries, network communication, and application logic.",
+            "Contributed to the development of a global position aggregator using <i>Hazelcast</i> and <i>Kafka</i> for distributed data management. Enhanced the user interface using <i>JavaFX</i> to efficiently visualize real-time data sourced via TCP protocols.",
+            "Successfully integrated with multiple trading venues (Euronext, LSE, Eurex, etc.) using the <i>FIX protocol</i> and the <i>QuickFix</i> library. Collaborated with counterparties and performed User Acceptance Testing for the FIX connectivity in diverse scenarios.",
+            "Developed and maintained robust relational database systems, using <i>Hibernate</i> and <i>MySQL</i>, for <i>Reference Data</i> (ETFs, Futures, Forex, etc.) and <i>Clearing operations</i>. Optimized database performance by more than 50% using indexing and batching."
+        ],
+        "tech_stack": [
+            "Java", "Maven", "Relational DBs", "SQL", "Hiberante", "Apache Kafka", "Kafka Connectors", "Hazelcast", "JMeter",  "JProfiler", "VisualVM", "Docker", "Prometheus", "Grafana", "OpenTelemetry", "OpenCsv", "Git", "BitBucket", "Kubernetes", "Amazon EKS", "Python", "Bash", "TCP/IP Protocols", "QuickFix", "FIX Protocol"
+        ]
+        }
+    ],
+    "education": [
+        {
+        "degree": "Master Degree in Computer Science",
+        "institution": "University of Pisa",
+        "location": "Pisa, Italia",
+        "graduation_year": 2018,
+        "thesis": "Platoon Formation and Stability, using Multi-access Edge Computing in LTE-Advanced networks",
+        "publications": [
+            {
+                "title": "SimuLTE-MEC: extending SimuLTE for Multiaccess Edge Computing",
+                "link": "https://www.researchgate.net/publication/327238265_SimuLTE-MEC_extending_SimuLTE_for_Multiaccess_Edge_Computing"
+            }
+        ]
+        },
+        {
+        "degree": "Bachelor Degree in Ingegneria Informatica",
+        "institution": "University of Pisa",
+        "location": "Pisa, Italia",
+        "graduation_year": 2015,
+        "thesis": "Il sistema operativo JUNOS, e confronto con Cisco IOS"
+        }
+    ],
+    "hall_of_fame": [
+        {
+            "category": "Coding Achievements",
+            "achievements": [
+                {
+                    "title": "Leet Code",
+                    "description": "LeetCode is where I love to get my brain in gear and tackle some seriously fun puzzles. There's always something new to learn, and I really enjoy the challenge of finding solutions. My dedication to it has even earned me some pretty cool badges along the way!",
+                    "images": [
+                        "assets/hall-of-fame-images/Leetcode-100days-2022.png", 
+                        "assets/hall-of-fame-images/Leetcode-DailyChallenge-March-2025.png"
+                    ],
+                    "links": []
+                },
+                {
+                    "title": "Advent of Code",
+                    "description": "In the last few years I've been awaiting Christmas with the Advent of Code, an amazing initiative wihch I'm very glad for! In 2024, for the 10-th anniversary I completed the whole calendar and it's been a fantastic journey!",
+                    "images": [
+                        "assets/hall-of-fame-images/AoC-2024.png"
+                    ],
+                    "links": [
+                        "https://adventofcode.com/2024",
+                        "https://adventofcode.com/2023"
+                    ]
+                }
+            ]
+        },
+        {
+            "category": "Work Achievements",
+            "achievements": [
+                {
+                    "title": "Sonar's Community Hero",
+                    "description": "Sonar has a cool way of recognizing helpful people in their Community with a Leaderboard for Sonar Sourcers. I'm really proud for nailing the top of the board within my first 6 months and receiving the awesome 'Community Hero' t-shirt honored only to few!",
+                    "images": [
+                        "assets/hall-of-fame-images/Sonar-Community-Hero-2023.jpeg",
+                        "assets/hall-of-fame-images/Sonar-Community-Hero-t-shirt.jpeg"
+                    ],
+                    "links": ["https://community.sonarsource.com/"]
+                },
+                {
+                    "title": "Flow Traders Graduate's Party",
+                    "description": "As a final part of the successful Graduate Program at Flow Traders, I had the pleasure of organizing a celebration with my fellow graduates. It's one of the funniest and most memorable moments from my first job, and it showed me the value of celebrating accomplishments.",
+                    "images": [
+                        "assets/hall-of-fame-images/Flow-Traders-Graduate-Party.jpeg",
+                        "assets/hall-of-fame-images/Flow-Traders-Graduate-Party-1.jpeg",
+                        "assets/hall-of-fame-images/Flow-Traders-Graduate-Party-3.jpeg"
+                    ],
+                    "links": ["https://community.sonarsource.com/"]
+                }
+            ]
+        },
+        {
+            "category": "Personal Achievements",
+            "achievements": [
+                {
+                    "title": "Kilimanjaro's Hike",
+                    "description": "Going up Kilimanjaro with my friends from Flow Traders was a tough but awesome experience, and the memories will stay with me. Getting to the top felt like a really significant way to finish my time at a company I really valued.",
+                    "images": [
+                        "assets/hall-of-fame-images/Kilimanjaro-Certificate-2023.png",
+                        "assets/hall-of-fame-images/Kilimanjaro-Hike-2.jpeg",
+                        "assets/hall-of-fame-images/Kilimanjaro-Hike-3.jpeg",
+                        "assets/hall-of-fame-images/Kilimanjaro-Hike-6.jpeg",
+                        "assets/hall-of-fame-images/Kilimanjaro-Hike-7.jpeg",
+                        "assets/hall-of-fame-images/Kilimanjaro-Hike-8.jpeg"
+                    ],
+                    "links": []
+                },
+                {
+                    "title": "Sahara's Desert",
+                    "description": "Exploring the Sahara Desert was a dream come true. The quiet nights under the stars, the warmth of the dunes, the stunning sunsets, and the breathtaking sunrise were all so special. It was also a perfect place to practice my photography hobby.",
+                    "images": [
+                        "assets/hall-of-fame-images/Sahara-Desert-1.jpeg",
+                        "assets/hall-of-fame-images/Sahara-Desert-2.jpeg",
+                        "assets/hall-of-fame-images/Sahara-Desert-3.jpeg",
+                        "assets/hall-of-fame-images/Sahara-Desert-4.jpeg"
+                    ],
+                    "links": []
+                },
+                {
+                    "title": "Dutch Tulips Fields",
+                    "description": "Living in the Netherlands wouldn't have been complete without a bike ride through the famous tulip fields. The experience of being surrounded by such vivid, natural colors was truly a blessing for the eyes. ",
+                    "images": [
+                        "assets/hall-of-fame-images/Netherlands-Tulips-1.jpeg",
+                        "assets/hall-of-fame-images/Netherlands-Tulips-3.jpeg",
+                        "assets/hall-of-fame-images/Netherlands-Tulips-4.jpeg"
+                    ],
+                    "links": []
+                }
+            ]
+        }
+    ],
+    "contacts": {
+        "email": "a.elessar22@gmail.com",
+        "phone": "+41 076 53 57 039",
+        "linkedin": "https://www.linkedin.com/in/angelobuono",
+        "github": "https://github.com/ADarko22"
+    }
+}
