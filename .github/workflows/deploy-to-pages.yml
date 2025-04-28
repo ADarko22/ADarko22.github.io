@@ -26,6 +26,11 @@ jobs:
       - name: Build Angular app
         run: npm run build 
 
+      - name: Create 404.html for redirect  
+        run: |
+          cp dist/index.html dist/404.html
+          sed -i 's/<title>.*<\/title>/<title>My Awesome Resume<\/title>/' dist/404.html
+
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
