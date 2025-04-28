@@ -1,27 +1,27 @@
 <div class="slideshow-container" *ngIf="photoUrls && photoUrls.length > 0">
-    <div *ngIf="isLoading" class="loading-spinner">
-      <mat-spinner></mat-spinner>
-    </div>
-  
-    <div class="photo-wrapper">
-      <img *ngIf="photoUrls.length > 1 && prevPhotoUrl && !isLoading" [src]="prevPhotoUrl" class="side-photo prev-photo" alt="Previous Photo">
-      <img *ngIf="currentPhoto && !isLoading" [src]="currentPhoto" class="slideshow-image" alt="Slideshow Image" (click)="openFullscreen()">
-      <img *ngIf="photoUrls.length > 1 && nextPhotoUrl && !isLoading" [src]="nextPhotoUrl" class="side-photo next-photo" alt="Next Photo">
-    </div>
-  
-    <button mat-icon-button class="prev" (click)="prevPhoto()" *ngIf="photoUrls.length > 1 && !isLoading">
-      <mat-icon>chevron_left</mat-icon>
-    </button>
-    <button mat-icon-button class="next" (click)="nextPhoto()" *ngIf="photoUrls.length > 1 && !isLoading">
-      <mat-icon>chevron_right</mat-icon>
-    </button>
+  <div *ngIf="isLoading" class="loading-spinner">
+    <mat-spinner></mat-spinner>
   </div>
-  
-  <div class="fullscreen-overlay" *ngIf="isFullscreen">
-    <button mat-icon-button class="close-fullscreen" (click)="closeFullscreen()">
-      <mat-icon>close</mat-icon>
-    </button>
-    <div class="fullscreen-image-container">
-      <img [src]="currentPhoto" class="fullscreen-image" alt="Fullscreen Image">
-    </div>
+
+  <div class="photo-wrapper">
+    <img *ngIf="photoUrls.length > 1 && prevPhotoUrl" [src]="prevPhotoUrl" class="side-photo prev-photo" alt="Previous Photo">
+    <img *ngIf="currentPhoto" [src]="currentPhoto" class="slideshow-image" [class.loading]="isLoading" alt="Slideshow Image" (click)="openFullscreen()">
+    <img *ngIf="photoUrls.length > 1 && nextPhotoUrl" [src]="nextPhotoUrl" class="side-photo next-photo" alt="Next Photo">
   </div>
+
+  <button mat-icon-button class="prev" (click)="prevPhoto()" *ngIf="photoUrls.length > 1">
+    <mat-icon>chevron_left</mat-icon>
+  </button>
+  <button mat-icon-button class="next" (click)="nextPhoto()" *ngIf="photoUrls.length > 1">
+    <mat-icon>chevron_right</mat-icon>
+  </button>
+</div>
+
+<div class="fullscreen-overlay" *ngIf="isFullscreen">
+  <button mat-icon-button class="close-fullscreen" (click)="closeFullscreen()">
+    <mat-icon>close</mat-icon>
+  </button>
+  <div class="fullscreen-image-container">
+    <img [src]="currentPhoto" class="fullscreen-image" alt="Fullscreen Image">
+  </div>
+</div>

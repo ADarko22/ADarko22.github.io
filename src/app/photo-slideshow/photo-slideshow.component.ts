@@ -21,6 +21,7 @@ export class PhotoSlideshowComponent implements OnInit, OnDestroy, OnChanges {
   private destroy$ = new Subject<void>();
   isLoading: boolean = false;
   isFullscreen: boolean = false;
+  private preloadedImages: { [url: string]: boolean } = {};
 
   ngOnInit(): void {
     this.updatePhoto();
@@ -29,6 +30,7 @@ export class PhotoSlideshowComponent implements OnInit, OnDestroy, OnChanges {
   ngOnChanges(changes: SimpleChanges): void {
     if (changes['photoUrls']) {
       this.currentPhotoIndex = 0;
+      this.preloadImages(changes['photoUrls'].currentValue);
       this.updatePhoto();
     }
   }
@@ -38,24 +40,64 @@ export class PhotoSlideshowComponent implements OnInit, OnDestroy, OnChanges {
     this.destroy$.complete();
   }
 
-  updatePhoto(): void {
-    if (this.photoUrls && this.photoUrls.length > 0) {
-      this.currentPhoto = this.photoUrls[this.currentPhotoIndex];
-
-      if (this.photoUrls.length > 1) {
-        const prevIndex = (this.currentPhotoIndex - 1 + this.photoUrls.length) % this.photoUrls.length;
-        const nextIndex = (this.currentPhotoIndex + 1) % this.photoUrls.length;
-
-        this.prevPhotoUrl = this.photoUrls[prevIndex];
-        this.nextPhotoUrl = this.photoUrls[nextIndex];
-      } else {
-        this.prevPhotoUrl = null;
-        this.nextPhotoUrl = null;
+  preloadImages(urls: string[]): void {
+    urls.forEach(url => {
+      if (!this.preloadedImages[url]) {
+        const img = new Image();
+        img.onload = () => {
+          this.preloadedImages[url] = true;
+        };
+        img.src = url;
       }
+    });
+  }
+
+  updatePhoto(): void {
+    this.isLoading = true;
+    this.currentPhoto = null; // Clear current photo immediately
+
+    if (this.photoUrls && this.photoUrls.length > 0) {
+      this.loadImage(this.photoUrls[this.currentPhotoIndex]).then(() => {
+        this.currentPhoto = this.photoUrls[this.currentPhotoIndex];
+        this.isLoading = false;
+        this.updatePrevNext();
+      });
     } else {
-      this.currentPhoto = null;
+      this.isLoading = false;
+      this.updatePrevNext();
+    }
+  }
+
+  loadImage(url: string): Promise<void> {
+    return new Promise((resolve, reject) => {
+      const img = new Image();
+      img.onload = () => resolve();
+      img.onerror = reject; // Handle potential errors
+      img.src = url;
+    });
+  }
+
+  updatePrevNext(): void {
+    if (this.photoUrls && this.photoUrls.length > 1) {
+      const prevIndex = (this.currentPhotoIndex - 1 + this.photoUrls.length) % this.photoUrls.length;
+      const nextIndex = (this.currentPhotoIndex + 1) % this.photoUrls.length;
+      this.preloadImage(this.photoUrls[prevIndex]);
+      this.preloadImage(this.photoUrls[nextIndex]);
+      this.prevPhotoUrl = this.photoUrls[prevIndex];
+      this.nextPhotoUrl = this.photoUrls[nextIndex];
+    } else {
       this.prevPhotoUrl = null;
       this.nextPhotoUrl = null;
+    }
+  }
+
+  preloadImage(url: string | null): void {
+    if (url && !this.preloadedImages[url]) {
+      const img = new Image();
+      img.onload = () => {
+        this.preloadedImages[url] = true;
+      };
+      img.src = url;
     }
   }
 

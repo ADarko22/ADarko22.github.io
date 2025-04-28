@@ -21,11 +21,15 @@
   object-fit: cover;
   display: block;
   z-index: 2;
-  transform: translateY(5%) scale(1);
-  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
   opacity: 1;
   border: 1px outset;
+  transform: translateY(5%) scale(1);
+  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+
+  &.loading {
+    opacity: 0;
+  }
 }
 
 .side-photo {
