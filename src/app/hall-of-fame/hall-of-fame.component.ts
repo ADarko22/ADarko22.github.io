@@ -42,7 +42,7 @@ export class HallOfFameComponent implements OnInit {
   ngOnInit(): void {
     this.resumeParserService.getResume().subscribe((data) => {
       this.hallOfFames = data?.hall_of_fame ?? null;
-      this.expandedHallOfFames = this.hallOfFames?.map((_, i) => true) ?? [];
+      this.expandedHallOfFames = this.hallOfFames?.map((_, i) => i == 0) ?? [];
       if (this.hallOfFames && this.hallOfFames.length > 0 && this.hallOfFames[0].achievements && this.hallOfFames[0].achievements.length > 0) {
         this.selectedAchievement = this.hallOfFames[0].achievements[0];
       }

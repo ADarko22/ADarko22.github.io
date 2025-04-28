@@ -1,27 +1,81 @@
 .education-container {
   display: flex;
   justify-content: center;
+  width: 100%; /* Ensure full width on mobile */
 }
 
 .education-section {
   margin-top: 1em;
-  max-width: 75vw;
-  width: 100%;
-  padding: 0 1em;
+  display: block;
+  justify-content: center;
+  width: 95%; /* Take up most of the screen on mobile with some padding */
+  padding: 0; /* Remove horizontal padding on mobile */
 }
 
 .education-details h5,
-mat-panel-title,
-mat-panel-description,
 mat-list-item {
-  word-wrap: break-word; 
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  font-size: 0.9em; /* Adjust font size for mobile */
+}
+
+mat-accordion {
+  width: 100%;
+}
+
+mat-expansion-panel {
+  background: var(--primary-bg-color);
+  width: 100%;
+  min-height: fit-content;
+  height: fit-content;
+  margin-bottom: 0.5em; /* Add some spacing between panels on mobile */
+}
+
+mat-expansion-panel-header {
+  display: flex;
+  text-align: left;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: fit-content;
+  height: fit-content;
+  word-wrap: break-word;
+  padding: 0.8em; /* Add some padding to the header on mobile */
+}
+
+mat-panel-title {
+  font-size: 1em; /* Adjust font size for mobile */
+  color: var(--text-color);
+  width: 100%;
+  flex: 1;
+  margin-right: 0.5em; /* Reduce right margin on mobile */
+  word-wrap: break-word;
+}
+
+mat-panel-description {
+  font-size: 0.85em; /* Adjust font size for mobile */
+  color: var(--text-color);
+  flex: 1;
+  width: 100%;
+  display: flex;
+  word-wrap: break-word;
+  justify-content: flex-end;
+  align-items: center; /* Vertically align icons and text */
+
+  .calendar-icon,
+  .location-icon {
+    font-size: 1em; /* Adjust icon size for mobile */
+    margin-left: 0.1em;
+    margin-right: 0.1em;
+  }
 }
 
 .education-details {
   width: 100%;
+  padding: 0.8em; /* Add some padding to the details on mobile */
 
   h5 {
-    margin: 1em 0 0.5em;
+    margin: 0.8em 0 0.4em; /* Adjust margins for mobile */
+    font-size: 1em; /* Adjust font size for mobile */
   }
 
   strong {
@@ -32,55 +86,27 @@ mat-list-item {
 
   a,
   p {
-    margin-bottom: 0.6em;
-    line-height: 1;
-    font-size: clamp(0.9rem, 1vw, 1.1rem);
+    margin-bottom: 0.5em; /* Adjust margins for mobile */
+    line-height: 1.5; /* Improve readability on mobile */
+    font-size: 0.9em; /* Adjust font size for mobile */
   }
-}
-
-mat-accordion {
-  width: 100%;
-}
-
-mat-expansion-panel {
-  background: var(--primary-bg-color);
-  width: 100%;
-}
-
-mat-expansion-panel-header {
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  min-height: 5vw;
-  height: fit-content;
-}
-
-mat-panel-title {
-  font-size: clamp(1rem, 1.1vw, 1.2rem);
-  color: var(--text-color);
-  width: 100%;
-  flex: 1;
-  margin-right: 1em;
-  word-wrap: break-word;
-}
-
-mat-panel-description {
-  font-size: clamp(0.9rem, 1vw, 1.1rem);
-  color: var(--text-color);
-  flex: 1;
-  width: 100%;
-  display: flex;
-  word-wrap: break-word;
-  justify-content: flex-end;
 }
 
 mat-list-item {
   background-color: var(--secondary-bg-color);
   border-radius: 0.3em;
-  margin-bottom: 0.6em;
-  
+  margin-bottom: 0.5em; /* Adjust margins for mobile */
+  padding: 0.6em; /* Add some padding to list items on mobile */
+
   &:hover {
     background: var(--hover-bg-color);
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
   }
 }
 
@@ -90,21 +116,109 @@ mat-list-item {
 .thesis-icon,
 .publications-icon,
 .publication-link-icon {
-  margin-left: 0.2em;
-  margin-right: 0.2em;
+  margin-left: 0.1em;
+  margin-right: 0.3em; /* Adjust right margin for better spacing */
   vertical-align: middle;
-  font-size: 1.2em;
+  font-size: 1.1em; /* Adjust icon size for mobile */
   color: var(--icon-bg-color);
   display: inline-flex;
   align-items: center;
+  flex-shrink: 0;
 }
 
 .thesis-section {
-  border-bottom: 1px solid var(--text-colo);
-  padding-bottom: 0.5em;
-  margin-bottom: 0.5em;
+  border-bottom: 1px solid var(--text-color);
+  padding-bottom: 0.4em; /* Adjust padding for mobile */
+  margin-bottom: 0.4em; /* Adjust margin for mobile */
 }
 
 .publications-section {
-  margin-top: 0.5em;
+  margin-top: 0.4em; /* Adjust margin for mobile */
+}
+
+/* Media query for larger screens (tablets and desktops) */
+@media (min-width: 769px) {
+  .education-container {
+    justify-content: center;
+  }
+
+  .education-section {
+    margin-top: 1em;
+    display: block;
+    justify-content: center;
+    max-width: 75vw;
+    width: 100%;
+    padding: 0 1em;
+  }
+
+  .education-details h5,
+  mat-list-item {
+    font-size: clamp(0.9rem, 1vw, 1.1rem);
+  }
+
+  mat-expansion-panel {
+    margin-bottom: 0; /* Reset margin on larger screens */
+  }
+
+  mat-expansion-panel-header {
+    padding: 1em; /* Reset padding on larger screens */
+  }
+
+  mat-panel-title {
+    font-size: clamp(1rem, 1.1vw, 1.2rem);
+    margin-right: 1em;
+  }
+
+  mat-panel-description {
+    font-size: clamp(0.9rem, 1vw, 1.1rem);
+    justify-content: flex-end;
+
+    .calendar-icon,
+    .location-icon {
+      font-size: 1.2em;
+      margin-left: 0.2em;
+      margin-right: 0.2em;
+    }
+  }
+
+  .education-details {
+    padding: 1em; /* Reset padding on larger screens */
+
+    h5 {
+      margin: 1em 0 0.5em;
+      font-size: clamp(1rem, 1.1vw, 1.2rem);
+    }
+
+    a,
+    p {
+      margin-bottom: 0.6em;
+      line-height: 1;
+      font-size: clamp(0.9rem, 1vw, 1.1rem);
+    }
+  }
+
+  mat-list-item {
+    margin-bottom: 0.6em;
+    padding: 0.8em;
+  }
+
+  .education-icon,
+  .calendar-icon,
+  .location-icon,
+  .thesis-icon,
+  .publications-icon,
+  .publication-link-icon {
+    margin-left: 0.2em;
+    margin-right: 0.2em;
+    font-size: 1.2em;
+  }
+
+  .thesis-section {
+    padding-bottom: 0.5em;
+    margin-bottom: 0.5em;
+  }
+
+  .publications-section {
+    margin-top: 0.5em;
+  }
 }

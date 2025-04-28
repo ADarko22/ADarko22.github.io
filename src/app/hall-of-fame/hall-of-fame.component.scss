@@ -1,23 +1,24 @@
 .hall-of-fame-container {
-  display: flex;
-  max-width: 100vw;
+  display: flex; /* Stack elements vertically on mobile */
   width: 100%;
+  flex-direction: column;
   background: var(--base-bg-color);
 }
 
 .category-menu {
-  max-width: 20vw; 
-  width: 100%;
-  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  width: 100%; /* Take full width on mobile */
+  border-right: none; /* Remove right border on mobile */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Add bottom border to separate sections */
   padding: 0.5em;
-  height: 100%;
   overflow-y: auto;
-  transition: width 0.3s ease;
+  transition: max-height 0.3s ease, padding 0.3s ease; 
   background: var(--base-bg-color);
-  flex-shrink: 0; 
-
+  flex-shrink: 0;
+  max-height: none; 
   &.minimized {
-    width: 3em;
+    max-height: 3.5em; 
+    overflow: hidden;
+    padding-bottom: 0;
   }
 
   .minimize-button {
@@ -27,8 +28,11 @@
     border: none;
     cursor: pointer;
     padding: 0.5em;
-    margin-bottom: 0.5em;
+    margin-bottom: 0; 
     color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
   mat-accordion {
@@ -38,19 +42,19 @@
   mat-expansion-panel {
     background: var(--primary-bg-color);
     width: 100%;
+    margin-bottom: 0.2em; 
+
+    &:first-child {
+      margin-top: 0.2em;
+    }
 
     mat-expansion-panel-header {
-      padding: 0em 0.3em; 
-
-      mat-expansion-panel-header-title {
-        display: flex;
-        align-items: center;
-      }
+      padding: 0.3em 0.5em;
 
       .category-title {
         display: flex;
         align-items: center;
-        font-size: 0.8em;
+        font-size: 0.9em; /* Slightly larger font on mobile */
         color: var(--text-color);
       }
 
@@ -58,8 +62,8 @@
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        font-size: 0.8em;
-        max-width: calc(90% - 1em); 
+        font-size: 0.9em; /* Slightly larger font on mobile */
+        max-width: calc(90% - 1.2em);
       }
     }
   }
@@ -71,12 +75,13 @@
 
     mat-list-item {
       cursor: pointer;
-      height: 2em;
+      min-height: 2.5em; /* Slightly taller for better touch target */
       width: 100%;
       border-radius: 0.3em;
       margin-bottom: 0.2em;
       margin-left: 0em;
       color: var(--text-color);
+      font-size: 0.9em; /* Slightly larger font on mobile */
 
       &:hover,
       &.selected {
@@ -90,11 +95,11 @@
       }
 
       .mat-list-item-graphic {
-        margin-right: 0.5em;
+        margin-right: 0.8em; /* More spacing for icons */
       }
 
       .achievement-title {
-        font-size: 0.6em;
+        font-size: 0.9em; /* Slightly larger font on mobile */
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -105,62 +110,227 @@
 
   .category-icon,
   .achievement-icon {
-    margin-right: 0.2em;
+    margin-right: 0.5em; /* More spacing for icons */
+    font-size: 1.1em; /* Slightly larger icons on mobile */
     color: var(--icon-bg-color);
   }
 }
 
 .achievement-display {
-  max-width: 75vw;
-  width: 100%;
-  flex-grow: 1;
+  width: 100%; /* Take full width on mobile */
   padding: 0.5em;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
+  flex-direction: column; /* Stack content within the display */
+  justify-content: flex-start; /* Align items to the start */
+  align-items: stretch; /* Stretch items to full width */
+  align-content: stretch;
 
   .achievement-details {
-    max-width: 65vw;
     width: 100%;
-    padding: 0.5em;
-    line-height: 1.6;
-    margin-bottom: 1em;
-    font-size: clamp(0.8em, 0.8em, 0.9em);
+    padding: 0.8em; /* More padding for readability */
+    line-height: 1.7;
+    margin-bottom: 1.5em;
+    font-size: 1em; /* Slightly larger base font size */
   }
 }
 
 .hall-of-fame-slideshow {
-  margin-top: 1em;
-  margin-bottom: 2em;
+  margin-top: 1.5em;
+  margin-bottom: 2.5em;
 }
 
 .achievement-links {
   display: flex;
   flex-wrap: wrap;
   margin-top: 1em;
+  gap: 0.5em; /* Add some gap between links */
 }
 
-
-mat-list-item {
-  background-color: var(--secondary-bg-color);
-  border-radius: 2em;  
+.achievement-links mat-list-item {
+  display: inline-flex; /* Display items inline */
+  background: var(--secondary-bg-color);
+  border-radius: 2em;
   margin-bottom: 0.6em;
   width: fit-content;
+  padding-right: 0.8em; /* Add padding for better touch target */
+  padding-left: 0.5em; /* Add padding for better touch target */
 
   &:hover {
     background: var(--hover-bg-color);
   }
 }
 
+.achievement-links mat-list-item a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit; /* Inherit text color */
+}
+
 .link-icon {
-  margin-left: 0.2em;
-  margin-right: 0.2em;
+  margin-left: 0; /* Adjust icon spacing */
+  margin-right: 0.5em;
   vertical-align: middle;
-  font-size: 1.2em;
+  font-size: 1.1em; /* Slightly smaller icon */
   color: var(--icon-bg-color);
   display: inline-flex;
   align-items: center;
 }
 
-  
+/* Media query for larger screens (tablets and desktops) */
+@media (min-width: 769px) {
+  .hall-of-fame-container {
+    display: flex;
+    flex-direction: row;
+    border-radius: 0.5em;
+  }
+
+  .category-menu {
+    max-width: 20vw;
+    width: 100%;
+    border-top-left-radius: 0.5em;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0.5em;
+    height: auto;
+    overflow-y: auto;
+    transition: width 0.3s ease;
+    background: var(--base-bg-color);
+    flex-shrink: 0;
+
+    &.minimized {
+      width: 3em;
+    }
+
+    .minimize-button {
+      width: 100%;
+      text-align: left;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5em;
+      margin-bottom: 0.5em;
+      color: var(--text-color);
+    }
+
+    mat-accordion {
+      width: 100%;
+    }
+
+    mat-expansion-panel {
+      background: var(--primary-bg-color);
+      width: 100%;
+
+      mat-expansion-panel-header {
+        padding: 0em 0.3em;
+        border-radius: 1em;
+
+        mat-expansion-panel-header-title {
+          display: flex;
+          align-items: center;
+        }
+
+        .category-title {
+          display: flex;
+          align-items: center;
+          font-size: 0.8em;
+          color: var(--text-color);
+        }
+
+        span {
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          font-size: 0.8em;
+          max-width: calc(90% - 1em);
+        }
+      }
+    }
+
+    mat-list {
+      width: 100%;
+      padding-top: 0;
+      padding-bottom: 0;
+
+      mat-list-item {
+        cursor: pointer;
+        height: 2em;
+        width: 100%;
+        border-radius: 0.3em;
+        margin-bottom: 0.2em;
+        margin-left: 0em;
+        color: var(--text-color);
+
+        &:hover,
+        &.selected {
+          background: var(--hover-bg-color);
+        }
+
+        .mat-list-item-content {
+          display: flex;
+          align-items: center;
+          padding: 0 !important;
+        }
+
+        .mat-list-item-graphic {
+          margin-right: 0.5em;
+        }
+
+        .achievement-title {
+          font-size: 0.6em;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          color: var(--text-color);
+        }
+      }
+    }
+
+    .category-icon,
+    .achievement-icon {
+      margin-right: 0.2em;
+      color: var(--icon-bg-color);
+    }
+  }
+
+  .achievement-display {
+    max-width: 7vw;
+    min-width: fit-content;
+    width: 100%;
+    flex-grow: 1;
+    padding: 0.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    .achievement-details {
+      max-width: 62vw;
+      width: 100%;
+      padding: 0.5em;
+      line-height: 1.6;
+      margin-bottom: 1em;
+      font-size: clamp(0.8em, 0.8em, 0.9em);
+    }
+  }
+
+  .hall-of-fame-slideshow {
+    margin-top: 1em;
+    margin-bottom: 2em;
+  }
+
+  .achievement-links {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1em;
+  }
+
+  .link-icon {
+    margin-left: 0.2em;
+    margin-right: 0.2em;
+    vertical-align: middle;
+    font-size: 1.2em;
+    color: var(--icon-bg-color);
+    display: inline-flex;
+    align-items: center;
+  }
+}

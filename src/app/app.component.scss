@@ -1,118 +1,119 @@
 .toolbar {
-    display: flex;
-    flex-direction: column; 
-    align-items: flex-start;
-    padding: 0.8em 1.2em;
-    border-radius: 5px;
-    background-color: var(--toolbar-bg-color);
-    color: var(--text-color);
-    box-shadow: 0 0.125em 0.25em var(--text-color);
-    box-sizing: border-box;
-    gap: 0.625em;
-    width: 100%;
-    overflow-x: hidden; 
-    height: auto;
-  }
-  
-  .toolbar__left {
-    display: flex;
-    align-items: center;
-    width: 100%; 
-  }
-  
-  .toolbar__logo {
-    background: var(--logo-color);
-    background-clip: text;
-    -webkit-background-clip: text;
-    font-size: clamp(1.4em, 1.4em, 1.6em);
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start;
+  padding: 0.8em 1.2em;
+  border-radius: 5px;
+  background-color: var(--toolbar-bg-color);
+  color: var(--text-color);
+  box-shadow: 0 0.125em 0.25em var(--text-color);
+  box-sizing: border-box;
+  gap: 0.625em;
+  width: 100%;
+  overflow-x: hidden; 
+  height: auto;
+}
+
+.toolbar__left {
+  display: flex;
+  align-items: center;
+  width: 100%; 
+}
+
+.toolbar__logo {
+  background: var(--logo-color);
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-size: clamp(1.4em, 1.4em, 1.6em);
+  font-weight: bold;
+  letter-spacing: 0.0625em;
+  text-transform: uppercase;
+  color: transparent;
+  transition: transform 0.3s ease-in-out;
+  white-space: pre-wrap;
+  max-width: fit-content;
+  flex-shrink: 0;
+  max-width: 100%;
+}
+
+.toolbar__right {
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start; 
+  width: 100%; 
+  margin-top: 0.5em; 
+}
+
+.toolbar__nav-links {
+  display: flex;
+  flex-wrap: wrap; 
+  box-sizing: border-box;
+  gap: 0.625em;
+  width: 100%;
+}
+
+.toolbar__nav-links button {
+  cursor: pointer;
+  font-family: "Gill Sans", sans-serif;
+  font-size: clamp(0.7em, 0.8em, 0.8em);
+  text-transform: capitalize;
+  color: inherit;
+  background: none;
+  border: none;
+  border-top: 1px solid var(--text-color);
+  border-bottom: 1px solid var(--text-color);
+  transition: color 0.3s ease, transform 0.3s ease;
+  box-sizing: border-box;
+  white-space: nowrap;
+  padding: 0.3em 0.5em;
+  flex-shrink: 0;
+  min-width: 80px;
+
+  &:hover,
+  &.active {
     font-weight: bold;
-    letter-spacing: 0.0625em;
-    text-transform: uppercase;
-    color: transparent;
-    transition: transform 0.3s ease-in-out;
-    white-space: pre-wrap;
-    max-width: fit-content;
-    flex-shrink: 0;
-    max-width: 100%;
   }
-  
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.toolbar__theme-toggle {
+  margin-top: 0.5em; 
+}
+
+@media (min-width: 769px) {
+  .toolbar {
+    flex-direction: row; 
+    align-items: center; 
+    justify-content: space-between;
+    overflow: hidden;
+  }
+
+  .toolbar__left {
+    width: auto;
+  }
+
   .toolbar__right {
-    display: flex;
-    flex-direction: column; 
-    align-items: flex-start; 
-    width: 100%; 
-    margin-top: 0.5em; 
+    flex-direction: row; 
+    align-items: center; 
+    justify-content: flex-end;
+    width: auto; 
+    margin-top: 0;
   }
-  
+
   .toolbar__nav-links {
-    display: flex;
-    flex-wrap: wrap; 
-    box-sizing: border-box;
-    gap: 0.625em;
-    width: 100%;
+    width: auto; 
+    justify-content: flex-end; 
   }
-  
-  .toolbar__nav-links button {
-    cursor: pointer;
-    font-family: "Gill Sans", sans-serif;
-    font-size: clamp(0.7em, 0.8em, 0.8em);
-    text-transform: capitalize;
-    color: inherit;
-    background: none;
-    border: none;
-    border-top: 1px solid var(--text-color);
-    border-bottom: 1px solid var(--text-color);
-    transition: color 0.3s ease, transform 0.3s ease;
-    box-sizing: border-box;
-    white-space: nowrap;
-    padding: 0.3em 0.5em;
-    flex-shrink: 0;
-    min-width: 80px;
-  
-    &:hover,
-    &.active {
-      font-weight: bold;
-    }
-  
-    &:focus {
-      outline: none;
-    }
-  }
-  
+
   .toolbar__theme-toggle {
-    margin-top: 0.5em; 
+    margin-top: 0;
+    margin-left: 1em;
   }
-  
-  @media (min-width: 769px) {
-    .toolbar {
-      flex-direction: row; 
-      align-items: center; 
-      justify-content: space-between;
-    }
-  
-    .toolbar__left {
-      width: auto;
-    }
-  
-    .toolbar__right {
-      flex-direction: row; 
-      align-items: center; 
-      justify-content: flex-end;
-      width: auto; 
-      margin-top: 0;
-    }
-  
-    .toolbar__nav-links {
-      width: auto; 
-      justify-content: flex-end; 
-    }
-  
-    .toolbar__theme-toggle {
-      margin-top: 0;
-      margin-left: 1em;
-    }
-  }
-  
-  .router-container {
-    width: 100%;
-  }
+}
+
+.router-container {
+  width: 100%;
+}

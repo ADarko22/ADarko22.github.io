@@ -24,20 +24,27 @@ import { CommonModule } from '@angular/common';
   `,
   styles: `
     div {
-      display: flex;
-    }
-    button {
-      background: none;
-      border: none;
-      padding: 4px 8px;
-      margin: 0 4px;
-      cursor: pointer;
-      color: var(--primary-bg-color);
-      border-radius: 4px;
-    }
-    button.active {
-      background-color: var(--secondary-bg-color);
-    }
+        display: flex;
+      }
+
+      button {
+        background: none;
+        border: none;
+        padding: 6px 10px; /* Slightly larger padding for touch */
+        margin: 0 6px; /* Slightly larger margin */
+        cursor: pointer;
+        color: var(--primary-bg-color);
+        border-radius: 6px; /* Slightly larger border-radius */
+        font-size: 1.1em; /* Slightly larger icon size */
+
+        span.material-symbols-outlined {
+          font-size: 1.1em;
+        }
+      }
+
+      button.active {
+        background-color: var(--secondary-bg-color);
+      }
   `,
 })
 export class ThemeToggleComponent {
