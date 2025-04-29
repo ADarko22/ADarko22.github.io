@@ -70,9 +70,12 @@
   flex-shrink: 0;
   min-width: 80px;
 
-  &:hover,
+  &:hover {
+    font-weight: 300;
+  }
+
   &.active {
-    font-weight: bold;
+    font-weight: 700;
   }
 
   &:focus {

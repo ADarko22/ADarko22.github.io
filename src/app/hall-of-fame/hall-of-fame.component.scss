@@ -131,12 +131,14 @@
     line-height: 1.7;
     margin-bottom: 1.5em;
     font-size: 1em; /* Slightly larger base font size */
+    text-align: center;
   }
 }
 
 .hall-of-fame-slideshow {
   margin-top: 1.5em;
   margin-bottom: 2.5em;
+  width: 100%;
 }
 
 .achievement-links {
@@ -221,13 +223,9 @@
       width: 100%;
 
       mat-expansion-panel-header {
-        padding: 0em 0.3em;
+        display: flex;
+        align-items: center;
         border-radius: 1em;
-
-        mat-expansion-panel-header-title {
-          display: flex;
-          align-items: center;
-        }
 
         .category-title {
           display: flex;
@@ -304,7 +302,7 @@
     align-content: center;
 
     .achievement-details {
-      max-width: 62vw;
+      max-width: 75vw;
       width: 100%;
       padding: 0.5em;
       line-height: 1.6;

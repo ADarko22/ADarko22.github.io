@@ -166,6 +166,7 @@ mat-panel-description {
   white-space: nowrap;
   transition: background-color 0.3s ease;
   font-size: 0.8em; /* Adjust font size for mobile */
+  max-width: fit-content;
 
   .mat-icon {
     margin-right: 0.2em; /* Add spacing for the icon */

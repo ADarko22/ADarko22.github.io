@@ -43,11 +43,11 @@
         "start_date": "2025-03-06",
         "end_date": null,
         "responsibilities": [
-             "Led the migration of a complex <i>client relationship management (CRM)</i> web application from Java 8 and Spring Boot 1.5.x to Java 11 and Spring Boot 2.7.x, resulting in enhanced maintainability and security.",
-             "Demonstrated the critical importance of <i>null-safe coding practices</i> and the associated tooling for automated enforcement, fostering cleaner and more robust development practices within the team."
+             "Led the modernization of a complex <i>client relationship management (CRM)</i> web application by migrating from Java 8 and Spring Boot 1.x to Java 11 and Spring Boot 2.x, and automating the integration testing, resulting in better maintainability, security, and development efficiency.",
+             "Drove the adoption of <i>null-safe coding practices</i> and the associated automated tooling, fostering cleaner and more robust development within the team."
         ],
         "tech_stack": [
-            "Java", "Maven", "Spring Boot", "Hiberante", "Typescript", "Thymeleaf", "ArgoCD", "Grafana", "Prometheus", "Logstash", "Elasticsearch", "Kubernetes", "AWS", "GitOps", "BitBucket", "Bamboo", "OpenAPI", "SwaggerUI", "OAuth 2.0", "OIDC", "JWT"
+            "Java", "Maven", "Spring Boot", "Hiberante", "Liquibase", "Typescript", "Thymeleaf", "ArgoCD", "Grafana", "Prometheus", "Logstash", "Elasticsearch", "Kubernetes", "AWS", "GitOps", "BitBucket", "Bamboo", "OpenAPI", "SwaggerUI", "OAuth 2.0", "OIDC", "JWT", "Typescript", "Angular"
         ],
         "git_repositories": [
             {
@@ -93,6 +93,10 @@
             {
                 "name": "Sonar Kotlin",
                 "uri": "https://github.com/SonarSource/sonar-kotlin"
+            },
+            {
+                "name": "SLang",
+                "uri": "https://github.com/SonarSource/slang"
             },
             {
                 "name": "RSPEC",
