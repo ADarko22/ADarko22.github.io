@@ -154,7 +154,7 @@
                     "title": "Leet Code",
                     "description": "LeetCode is where I love to get my brain in gear and tackle some seriously fun puzzles. There's always something new to learn, and I really enjoy the challenge of finding solutions. My dedication to it has even earned me some pretty cool badges along the way!",
                     "images": [
-                        "src/assets/hall-of-fame-images/Leetcode-DailyChallenge-April-2025.png", 
+                        "assets/hall-of-fame-images/Leetcode-DailyChallenge-April-2025.png", 
                         "assets/hall-of-fame-images/Leetcode-DailyChallenge-March-2025.png",
                         "assets/hall-of-fame-images/Leetcode-100days-2022.png"
                     ],
