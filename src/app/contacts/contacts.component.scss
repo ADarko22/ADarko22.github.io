@@ -1,16 +1,16 @@
 section {
   text-align: center;
   background: var(--primary-bg-color);
-  padding: 1.5em; /* Increase padding for better touch targets on mobile */
-  border-radius: 1em; /* Slightly reduce border-radius for a bit more screen space */
+  padding: 1.5em; 
+  border-radius: 1em; 
   box-shadow: 0 0.2em 0.3em rgba(0, 0, 0, 0.1);
-  max-width: 90vw; /* Take up more width on mobile */
-  width: 95%; /* Ensure it fits within the max-width */
-  margin: 1.5em auto; /* Adjust vertical margins for mobile */
+  max-width: 90vw; 
+  width: 95%; 
+  margin: 1.5em auto; 
   animation: fadeIn 0.5s ease-in-out;
 
   h2 {
-    font-size: 1.5em; /* Slightly smaller heading on mobile */
+    font-size: 1.3em;
     font-weight: bold;
     margin-top: 0.8em;
     margin-bottom: 1.2em;
@@ -20,10 +20,10 @@ section {
   .contact-card {
     display: flex;
     align-items: center;
-    padding: 0.8em 1.2em; /* Adjust padding for better touch targets */
-    border-radius: 0.8em; /* Slightly reduce border-radius */
+    padding: 0.8em 1.2em; 
+    border-radius: 0.8em; 
     background: var(--secondary-bg-color);
-    margin-bottom: 0.6em; /* Adjust margin */
+    margin-bottom: 0.6em; 
     overflow: auto;
 
     &:hover {
@@ -31,24 +31,24 @@ section {
     }
 
     span.material-symbols-outlined {
-      margin-right: 0.8em; /* Adjust spacing */
+      margin-right: 0.8em; 
       color: var(--icon-bg-color);
-      font-size: 1.2em; /* Slightly larger icon for better visibility */
+      font-size: 1em; 
       flex-shrink: 0;
     }
 
     p {
-      font-size: 1em;
-      line-height: 1.5; /* Adjust line height for better readability */
+      font-size: 0.9em;
+      line-height: 1.5; 
       margin: 0;
-      word-break: break-word; /* Prevent long text from overflowing */
+      word-break: break-word; 
     }
 
     a {
       text-decoration: none;
       border-bottom: 0.1em solid transparent;
       transition: border-bottom 0.3s ease, color 0.3s ease;
-      word-break: break-word; /* Prevent long links from overflowing */
+      word-break: break-word; 
 
       &:hover {
         border-bottom: 0.1em solid var(--contacts-a-color);

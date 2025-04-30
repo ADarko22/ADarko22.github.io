@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, OnDestroy, HostListener, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, Input, OnInit, OnDestroy, HostListener, OnChanges, SimpleChanges, ElementRef, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Subject } from 'rxjs';
 import { MatIconModule } from '@angular/material/icon';
@@ -23,8 +23,18 @@ export class PhotoSlideshowComponent implements OnInit, OnDestroy, OnChanges {
   isFullscreen: boolean = false;
   private preloadedImages: { [url: string]: boolean } = {};
 
+  @ViewChild('photoWrapper') photoWrapper: ElementRef | undefined;
+  private touchStartX = 0;
+
   ngOnInit(): void {
     this.updatePhoto();
+  }
+
+  ngAfterViewInit(): void {
+    if (this.photoWrapper) {
+      this.photoWrapper.nativeElement.addEventListener('touchstart', this.handleTouchStart);
+      this.photoWrapper.nativeElement.addEventListener('touchend', this.handleTouchEnd);
+    }
   }
 
   ngOnChanges(changes: SimpleChanges): void {
@@ -110,6 +120,33 @@ export class PhotoSlideshowComponent implements OnInit, OnDestroy, OnChanges {
     this.currentPhotoIndex = (this.currentPhotoIndex - 1 + this.photoUrls.length) % this.photoUrls.length;
     this.updatePhoto();
   }
+
+  handleTouchStart = (event: TouchEvent) => {
+    this.touchStartX = event.touches[0].clientX;
+  };
+
+  handleTouchEnd = (event: TouchEvent) => {
+    if (!this.touchStartX || !event.changedTouches[0]) {
+      return;
+    }
+
+    const touchEndX = event.changedTouches[0].clientX;
+    const deltaX = touchEndX - this.touchStartX;
+    // Adjust this value to control swipe sensitivity
+    const sensitivity = 50; 
+
+    // If the swipe distance is significant to the right, go to the previous photo
+    if (deltaX > sensitivity) {
+      this.prevPhoto();
+    }
+    // If the swipe distance is significant to the left, go to the next photo
+    else if (deltaX < -sensitivity) {
+      this.nextPhoto();
+    }
+    // Reset the starting touch position
+    this.touchStartX = 0; 
+  };
+
 
   @HostListener('document:keydown', ['$event'])
   handleKeyboardEvent(event: KeyboardEvent) {

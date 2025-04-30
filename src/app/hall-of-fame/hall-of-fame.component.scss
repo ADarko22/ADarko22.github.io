@@ -1,21 +1,18 @@
 .hall-of-fame-container {
   display: flex; /* Stack elements vertically on mobile */
   max-width: 100vw;
-  width: 100%;
+  width: 95%;
   flex-direction: column;
-  background: var(--base-bg-color);
 }
 
 .category-menu {
-  width: 100%; /* Take full width on mobile */
-  border-right: none; /* Remove right border on mobile */
+  width: 95%; 
   padding: 0.5em;
   overflow-y: auto;
   transition: max-height 0.3s ease, padding 0.3s ease; 
-  background: var(--base-bg-color);
   flex-shrink: 0;
   max-height: none; 
-  
+
   &.minimized {
     max-height: 3.5em; 
     overflow: hidden;
@@ -55,7 +52,7 @@
       .category-title {
         display: flex;
         align-items: center;
-        font-size: 0.9em; /* Slightly larger font on mobile */
+        font-size: 0.8em; 
         color: var(--text-color);
       }
 
@@ -63,7 +60,7 @@
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        font-size: 0.9em; /* Slightly larger font on mobile */
+        font-size: 0.8em; 
         max-width: calc(90% - 1.2em);
       }
     }
@@ -76,13 +73,13 @@
 
     mat-list-item {
       cursor: pointer;
-      min-height: 2.5em; /* Slightly taller for better touch target */
+      min-height: 2.5em; 
       width: 100%;
       border-radius: 0.3em;
       margin-bottom: 0.2em;
       margin-left: 0em;
       color: var(--text-color);
-      font-size: 0.9em; /* Slightly larger font on mobile */
+      font-size: 0.7em; 
 
       &:hover,
       &.selected {
@@ -96,11 +93,11 @@
       }
 
       .mat-list-item-graphic {
-        margin-right: 0.8em; /* More spacing for icons */
+        margin-right: 0.8em; 
       }
 
       .achievement-title {
-        font-size: 0.9em; /* Slightly larger font on mobile */
+        font-size: 0.9em; 
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -111,27 +108,27 @@
 
   .category-icon,
   .achievement-icon {
-    margin-right: 0.5em; /* More spacing for icons */
-    font-size: 1.1em; /* Slightly larger icons on mobile */
+    margin-right: 0.5em; 
+    font-size: 1em; 
     color: var(--icon-bg-color);
   }
 }
 
 .achievement-display {
-  width: 100%; /* Take full width on mobile */
+  width: 95%; 
   padding: 0.5em;
   display: flex;
-  flex-direction: column; /* Stack content within the display */
-  justify-content: flex-start; /* Align items to the start */
-  align-items: stretch; /* Stretch items to full width */
+  flex-direction: column; 
+  justify-content: flex-start; 
+  align-items: stretch; 
   align-content: stretch;
 
   .achievement-details {
     width: 100%;
-    padding: 0.8em; /* More padding for readability */
+    padding: 0.8em; 
     line-height: 1.7;
     margin-bottom: 1.5em;
-    font-size: 1em; /* Slightly larger base font size */
+    font-size: 1em; 
     text-align: center;
   }
 }
@@ -146,17 +143,17 @@
   display: flex;
   flex-wrap: wrap;
   margin-top: 1em;
-  gap: 0.5em; /* Add some gap between links */
+  gap: 0.5em; 
 }
 
 .achievement-links mat-list-item {
-  display: inline-flex; /* Display items inline */
+  display: inline-flex;
   background: var(--secondary-bg-color);
   border-radius: 2em;
   margin-bottom: 0.6em;
   width: fit-content;
-  padding-right: 0.8em; /* Add padding for better touch target */
-  padding-left: 0.5em; /* Add padding for better touch target */
+  padding-right: 0.8em; 
+  padding-left: 0.5em; 
 
   &:hover {
     background: var(--hover-bg-color);
@@ -167,14 +164,14 @@
   display: flex;
   align-items: center;
   text-decoration: none;
-  color: inherit; /* Inherit text color */
+  color: inherit;
 }
 
 .link-icon {
-  margin-left: 0; /* Adjust icon spacing */
+  margin-left: 0; 
   margin-right: 0.5em;
   vertical-align: middle;
-  font-size: 1.1em; /* Slightly smaller icon */
+  font-size: 1em; 
   color: var(--icon-bg-color);
   display: inline-flex;
   align-items: center;
@@ -185,19 +182,16 @@
   .hall-of-fame-container {
     display: flex;
     flex-direction: row;
-    border-radius: 0.5em;
   }
 
   .category-menu {
     max-width: 20vw;
-    width: 100%;
-    border-top-left-radius: 0.5em;
+    width: 95%;
     border-right: 1px solid rgba(0, 0, 0, 0.1);
     padding: 0.5em;
     height: auto;
     overflow-y: auto;
     transition: width 0.3s ease;
-    background: var(--base-bg-color);
     flex-shrink: 0;
 
     &.minimized {
@@ -258,6 +252,7 @@
         margin-bottom: 0.2em;
         margin-left: 0em;
         color: var(--text-color);
+        font-size: 0.9em; 
 
         &:hover,
         &.selected {
@@ -294,7 +289,7 @@
   .achievement-display {
     max-width: 7vw;
     min-width: fit-content;
-    width: 100%;
+    width: 95%;
     flex-grow: 1;
     padding: 0.5em;
     display: flex;

@@ -143,7 +143,7 @@
         "institution": "University of Pisa",
         "location": "Pisa, Italia",
         "graduation_year": 2015,
-        "thesis": "Il sistema operativo JUNOS, e confronto con Cisco IOS"
+        "thesis": "Il sistema operativo JunOS, e confronto con Cisco IOS"
         }
     ],
     "hall_of_fame": [
@@ -158,7 +158,9 @@
                         "assets/hall-of-fame-images/Leetcode-DailyChallenge-March-2025.png",
                         "assets/hall-of-fame-images/Leetcode-100days-2022.png"
                     ],
-                    "links": []
+                    "links": [
+                        "https://leetcode.com/u/adarko22/"
+                    ]
                 },
                 {
                     "title": "Advent of Code",
@@ -167,8 +169,7 @@
                         "assets/hall-of-fame-images/AoC-2024.png"
                     ],
                     "links": [
-                        "https://adventofcode.com/2024",
-                        "https://adventofcode.com/2023"
+                        "https://github.com/ADarko22/AdventOfCode2024"
                     ]
                 }
             ]
@@ -193,7 +194,7 @@
                         "assets/hall-of-fame-images/Flow-Traders-Graduate-Party-1.jpeg",
                         "assets/hall-of-fame-images/Flow-Traders-Graduate-Party-3.jpeg"
                     ],
-                    "links": ["https://community.sonarsource.com/"]
+                    "links": []
                 }
             ]
         },
