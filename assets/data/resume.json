@@ -167,8 +167,7 @@
                         "assets/hall-of-fame-images/AoC-2024.png"
                     ],
                     "links": [
-                        "https://adventofcode.com/2024",
-                        "https://adventofcode.com/2023"
+                        "https://github.com/ADarko22/AdventOfCode2024"
                     ]
                 }
             ]
@@ -193,7 +192,7 @@
                         "assets/hall-of-fame-images/Flow-Traders-Graduate-Party-1.jpeg",
                         "assets/hall-of-fame-images/Flow-Traders-Graduate-Party-3.jpeg"
                     ],
-                    "links": ["https://community.sonarsource.com/"]
+                    "links": []
                 }
             ]
         },
