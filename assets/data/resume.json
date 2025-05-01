@@ -158,7 +158,9 @@
                         "assets/hall-of-fame-images/Leetcode-DailyChallenge-March-2025.png",
                         "assets/hall-of-fame-images/Leetcode-100days-2022.png"
                     ],
-                    "links": []
+                    "links": [
+                        "https://leetcode.com/u/adarko22/"
+                    ]
                 },
                 {
                     "title": "Advent of Code",
