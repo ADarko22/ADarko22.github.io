@@ -126,7 +126,7 @@
     ],
     "education": [
         {
-        "degree": "Master Degree in Computer Science",
+        "degree": "MSc in Computer Engineering",
         "institution": "University of Pisa",
         "location": "Pisa, Italia",
         "graduation_year": 2018,
@@ -139,7 +139,7 @@
         ]
         },
         {
-        "degree": "Bachelor Degree in Ingegneria Informatica",
+        "degree": "BSc in Computer Engineering",
         "institution": "University of Pisa",
         "location": "Pisa, Italia",
         "graduation_year": 2015,
