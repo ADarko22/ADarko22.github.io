@@ -3,7 +3,7 @@
     <mat-spinner></mat-spinner>
   </div>
 
-  <div class="photo-wrapper" #photoWrapper>
+  <div class="photo-wrapper">
     <img *ngIf="photoUrls.length > 1 && prevPhotoUrl" [src]="prevPhotoUrl" class="side-photo prev-photo" alt="Previous Photo">
     <img *ngIf="currentPhoto" [src]="currentPhoto" class="slideshow-image" [class.loading]="isLoading" alt="Slideshow Image" (click)="openFullscreen()">
     <img *ngIf="photoUrls.length > 1 && nextPhotoUrl" [src]="nextPhotoUrl" class="side-photo next-photo" alt="Next Photo">
@@ -17,7 +17,7 @@
   </button>
 </div>
 
-<div class="fullscreen-overlay" *ngIf="isFullscreen">
+<div class="fullscreen-overlay" *ngIf="isFullscreen" #fullscreenOverlay>
   <button mat-icon-button class="close-fullscreen" (click)="closeFullscreen()">
     <mat-icon>close</mat-icon>
   </button>

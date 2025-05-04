@@ -78,7 +78,7 @@ $dark-theme: mat.m2-define-dark-theme((
 }
 
 body {
-  width: 100%;
+  width: 95%;
   background-color: var(--base-bg-color); 
   color: var(--text-color);
   font-family: "Gill Sans", sans-serif;
@@ -100,6 +100,7 @@ a {
   overflow: auto;
   flex-grow: 1; 
   min-width: 0; 
+  text-decoration: none;
 }
 
 a:hover,

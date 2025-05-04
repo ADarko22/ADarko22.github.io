@@ -115,7 +115,7 @@
 }
 
 .achievement-display {
-  width: 95%; 
+  max-width: 100%;
   padding: 0.5em;
   display: flex;
   flex-direction: column; 
@@ -164,7 +164,6 @@
   display: flex;
   align-items: center;
   text-decoration: none;
-  color: inherit;
 }
 
 .link-icon {
@@ -186,7 +185,7 @@
 
   .category-menu {
     max-width: 20vw;
-    width: 95%;
+    width: 100%;
     border-right: 1px solid rgba(0, 0, 0, 0.1);
     padding: 0.5em;
     height: auto;
@@ -287,18 +286,17 @@
   }
 
   .achievement-display {
-    max-width: 7vw;
-    min-width: fit-content;
+    max-width: 100%;
     width: 95%;
     flex-grow: 1;
     padding: 0.5em;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
+    flex-direction: column; 
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
 
     .achievement-details {
-      max-width: 75vw;
       width: 100%;
       padding: 0.5em;
       line-height: 1.6;
@@ -310,6 +308,7 @@
   .hall-of-fame-slideshow {
     margin-top: 1em;
     margin-bottom: 2em;
+    width: 100%;
   }
 
   .achievement-links {

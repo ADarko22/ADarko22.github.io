@@ -1,4 +1,15 @@
-import { Component, Input, OnInit, OnDestroy, HostListener, OnChanges, SimpleChanges, ElementRef, ViewChild } from '@angular/core';
+import {
+  Component,
+  Input,
+  OnInit,
+  OnDestroy,
+  OnChanges,
+  SimpleChanges,
+  ElementRef,
+  ViewChild,
+  HostListener,
+  AfterViewInit,
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Subject } from 'rxjs';
 import { MatIconModule } from '@angular/material/icon';
@@ -12,7 +23,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
   templateUrl: './photo-slideshow.component.html',
   styleUrls: ['./photo-slideshow.component.scss'],
 })
-export class PhotoSlideshowComponent implements OnInit, OnDestroy, OnChanges {
+export class PhotoSlideshowComponent implements OnInit, OnDestroy, OnChanges, AfterViewInit {
   @Input() photoUrls: string[] = [];
   currentPhotoIndex: number = 0;
   currentPhoto: string | null = null;
@@ -23,7 +34,7 @@ export class PhotoSlideshowComponent implements OnInit, OnDestroy, OnChanges {
   isFullscreen: boolean = false;
   private preloadedImages: { [url: string]: boolean } = {};
 
-  @ViewChild('photoWrapper') photoWrapper: ElementRef | undefined;
+  @ViewChild('fullscreenOverlay') fullscreenOverlay: ElementRef | undefined;
   private touchStartX = 0;
 
   ngOnInit(): void {
@@ -31,10 +42,7 @@ export class PhotoSlideshowComponent implements OnInit, OnDestroy, OnChanges {
   }
 
   ngAfterViewInit(): void {
-    if (this.photoWrapper) {
-      this.photoWrapper.nativeElement.addEventListener('touchstart', this.handleTouchStart);
-      this.photoWrapper.nativeElement.addEventListener('touchend', this.handleTouchEnd);
-    }
+    // Ensure the fullscreen overlay element is available after the view is initialized.
   }
 
   ngOnChanges(changes: SimpleChanges): void {
@@ -46,6 +54,7 @@ export class PhotoSlideshowComponent implements OnInit, OnDestroy, OnChanges {
   }
 
   ngOnDestroy(): void {
+    this.removeTouchListeners();
     this.destroy$.next();
     this.destroy$.complete();
   }
@@ -64,7 +73,7 @@ export class PhotoSlideshowComponent implements OnInit, OnDestroy, OnChanges {
 
   updatePhoto(): void {
     this.isLoading = true;
-    this.currentPhoto = null; // Clear current photo immediately
+    this.currentPhoto = null;
 
     if (this.photoUrls && this.photoUrls.length > 0) {
       this.loadImage(this.photoUrls[this.currentPhotoIndex]).then(() => {
@@ -82,7 +91,7 @@ export class PhotoSlideshowComponent implements OnInit, OnDestroy, OnChanges {
     return new Promise((resolve, reject) => {
       const img = new Image();
       img.onload = () => resolve();
-      img.onerror = reject; // Handle potential errors
+      img.onerror = reject;
       img.src = url;
     });
   }
@@ -132,21 +141,43 @@ export class PhotoSlideshowComponent implements OnInit, OnDestroy, OnChanges {
 
     const touchEndX = event.changedTouches[0].clientX;
     const deltaX = touchEndX - this.touchStartX;
-    // Adjust this value to control swipe sensitivity
-    const sensitivity = 50; 
+    const sensitivity = 50;
 
-    // If the swipe distance is significant to the right, go to the previous photo
     if (deltaX > sensitivity) {
       this.prevPhoto();
-    }
-    // If the swipe distance is significant to the left, go to the next photo
-    else if (deltaX < -sensitivity) {
+    } else if (deltaX < -sensitivity) {
       this.nextPhoto();
     }
-    // Reset the starting touch position
-    this.touchStartX = 0; 
+
+    this.touchStartX = 0;
   };
 
+  private addTouchListeners(): void {
+    if (this.fullscreenOverlay) {
+      this.fullscreenOverlay.nativeElement.addEventListener('touchstart', this.handleTouchStart);
+      this.fullscreenOverlay.nativeElement.addEventListener('touchend', this.handleTouchEnd);
+    }
+  }
+
+  private removeTouchListeners(): void {
+    if (this.fullscreenOverlay) {
+      this.fullscreenOverlay.nativeElement.removeEventListener('touchstart', this.handleTouchStart);
+      this.fullscreenOverlay.nativeElement.removeEventListener('touchend', this.handleTouchEnd);
+    }
+  }
+
+  openFullscreen(): void {
+    this.isFullscreen = true;
+    // Add listeners immediately when opening fullscreen
+    setTimeout(() => {
+      this.addTouchListeners();
+    }, 0);
+  }
+
+  closeFullscreen(): void {
+    this.isFullscreen = false;
+    this.removeTouchListeners();
+  }
 
   @HostListener('document:keydown', ['$event'])
   handleKeyboardEvent(event: KeyboardEvent) {
@@ -160,13 +191,5 @@ export class PhotoSlideshowComponent implements OnInit, OnDestroy, OnChanges {
         this.prevPhoto();
       }
     }
-  }
-
-  openFullscreen(): void {
-    this.isFullscreen = true;
-  }
-
-  closeFullscreen(): void {
-    this.isFullscreen = false;
   }
 }

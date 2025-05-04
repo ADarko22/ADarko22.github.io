@@ -8,7 +8,10 @@
           <mat-expansion-panel-header>
             <mat-panel-title>
               <mat-icon class="education-icon">school</mat-icon>
-              {{ education.degree }} from {{ education.institution }}
+              <div class="education-text">
+                  <div class="institution">{{ education.institution }}</div>
+                  <div class="degree">{{ education.degree }}</div>
+              </div>
             </mat-panel-title>
             <mat-panel-description>
               <mat-icon class="calendar-icon">calendar_today</mat-icon>
@@ -20,23 +23,23 @@
           <div class="education-details">
             <div class="thesis-section">
               <h5>
-                <mat-icon class="thesis-icon">description</mat-icon>
-                Thesis: <strong>{{ education.thesis }}</strong>
+                <mat-icon class="thesis-icon">description</mat-icon> Thesis:
               </h5>
+              <p><strong>{{ education.thesis }}</strong></p>
             </div>
             <div *ngIf="education.publications && education.publications.length > 0" class="publications-section">
               <h5>
                 <mat-icon class="publications-icon">library_books</mat-icon>
                 Publications:
               </h5>
-              <mat-list>
-                <mat-list-item *ngFor="let publication of education.publications; trackBy: trackByPublication">
-                  <a [href]="publication.link" target="_blank">
+              <div *ngIf="education.publications && education.publications.length > 0">
+                <div *ngFor="let publication of education.publications; trackBy: trackByPublication" class="publication-card">
+                  <span class="material-symbols-outlined">
                     <mat-icon class="publication-link-icon">link</mat-icon>
-                    {{ publication.title }}
-                  </a>
-                </mat-list-item>
-              </mat-list>
+                  </span>
+                  <p><a [href]="publication.link" target="_blank">{{ publication.title }}</a></p>
+                </div>
+              </div>
             </div>
           </div>
         </mat-expansion-panel>

@@ -1,11 +1,16 @@
+.info-container {
+  display: flex;
+  justify-content: center;
+  width: 95%;
+}
+
 section {
   text-align: center;
   background: var(--primary-bg-color);
   padding: 1.5em; 
   border-radius: 1em; 
   box-shadow: 0 0.2em 0.3em rgba(0, 0, 0, 0.1);
-  max-width: 90vw; 
-  width: 95%; 
+  max-width: 95%; 
   margin: 1.5em auto; 
   animation: fadeIn 0.5s ease-in-out;
 
@@ -38,7 +43,7 @@ section {
     }
 
     p {
-      font-size: 0.9em;
+      font-size: 0.7em;
       line-height: 1.5; 
       margin: 0;
       word-break: break-word; 
@@ -59,13 +64,17 @@ section {
 
 /* Media query for larger screens (tablets and desktops) */
 @media (min-width: 769px) {
+  .info-section {
+    max-width: 40vw;
+    padding: 0 1em;
+  }
+
   section {
     text-align: center;
     background: var(--primary-bg-color);
     padding: 1em;
     border-radius: 1.1em;
     box-shadow: 0 0.2em 0.3em rgba(0, 0, 0, 0.1);
-    max-width: 40vw;
     width: 90%;
     margin: 2em auto 2em;
     animation: fadeIn 0.5s ease-in-out;

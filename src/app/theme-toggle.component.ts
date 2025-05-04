@@ -7,7 +7,6 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <div>
       <button 
         [class.active]="!themeService.isDarkTheme()" 
         [disabled]="!themeService.isDarkTheme()" 
@@ -20,31 +19,26 @@ import { CommonModule } from '@angular/common';
         (click)="themeService.toggleTheme()">
         <span class="material-symbols-outlined">dark_mode</span>
       </button>
-    </div>
   `,
   styles: `
-    div {
-        display: flex;
-      }
+    button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--primary-bg-color);
+      border-radius: 6px;
+      font-size: 0.7em; 
+      padding: 0.3em 0.5em;
+      flex-shrink: 0;
 
-      button {
-        background: none;
-        border: none;
-        padding: 6px 10px; /* Slightly larger padding for touch */
-        margin: 0 6px; /* Slightly larger margin */
-        cursor: pointer;
-        color: var(--primary-bg-color);
-        border-radius: 6px; /* Slightly larger border-radius */
-        font-size: 1.1em; /* Slightly larger icon size */
-
-        span.material-symbols-outlined {
-          font-size: 1.1em;
-        }
+      span.material-symbols-outlined {
+        font-size: 1em;
       }
+    }
 
-      button.active {
-        background-color: var(--secondary-bg-color);
-      }
+    button.active {
+      background-color: var(--secondary-bg-color);
+    }
   `,
 })
 export class ThemeToggleComponent {

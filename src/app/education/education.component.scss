@@ -49,10 +49,30 @@ mat-panel-title {
   flex: 1;
   margin-right: 0.5em; 
   word-wrap: break-word;
+
+.mat-icon {
+  margin-right: 0.3em; 
+  font-size: 1em; 
+  flex-shrink: 0;
+}
+
+.education-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+  
+  .institution {
+    font-weight: bold;
+  }
+
+  .degree {
+    font-style: italic;
+  }
+}
 }
 
 mat-panel-description {
-  font-size: 0.6em; 
+  font-size: 0.5em; 
   color: var(--text-color);
   flex: 1;
   width: 100%;
@@ -71,10 +91,8 @@ mat-panel-description {
 
 .education-details {
   width: 100%;
-  padding: 0.8em; 
 
   h5 {
-    margin: 0.8em 0 0.4em; 
     font-size: 0.9em; 
   }
 
@@ -92,22 +110,24 @@ mat-panel-description {
   }
 }
 
-mat-list-item {
-  background-color: var(--secondary-bg-color);
-  border-radius: 0.3em;
-  margin-bottom: 0.5em; 
-  padding: 0.6em;
+.publication-card {
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  padding: 0.2em 0.3em;
+  border-radius: 0.8em;
+  background: var(--secondary-bg-color);
+  overflow: auto;
+}
 
-  &:hover {
-    background: var(--hover-bg-color);
-  }
+.publication-card:hover {
+  background: var(--hover-bg-color);
+}
 
-  a {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: inherit;
-  }
+.publication-card span.material-symbols-outlined {
+  color: var(--icon-bg-color);
+  font-size: 1em;
+  flex-shrink: 0;
 }
 
 .education-icon,
@@ -167,25 +187,26 @@ mat-list-item {
   mat-panel-title {
     font-size: clamp(1rem, 1.1vw, 1.2rem);
     margin-right: 1em;
+
+    .mat-icon {
+      font-size: 1.2rem;
+      margin-right: 0.3em;
+    }
   }
 
   mat-panel-description {
-    font-size: clamp(0.9rem, 1vw, 1.1rem);
+    font-size: clamp(0.8rem, 0.9vw, 1rem);
     justify-content: flex-end;
 
-    .calendar-icon,
-    .location-icon {
-      font-size: 1.2em;
-      margin-left: 0.2em;
+    .mat-icon {
+      font-size: 1rem;
+      margin-left: 1.2em;
       margin-right: 0.2em;
     }
   }
 
   .education-details {
-    padding: 1em; 
-
     h5 {
-      margin: 1em 0 0.5em;
       font-size: clamp(1rem, 1.1vw, 1.2rem);
     }
 
@@ -197,25 +218,16 @@ mat-list-item {
     }
   }
 
-  mat-list-item {
-    margin-bottom: 0.6em;
-    padding: 0.8em;
-  }
-
-  .education-icon,
-  .calendar-icon,
-  .location-icon,
-  .thesis-icon,
-  .publications-icon,
-  .publication-link-icon {
-    margin-left: 0.2em;
-    margin-right: 0.2em;
-    font-size: 1.2em;
-  }
-
   .thesis-section {
-    padding-bottom: 0.5em;
-    margin-bottom: 0.5em;
+
+    h5 {
+      margin-bottom: 0.3em;
+    }
+
+    p {
+      font-size: clamp(1rem, 1vw, 1.2rem); 
+      line-height: 1.4; 
+    }
   }
 
   .publications-section {

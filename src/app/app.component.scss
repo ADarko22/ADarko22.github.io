@@ -25,7 +25,7 @@
   background: var(--logo-color);
   background-clip: text;
   -webkit-background-clip: text;
-  font-size: clamp(1.4em, 1.4em, 1.6em);
+  font-size: clamp(1.2em, 1.2em, 1.4em);
   font-weight: bold;
   letter-spacing: 0.0625em;
   text-transform: uppercase;
@@ -56,7 +56,7 @@
 .toolbar__nav-links button {
   cursor: pointer;
   font-family: "Gill Sans", sans-serif;
-  font-size: clamp(0.7em, 0.7em, 0.7em);
+  font-size: clamp(0.6em, 0.6em, 0.7em);
   text-transform: capitalize;
   color: inherit;
   background: none;
@@ -95,6 +95,15 @@
     overflow: hidden;
   }
 
+  .toolbar__logo {
+    font-size: clamp(1.4em, 1.4em, 1.6em);
+  }
+
+  .toolbar__nav-links button {
+    cursor: pointer;
+    font-size: clamp(0.7em, 0.7em, 0.7em);
+  }
+
   .toolbar__left {
     width: auto;
   }
@@ -110,11 +119,6 @@
   .toolbar__nav-links {
     width: auto; 
     justify-content: flex-end; 
-  }
-
-  .toolbar__theme-toggle {
-    margin-top: 0;
-    margin-left: 1em;
   }
 }
 

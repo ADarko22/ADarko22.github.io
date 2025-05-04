@@ -8,22 +8,21 @@
             <mat-expansion-panel *ngFor="let work of workExperiences; let i = index; trackBy: trackByWorkExperience" [expanded]="i === 0">
                 <mat-expansion-panel-header>
                     <mat-panel-title>
-                        <mat-icon class="work-icon">business</mat-icon>
-                        {{ work.job_title }} at {{ work.company }}
+                        <mat-icon class="work-icon">business</mat-icon>      
+                        <div class="work-text">
+                            <div class="company">{{ work.company }}</div>
+                            <div class="job-title">{{ work.job_title }}</div>
+                        </div>
                     </mat-panel-title>
                     <mat-panel-description>
                         <mat-icon class="date-icon">calendar_today</mat-icon>
-                        {{ formatDate(work.start_date) }} - {{ formatDate(work.end_date) || 'Present' }} 
+                        {{ formatDate(work.start_date) }} - {{ formatDate(work.end_date) || 'Present' }}
                         <mat-icon class="location-icon">location_on</mat-icon>
                         {{ work.location }}
                     </mat-panel-description>
                 </mat-expansion-panel-header>
                 <div class="work-details">
                     <article>
-                        <h3 class="work-detail-heading">
-                            <mat-icon class="about-icon">info</mat-icon>
-                            About the Company
-                        </h3>
                         <p class="work-company-description">{{ work.company_description }}</p>
                     </article>
                     <article *ngIf="work.role">

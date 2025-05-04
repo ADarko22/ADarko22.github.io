@@ -93,11 +93,26 @@ mat-panel-title {
   .mat-icon {
     margin-right: 0.3em; 
     font-size: 1em; 
+    flex-shrink: 0;
+  }
+
+  .work-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+    
+    .company {
+      font-weight: bold;
+    }
+
+    .job-title {
+      font-style: italic;
+    }
   }
 }
 
 mat-panel-description {
-  font-size: 0.6em; 
+  font-size: 0.5em; 
   color: var(--text-color);
   flex: 1;
   width: 100%;
@@ -141,8 +156,8 @@ mat-panel-description {
 .responsibilities-icon,
 .git-icon,
 .tech-stack-icon {
-  margin-left: 0; 
-  margin-right: 0.3em; 
+  margin-left: 0.2em; 
+  margin-right: 0.1em; 
   vertical-align: middle;
   font-size: 1em; 
   color: var(--icon-bg-color);
@@ -240,11 +255,11 @@ mat-panel-description {
   }
 
   mat-panel-description {
-    font-size: clamp(0.9rem, 1vw, 1.1rem);
+    font-size: clamp(0.8rem, 0.9vw, 1rem);
 
     .mat-icon {
-      font-size: 1.2rem;
-      margin-left: 0.2em;
+      font-size: 1rem;
+      margin-left: 1.2em;
       margin-right: 0.2em;
     }
   }
@@ -259,19 +274,6 @@ mat-panel-description {
     font-size: clamp(0.9rem, 1vw, 1.1rem);
   }
 
-  .work-icon,
-  .date-icon,
-  .location-icon,
-  .about-icon,
-  .role-icon,
-  .responsibilities-icon,
-  .git-icon,
-  .tech-stack-icon {
-    margin-left: 1.2em;
-    margin-right: 0.2em;
-    font-size: 1.2em;
-  }
-
   .git-chips {
     gap: 0.5rem;
     margin-top: 0.6em;
@@ -279,7 +281,7 @@ mat-panel-description {
 
   .git-chip {
     padding: 0.5em 1em;
-    font-size: inherit; /* Use default font size on larger screens */
+    font-size: inherit; 
 
     .mat-icon {
       font-size: 1.2em;
