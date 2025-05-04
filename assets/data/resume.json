@@ -35,7 +35,7 @@
     },
     "work_experience": [
         {
-        "job_title": "Senior SW Engineer",
+        "job_title": "Sr. Software Engineer",
         "company": "Tech Mahindra",
         "company_description": "Tech Mahindra is a global leader in digital transformation, IT services, and consulting. It is part of the Mahindra Group and delivers innovative solutions across industries like telecom, healthcare, and finance.",
         "role": "Senior DevOps consultant at a leading Swiss private-bank specialized in wealth and asset management services.",
@@ -61,7 +61,7 @@
         ]
         },
         {
-        "job_title": "SW Engineer",
+        "job_title": "Software Engineer",
         "company": "Sonar",
         "company_description": "Sonar is a software company dedicated to improving code quality and security, by providing solutions to detect bugs, vulnerabilities and code smells in several programming languages.",
         "location": "Geneva, Switzerland",
@@ -105,7 +105,7 @@
         ]
         },
         {
-        "job_title": "SW Engineer",
+        "job_title": "Software Engineer",
         "company": "Flow Traders",
         "company_description": "Flow Traders is a leading global trading firm specialized in Exchange-Traded Products (ETPs). The company uses proprietary strategies and tools to identify and capitalize on market inefficiencies and trends.",
         "location": "Amsterdam, The Netherlands",
