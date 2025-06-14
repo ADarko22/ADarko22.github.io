@@ -47,7 +47,7 @@
              "Drove the adoption of <i>null-safe coding practices</i> and the associated automated tooling, fostering cleaner and more robust development within the team."
         ],
         "tech_stack": [
-            "Java", "Maven", "Spring Boot", "Hiberante", "Liquibase", "Typescript", "Thymeleaf", "ArgoCD", "Grafana", "Prometheus", "Logstash", "Elasticsearch", "Kubernetes", "AWS", "GitOps", "BitBucket", "Bamboo", "OpenAPI", "SwaggerUI", "OAuth 2.0", "OIDC", "JWT", "Typescript", "Angular"
+            "Java", "Maven", "Spring Boot", "Hiberante", "Liquibase", "Angular", "Typescript", "Thymeleaf", "ArgoCD", "Grafana", "Prometheus", "Logstash", "Elasticsearch", "Kubernetes", "AWS", "GitOps", "BitBucket", "Bamboo", "OpenAPI", "OAuth 2.0", "OIDC", "JWT"
         ],
         "git_repositories": [
             {
@@ -239,7 +239,7 @@
         }
     ],
     "contacts": {
-        "email": "a.elessar22@gmail.com",
+        "email": "angelo.buono992@gmail.com",
         "phone": "+41 076 53 57 039",
         "linkedin": "https://www.linkedin.com/in/angelobuono",
         "github": "https://github.com/ADarko22"
