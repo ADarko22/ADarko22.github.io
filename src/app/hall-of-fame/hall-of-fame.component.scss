@@ -144,6 +144,7 @@
   flex-wrap: wrap;
   margin-top: 1em;
   gap: 0.5em; 
+  align-content: center;
 }
 
 .achievement-links mat-list-item {
@@ -315,6 +316,7 @@
     display: flex;
     flex-wrap: wrap;
     margin-top: 1em;
+    align-content: center;
   }
 
   .link-icon {

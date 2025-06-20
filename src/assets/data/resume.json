@@ -43,7 +43,7 @@
         "start_date": "2025-03-06",
         "end_date": null,
         "responsibilities": [
-             "Led the modernization of a complex <i>client relationship management (CRM)</i> web application by migrating from Java 8 and Spring Boot 1.x to Java 11 and Spring Boot 2.x, and automating the integration testing, resulting in better maintainability, security, and development efficiency.",
+             "Led the modernization of a complex <i>client relationship management (CRM)</i> web application upgrading to Java 11 and Spring Boot 2.x, introducing OAuth2 for robust authentication, and automating integration testing for enhanced maintainability and development efficiency.",
              "Drove the adoption of <i>null-safe coding practices</i> and the associated automated tooling, fostering cleaner and more robust development within the team."
         ],
         "tech_stack": [
