@@ -1,4 +1,3 @@
-# MyResumeWebsite
+# [https://adarko22.github.io/](https://adarko22.github.io/)
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.0.
-
+![Angular](https://img.shields.io/badge/Angular-19.2%2B-red?logo=angular) ![Material](https://img.shields.io/badge/Material-Design-blue) 
