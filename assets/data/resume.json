@@ -43,11 +43,11 @@
         "start_date": "2025-03-06",
         "end_date": null,
         "responsibilities": [
-             "Led the modernization of a complex <i>client relationship management (CRM)</i> web application upgrading to Java 11 and Spring Boot 2.x, introducing OAuth2 for robust authentication, and automating integration testing for enhanced maintainability and development efficiency.",
+             "Led the modernization of a complex <i>client relationship management (CRM)</i> web application by migrating from Java 8 and Spring Boot 1.x to Java 11 and Spring Boot 2.x, and automating the integration testing, resulting in better maintainability, security, and development efficiency.",
              "Drove the adoption of <i>null-safe coding practices</i> and the associated automated tooling, fostering cleaner and more robust development within the team."
         ],
         "tech_stack": [
-            "Java", "Maven", "Spring Boot", "Hiberante", "Liquibase", "Angular", "Typescript", "Thymeleaf", "ArgoCD", "Grafana", "Prometheus", "Logstash", "Elasticsearch", "Kubernetes", "AWS", "GitOps", "BitBucket", "Bamboo", "OpenAPI", "OAuth 2.0", "OIDC", "JWT"
+            "Java", "Maven", "Spring Boot", "Hiberante", "Liquibase", "Typescript", "Thymeleaf", "ArgoCD", "Grafana", "Prometheus", "Logstash", "Elasticsearch", "Kubernetes", "AWS", "GitOps", "BitBucket", "Bamboo", "OpenAPI", "SwaggerUI", "OAuth 2.0", "OIDC", "JWT", "Typescript", "Angular"
         ],
         "git_repositories": [
             {
@@ -154,6 +154,7 @@
                     "title": "Leet Code",
                     "description": "LeetCode is where I love to get my brain in gear and tackle some seriously fun puzzles. There's always something new to learn, and I really enjoy the challenge of finding solutions. My dedication to it has even earned me some pretty cool badges along the way!",
                     "images": [
+                        "assets/hall-of-fame-images/Leetcode-100days-2025.png",
                         "assets/hall-of-fame-images/Leetcode-DailyChallenge-April-2025.png", 
                         "assets/hall-of-fame-images/Leetcode-DailyChallenge-March-2025.png",
                         "assets/hall-of-fame-images/Leetcode-100days-2022.png"
@@ -239,7 +240,7 @@
         }
     ],
     "contacts": {
-        "email": "angelo.buono992@gmail.com",
+        "email": "a.elessar22@gmail.com",
         "phone": "+41 076 53 57 039",
         "linkedin": "https://www.linkedin.com/in/angelobuono",
         "github": "https://github.com/ADarko22"
