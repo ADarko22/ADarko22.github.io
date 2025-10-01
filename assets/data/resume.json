@@ -35,16 +35,17 @@
     },
     "work_experience": [
         {
-        "job_title": "Sr. Software Engineer",
-        "company": "Tech Mahindra",
-        "company_description": "Tech Mahindra is a global leader in digital transformation, IT services, and consulting. It is part of the Mahindra Group and delivers innovative solutions across industries like telecom, healthcare, and finance.",
-        "role": "Senior DevOps consultant at a leading Swiss private-bank specialized in wealth and asset management services.",
+        "job_title": "Sr. DevOps Engineer",
+        "company": "Pictet Group",
+        "company_description": "Pictet Group is a Swiss-based financial institution founded in 1805, specializing in wealth and asset management for private and institutional clients worldwide.",
+        "role": "External consultant for the Pictet Asset Services business line.",
         "location": "Geneva, Switzerland",
         "start_date": "2025-03-06",
         "end_date": null,
         "responsibilities": [
-             "Led the modernization of a complex <i>client relationship management (CRM)</i> web application by migrating from Java 8 and Spring Boot 1.x to Java 11 and Spring Boot 2.x, and automating the integration testing, resulting in better maintainability, security, and development efficiency.",
-             "Drove the adoption of <i>null-safe coding practices</i> and the associated automated tooling, fostering cleaner and more robust development within the team."
+            " Redesigned <i>CI/CD pipelines</i> to enforce code quality and guarantee continuous releasability. The effort involved moving from <i>Bitbucket + Bamboo</i> to <i>GitHub + GitHub Actions</i>, and integrating with <i>GitOps + ArgoCD</i> for automated deployments on <i>Kubernets</i>.\n",
+             "Led the modernization of a complex <i>Client Relationship Management (CRM)</i> and <i>Know Your Client (KYC)</i> applications: upgrade of Java from 8 to 17, upgrade of Spring Boot to 1.5 to 2.7, and adoption of <i>OIDC/OAuth2</i> authentication.",
+             "Drove the adoption of <i>null-safe coding practices</i> and the associated automated tooling, fostering cleaner and more robust development within the team. I provided a tool for simplifying the management of certificates for local JDK installations: <i>jdkcerts</i>.\n"
         ],
         "tech_stack": [
             "Java", "Maven", "Spring Boot", "Hiberante", "Liquibase", "Typescript", "Thymeleaf", "ArgoCD", "Grafana", "Prometheus", "Logstash", "Elasticsearch", "Kubernetes", "AWS", "GitOps", "BitBucket", "Bamboo", "OpenAPI", "SwaggerUI", "OAuth 2.0", "OIDC", "JWT", "Typescript", "Angular"
@@ -154,6 +155,7 @@
                     "title": "Leet Code",
                     "description": "LeetCode is where I love to get my brain in gear and tackle some seriously fun puzzles. There's always something new to learn, and I really enjoy the challenge of finding solutions. My dedication to it has even earned me some pretty cool badges along the way!",
                     "images": [
+                        "assets/hall-of-fame-images/Leetcode-DailyChallenge-September-2025.png",
                         "assets/hall-of-fame-images/Leetcode-DailyChallenge-July-2025.png",
                         "assets/hall-of-fame-images/Leetcode-100days-2025.png",
                         "assets/hall-of-fame-images/Leetcode-DailyChallenge-April-2025.png", 
@@ -241,7 +243,7 @@
         }
     ],
     "contacts": {
-        "email": "a.elessar22@gmail.com",
+        "email": "angelo.buono992@gmail.com",
         "phone": "+41 076 53 57 039",
         "linkedin": "https://www.linkedin.com/in/angelobuono",
         "github": "https://github.com/ADarko22"
