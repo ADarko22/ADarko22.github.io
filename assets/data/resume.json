@@ -43,8 +43,8 @@
         "start_date": "2025-03-06",
         "end_date": null,
         "responsibilities": [
-            " Redesigned <i>CI/CD pipelines</i> to enforce code quality and guarantee continuous releasability. The effort involved moving from <i>Bitbucket + Bamboo</i> to <i>GitHub + GitHub Actions</i>, and integrating with <i>GitOps + ArgoCD</i> for automated deployments on <i>Kubernets</i>.\n",
-             "Led the modernization of a complex <i>Client Relationship Management (CRM)</i> and <i>Know Your Client (KYC)</i> applications: upgrade of Java from 8 to 17, upgrade of Spring Boot to 1.5 to 2.7, and adoption of <i>OIDC/OAuth2</i> authentication.",
+            " Redesigned <i>CI/CD pipelines</i> to enforce code quality and guarantee continuous releasability: moving from <i>Bitbucket + Bamboo</i> to <i>GitHub + GitHub Actions</i>, and integrating with <i>GitOps + ArgoCD</i> for automated deployments on <i>Kubernets</i>.\n",
+             "Led the modernization of a complex <i>Client Relationship Management (CRM)</i> and <i>Know Your Client (KYC)</i> applications: upgrading Java from 8 to 17, Spring Boot to 1.5 to 2.7, and adopting <i>OIDC & OAuth2</i> for authentication and authorization.",
              "Drove the adoption of <i>null-safe coding practices</i> and the associated automated tooling, fostering cleaner and more robust development within the team. I provided a tool for simplifying the management of certificates for local JDK installations: <i>jdkcerts</i>.\n"
         ],
         "tech_stack": [
@@ -71,9 +71,9 @@
         "responsibilities": [
             "Leveraging <i>Abstract Syntax Trees (ASTs)</i>, I worked on static analysis tools to detect a wide range of vulnerabilities, including security flaws and performance bottlenecks for Java and Kotlin projects. Integrated the <i>Eclipse Compiler for Java</i> to support the features of Java 21 and Java 22.",
             "Extended <i>Gradle</i> and <i>Maven</i> plugins to improve project indexing and support for various file types, resulting in a more accurate representation of the project structure.",
-            "Reduced build and test times of <i>Cirrus CI</i> jobs for dogfooding the Java and Kotlin analyzers on <i>Sonar Qube</i> by leveraging knowledge of <i>Linux Systems</i> and <i>DevOps</i> tools, such as <i>Docker</i>, <i>Bash</i>, and <i>Git</i>.",
+            " Optimized <i>Cirrus-CI</i> pipelines for dogfooding plugin changes on a shared <i>SonarQube</i> instance. Consolidated project configurations, replaced custom scripts with a unified structure, introduced shallow Git clones, and automated compatibility with <i>SonarQube</i>.",
             "Mentored and onboarded new team members through individual sessions and defining specific onboarding programs. I've also contributed to the  <i>Sonar community</i> by sharing expertise, answering questions and providing code examples.",
-            "Led a proof-of-concept project to integrate a <i>RoBERTa</i>-based ML model for detecting commented code. Explored frameworks like <i>Spring Boot</i> and <i>JSpecify</i>, <i>Java 21</i> features and sustainable coding to ideate and implement new rules for the Java analyzer."
+            "Explored frameworks like <i>Spring Boot</i> and <i>JSpecify</i>, <i>Java 21</i> features and sustainable coding to ideate and implement new rules for the Java analyzer. Led a proof-of-concept project to integrate a <i>RoBERTa</i>-based ML model for detecting commented code. "
             ],
         "tech_stack": [
             "Java", "Gradle", "Maven", "Kotlin", "Eclipse ECJ", "Docker", "Kubernetes", "Git", "Sonar Qube", "Sonar Cloud", "Cirrus CI", "Bash", " Python", "Spring Boot", "JSpecify", "Thymeleaf", "Testcontainers"
@@ -116,9 +116,9 @@
             "Implemented a robust observability solution using <i>Prometheus</i>, <i>Grafana</i>, and <i>OpenTelemetry</i> to monitor and optimize services on <i>Amazon EKS</i>. Automated redeployment mechanisms to ensure high availability and rapid recovery from failures.",
             "Leveraged <i>Kafka Streams</i> to process real-time market data, from distributed components, and enhance the price limit tool. Contributed to the development of a global position aggregator by implementing <i>Kafka Connectors</i> for data ingestion, manipulation and storage.",
             "Utilized profiling tools like <i>JMeter</i>, <i>JProfiler</i>, and <i>VisualVM</i> to identify and resolve performance bottlenecks in complex systems. Optimized database queries, network communication, and application logic.",
-            "Contributed to the development of a global position aggregator using <i>Hazelcast</i> and <i>Kafka</i> for distributed data management. Enhanced the user interface using <i>JavaFX</i> to efficiently visualize real-time data sourced via TCP protocols.",
+            "Contributed to the development of a global position aggregator using <i>Hazelcast</i> and <i>Kafka</i> for distributed data management. Enhanced the user interface using <i>JavaFX</i> to efficiently visualize real-time data sourced via TCP protocols. Collaborated with QA in designing and maintaining the internal Integration Tests framework.",
             "Successfully integrated with multiple trading venues (Euronext, LSE, Eurex, etc.) using the <i>FIX protocol</i> and the <i>QuickFix</i> library. Collaborated with counterparties and performed User Acceptance Testing for the FIX connectivity in diverse scenarios.",
-            "Developed and maintained robust relational database systems, using <i>Hibernate</i> and <i>MySQL</i>, for <i>Reference Data</i> (ETFs, Futures, Forex, etc.) and <i>Clearing operations</i>. Optimized database performance by more than 50% using indexing and batching."
+            "Developed entire data injection applications, leveraging <i>Hibernate</i> and <i>Rest APIs</i>, for <i>Reference Data</i> (ETFs, Futures, Forex, etc.), <i>Clearing operations</i> and and <i>Trading reports</i>. Optimized database performance by more than 50% using indexing and batching."
         ],
         "tech_stack": [
             "Java", "Maven", "Relational DBs", "SQL", "Hiberante", "Apache Kafka", "Kafka Connectors", "Hazelcast", "JMeter",  "JProfiler", "VisualVM", "Docker", "Prometheus", "Grafana", "OpenTelemetry", "OpenCsv", "Git", "BitBucket", "Kubernetes", "Amazon EKS", "Python", "Bash", "TCP/IP Protocols", "QuickFix", "FIX Protocol"
